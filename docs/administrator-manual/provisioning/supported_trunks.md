@@ -1,5 +1,5 @@
 ---
-id: supported_trunks
+id: supported-trunks
 title: Supported VoIP trunks
 ---
 
