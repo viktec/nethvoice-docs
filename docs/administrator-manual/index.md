@@ -99,12 +99,12 @@ Before deploying NethVoice, ensure you have:
 1. **[Review System Requirements](./install/nethserver#system-requirements)** - Ensure your infrastructure meets requirements
 2. **[Install NethServer 8](./install/nethserver/)** - Deploy the base infrastructure platform
 3. **[Create User Domain](./install/nethserver.md#user-domains)** - Set up LDAP for users and authentication
-4. **[Install & Configure NethVoice Proxy](./nethvoice_proxy/)** - Deploy the external VoIP gateway (REQUIRED before NethVoice)
+4. **[Install & Configure NethVoice Proxy](./advanced/nethvoice_proxy)** - Deploy the external VoIP gateway (REQUIRED before NethVoice)
 5. **[Deploy NethVoice](./install/nethvoice_install/)** - Install NethVoice module(s) on top of the proxy
 6. **Configure Your System**:
    - [Provision Phones](./provisioning/) - Deploy and configure telephone devices
    - [Manage Extensions](../user-manual/nethcti/) - Create extensions and assign to users
-7. **[Advanced Configuration](./administrator-manual/)** - Configure trunks, gateways, routing, and advanced features
+7. **[Advanced Configuration](./advanced/)** - Configure trunks, gateways, routing, and advanced features
 
 ## Key Documentation Sections
 
@@ -128,7 +128,7 @@ The NethVoice module requires that the **NethVoice proxy** be already installed,
 - Enables external access even with a single NethVoice instance
 - Routes traffic between multiple NethVoice installations on the same node
 
-If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation](./nethvoice_proxy/) before installing NethVoice.
+If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation](./advanced/nethvoice_proxy) before installing NethVoice.
 :::
 
 ## Support & Additional Resources

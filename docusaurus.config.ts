@@ -89,10 +89,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -153,15 +149,15 @@ const config: Config = {
           items: [
             {
               label: 'Administrator manual',
-              to: '/docs/administrator-manual/',
+              to: '/docs/administrator-manual',
             },
             {
               label: 'User manual',
-              to: '/docs/user-manual/',
+              to: '/docs/user-manual',
             },
             {
               label: 'Tutorial',
-              to: '/docs/tutorial/',
+              to: '/docs/tutorial',
             },
           ],
         },
