@@ -29,6 +29,7 @@ The destination NS8 system requires:
   - Recommended: Scale based on your NS7 usage and data volume
 - **NethVoice Proxy**: Should be pre-installed and configured (see [NethVoice Proxy documentation](/docs/administrator-manual/install/nethvoice_proxy))
   - Note: If not installed, the migration tool will install it automatically, but manual configuration will be required afterward
+- **Supported VoIP trunks and phones**: Ensure that all VoIP trunks and phones used in NS7 are supported in NS8. Check the [Supported Phones](../../administrator-manual/provisioning/supported_phones), [Supported Gateways](../../administrator-manual/provisioning/supported_gateways) and [Supported trunks](../../administrator-manual/provisioning/supported_trunks) documentation for compatibility information.
 
 :::tip Pre-install NethVoice Proxy
 It's highly recommended to install and configure NethVoice Proxy **before** starting the migration. This ensures proper network configuration and reduces post-migration tasks.
