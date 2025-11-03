@@ -1,6 +1,7 @@
 ---
 id: provisioning-index
 title: Provisioning
+sidebar_position: 5
 ---
 
 # Tutorial Provisioning
