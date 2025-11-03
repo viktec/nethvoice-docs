@@ -10,10 +10,16 @@ yarn install
 
 ## Local Development
 
-To open the website locally for development, run:
+To open the English website locally for development, run:
 
 ```bash
 yarn run start
+```
+
+To open the Italian website locally for development, run:
+
+```bash
+yarn run start --locale it
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.

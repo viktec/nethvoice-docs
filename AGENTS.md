@@ -61,7 +61,8 @@ docs/
 ## Tools
 
 - Install dependencies with: `yarn install`
-- Run development server in foreground: `yarn run start`
+- Run development server in foreground, English: `yarn run start`
+- Run development server in foreground, Italian: `yarn run start --locale it`
 - Run development server in background: `yarn run start &`
 - Build static site: `yarn build`
 - Test the static site (listens on port 8000): `cd build && python3 -mhttp.server`
