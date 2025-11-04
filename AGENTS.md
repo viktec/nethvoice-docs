@@ -70,6 +70,16 @@ docs/
 
 ---
 
+## Planning
+
+- For complex tasks, break down the work into smaller subtasks.
+- Prioritize tasks based on impact and urgency (e.g., fixing broken links before adding new content).
+- Maintain a checklist of completed tasks and pending reviews.
+- Create plan Markdown files inside the `plans` directory, eg: `plans/review_broken_links.md`.
+- Never commit plan files inside the repository.
+
+---
+
 ## Expected Output
 
 - Revised or newly created markdown pages in English.
