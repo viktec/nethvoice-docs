@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # NethVoice Proxy
 
-## Overview
+## Overview {#overview}
 
 NethVoice Proxy is a critical component that handles all external VoIP traffic for NethVoice instances. It acts as a gateway for internet-based SIP and RTP connections, enabling secure external access to your telephony system.
 
@@ -20,7 +20,7 @@ NethVoice Proxy provides:
 **Important**: NethVoice Proxy is required for every NethVoice deployment, even with a single instance. It manages external internet access and must be installed and configured before deploying any NethVoice instances.
 :::
 
-## Architecture
+## Architecture {#architecture}
 
 NethVoice Proxy module is built on two main open-source components:
 
@@ -31,9 +31,9 @@ NethVoice Proxy module is built on two main open-source components:
 
 These components work together to manage all incoming and outgoing SIP and RTP connections between your NethVoice instances and external VoIP networks (internet, trunks, remote offices, mobile users).
 
-## Role in NethVoice Deployments
+## Role in NethVoice Deployments {#role-in-nethvoice-deployments}
 
-### Single Instance Deployment
+### Single Instance Deployment {#single-instance-deployment}
 
 Even with a single NethVoice installation, NethVoice Proxy is essential:
 - Acts as the external interface for internet-based VoIP traffic
@@ -41,7 +41,7 @@ Even with a single NethVoice installation, NethVoice Proxy is essential:
 - Manages NAT traversal for mobile and remote connections
 - Provides a single domain for external users to reach your PBX
 
-### Multi-Instance Deployment
+### Multi-Instance Deployment {#multi-instance-deployment}
 
 With multiple NethVoice instances on the same node, NethVoice Proxy provides:
 - **Single External Entry Point**: External callers use one FQDN (the proxy domain)
@@ -67,7 +67,7 @@ In this scenario:
 - Each instance operates independently while sharing external access
 :::
 
-## Installation
+## Installation {#installation}
 
 :::note
 You can install only one NethVoice Proxy per node from the Software Center.
@@ -75,7 +75,7 @@ You can install only one NethVoice Proxy per node from the Software Center.
 
 NethVoice Proxy must be installed **before** deploying any NethVoice instances. See [NethVoice Installation](./nethvoice_install/) for the complete installation sequence.
 
-### Installation Steps
+### Installation Steps {#installation-steps}
 
 1. **Open NethServer Management Interface** on your node
 2. **Navigate to Software Center**
@@ -86,7 +86,7 @@ NethVoice Proxy must be installed **before** deploying any NethVoice instances. 
 :::warning Installation Order
 Do not attempt to install NethVoice before installing and configuring NethVoice Proxy. The installation will fail if the proxy is not available.
 
-## Configuration
+## Configuration {#configuration}
 
 Configuration of NethVoice Proxy is essential before installing NethVoice instances. The proxy requires a dedicated FQDN and proper network settings.
 
@@ -94,7 +94,7 @@ Configuration of NethVoice Proxy is essential before installing NethVoice instan
 NethVoice Proxy must be fully configured and operational before installing NethVoice instances. Verify configuration is complete and proxy is running before proceeding to NethVoice installation.
 :::
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
 Before configuring NethVoice Proxy, ensure:
 
@@ -102,7 +102,7 @@ Before configuring NethVoice Proxy, ensure:
 2. **Public IP Address**: Know the public IPv4 or IPv6 address where the proxy will be accessible from the internet
 3. **Network Interface**: Identify which network interface will handle VoIP traffic
 
-### Configuration Steps
+### Configuration Steps {#configuration-steps}
 
 1. **Access the proxy configuration page** in the NethServer management interface
 2. **Enter the Proxy Domain**: Set a valid FQDN (e.g., `proxy.nethserver.org`)
@@ -118,7 +118,7 @@ Before configuring NethVoice Proxy, ensure:
    - Enable Let's Encrypt if you want automatic SSL certificate management
    - Requires the DNS record to be publicly resolvable
 
-### Configuration Example
+### Configuration Example {#configuration-example}
 
 **Scenario**: Single node with private network interface, public IP behind NAT
 
@@ -131,9 +131,9 @@ Before configuring NethVoice Proxy, ensure:
 
 **Result**: External devices connect to `proxy.example.com` (203.0.113.45), traffic routes internally to 192.168.1.10
 
-### Special Cases
+### Special Cases {#special-cases}
 
-#### Local Network Only (No Internet Access)
+#### Local Network Only (No Internet Access) {#local-network-only-no-internet-access}
 
 If the proxy is only accessible within a local network and not from the internet:
 
@@ -146,7 +146,7 @@ Let's Encrypt: Disabled
 
 Use the private IP address that devices on your local network use to reach the proxy.
 
-#### Multiple External IPs
+#### Multiple External IPs {#multiple-external-ips}
 
 If your node has multiple public IP addresses, configure the proxy with the specific public IP you want for VoIP traffic:
 
@@ -154,7 +154,7 @@ If your node has multiple public IP addresses, configure the proxy with the spec
 2. Enter the specific public IP in the "Public IP Address" field
 3. Ensure DNS records point to this IP address
 
-### Next Steps
+### Next Steps {#next-steps}
 
 Once NethVoice Proxy is fully configured and running:
 

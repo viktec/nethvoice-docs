@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Troubleshooting
 
-## Audio Issues
+## Audio Issues {#audio-issues}
 
 - Verify that audio devices are properly connected
 - Check browser audio permission settings
@@ -14,7 +14,7 @@ sidebar_position: 4
 - Test with different microphone/speaker combinations
 - Update audio drivers to the latest version
 
-## Connection Issues
+## Connection Issues {#connection-issues}
 
 - Verify internet connection and DNS resolution
 - Check your login credentials
@@ -23,7 +23,7 @@ sidebar_position: 4
 - Verify the correct server address is configured
 - Try connecting from a different network
 
-## Call Quality Issues
+## Call Quality Issues {#call-quality-issues}
 
 - Reduce background noise using the noise suppression feature
 - Check network bandwidth availability
@@ -31,7 +31,7 @@ sidebar_position: 4
 - Move closer to the wireless router
 - Close other applications consuming network bandwidth
 
-## Application Issues
+## Application Issues {#application-issues}
 
 - Clear application cache in Settings
 - Reinstall the application
@@ -39,14 +39,14 @@ sidebar_position: 4
 - Restart the application
 - Restart your computer if issues persist
 
-## Important Notes
+## Important Notes {#important-notes}
 
 - NethLink can be used concurrently with NethVoice CTI
 - Incoming calls will only be received on the device set as primary
 - NethLink uses system notifications for alerts (e.g., incoming call)
 - The application remains always accessible from the operating system's system tray
 
-## Getting Help
+## Getting Help {#getting-help}
 
 If you encounter issues not covered here:
 

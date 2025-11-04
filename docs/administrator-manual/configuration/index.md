@@ -7,7 +7,7 @@ sidebar_position: 4
 
 The Configuration section contains documentation for managing and monitoring your NethVoice system after the initial setup.
 
-## Key Pages
+## Key Pages {#key-pages}
 
 - **[Wizard](./configuration/wizard)** - Access the configuration wizard for system setup and customization
 - **[Dashboard](./configuration/dashboard)** - Monitor system status, users, and presence information

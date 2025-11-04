@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Calls
 
-## Making a Call
+## Making a Call {#making-a-call}
 
 To make a call, you can either:
 1. Type the phone number directly
@@ -13,7 +13,7 @@ To make a call, you can either:
 
 ![Making a Call](/img/nethcti/Chiamare.png)
 
-## Phone Island
+## Phone Island {#phone-island}
 
 When you make or receive a call, the **Phone Island** will appear:
 
@@ -21,7 +21,7 @@ When you make or receive a call, the **Phone Island** will appear:
 
 The **Phone Island** is the dedicated tool for managing your calls.
 
-### Phone Island Features
+### Phone Island Features {#phone-island-features}
 
 Through the **Phone Island** you can:
 
@@ -31,11 +31,11 @@ Through the **Phone Island** you can:
 - **Open numeric keypad**: Use the keypad to enter numbers during a call (useful for IVR systems)
 - **Park the call**: Park the call for later pickup (subject to specific permissions)
 
-### Phone Island Positioning
+### Phone Island Positioning {#phone-island-positioning}
 
 The **Phone Island** is a dynamic tool that you can move by dragging it anywhere on your screen for optimal visibility and convenience.
 
-## Incoming Calls
+## Incoming Calls {#incoming-calls}
 
 When you receive an incoming call, you will see:
 - Caller name or number

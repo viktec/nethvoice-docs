@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # NethVoice Installation
 
-## Overview
+## Overview {#overview}
 
 NethVoice is installed in two steps:
 
@@ -26,9 +26,9 @@ The proxy handles all external internet access and manages SIP/RTP traffic routi
 Even with a single NethVoice installation, the proxy is essential for proper network traffic management.
 :::
 
-## Installation Steps
+## Installation Steps {#installation-steps}
 
-### Step 1: Install NethVoice Proxy
+### Step 1: Install NethVoice Proxy {#step-1-install-nethvoice-proxy}
 
 1. **Access the Software Center** on your NethServer 8 system.
 2. **Search for "NethVoice Proxy"** in the Software Center search bar.
@@ -40,7 +40,7 @@ Even with a single NethVoice installation, the proxy is essential for proper net
 Ensure NethVoice Proxy is fully installed and configured with proper FQDNs and DNS records before proceeding to install NethVoice instances.
 :::
 
-### Step 2: Configure NethVoice Proxy
+### Step 2: Configure NethVoice Proxy {#step-2-configure-nethvoice-proxy}
 
 Before installing NethVoice, you must configure the NethVoice Proxy:
 
@@ -61,7 +61,7 @@ Those requeirements are critical to obtain a valid SSL/TLS certificate for secur
 
 See [NethVoice Proxy Documentation](advanced/nethvoice_proxy) for more info.
 
-### Step 3: Install NethVoice
+### Step 3: Install NethVoice {#step-3-install-nethvoice}
 
 Once the NethVoice Proxy is running, you can install NethVoice instances:
 
@@ -77,7 +77,7 @@ You can install multiple NethVoice instances on the same node. Each will use the
 :::
 
 
-## Module Configuration
+## Module Configuration {#module-configuration}
 
 :::warning Required Prerequisites
 Before proceeding with the configuration of any NethVoice instance, ensure:
@@ -124,7 +124,7 @@ The following options are available only with an active Enterprise subscription:
 - **Hotel FIAS server host**: Enter the IP address or hostname of the Hotel FIAS server.
 - **Hotel FIAS server port**: Specify the port number for the Hotel FIAS server connection.
 
-## Next steps
+## Next steps {#next-steps}
 
 After saving the configuration parameters, NethVoice will be accessible on its base host, eg:
 ```

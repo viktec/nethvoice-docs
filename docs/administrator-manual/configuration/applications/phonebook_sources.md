@@ -9,7 +9,7 @@ sidebar_position: 2
 
 The NethVoice phonebook is a centralized directory that stores and manages contact information for users and organizations. It enables seamless name and number resolution for incoming and outgoing calls, ensuring that caller details are consistently available across NethVoice CTI and NethVoice App. The phonebook can aggregate contacts from various sources, including external databases and CSV files, providing a unified and easily accessible address book for all users.
 
-#### Adding External Address Books
+#### Adding External Address Books {#adding-external-address-books}
 
 From the menu `Applications -> Address Book Sources`, you can define an external source for the contacts NethVoice should use to resolve incoming and outgoing calls.
 These contacts will be added to the NethVoice address book and made available for use in NethVoice CTI and NethVoice App.
@@ -20,7 +20,7 @@ To configure a new source, three steps are required:
 - **Mapping**: Associate fields from the source database with those of the NethVoice address book.
 - **Settings**: Choose the synchronization interval.
 
-#### Phonebook Source
+#### Phonebook Source {#phonebook-source}
 
 A unique `Phonebook Name` must be assigned to the source to distinguish the origin of the contacts imported into the NethVoice phonebook.
 
@@ -42,7 +42,7 @@ The CSV file must be encoded in UTF-8 and contain column names on the first row.
 
 The `Verify` button allows you to preview the data retrieved from the source.
 
-#### Custom Name Resolution
+#### Custom Name Resolution {#custom-name-resolution}
 
 If you wish to use a source other than the centralized address book to resolve names, you can create a custom resolution script and place it in the *~/.local/share/containers/storage/volumes/lookup.d/\_data/* directory.
 
@@ -78,7 +78,7 @@ The *lookup_dummy.php* script returns a fake result for any number dialed or inc
 | workcountry     | Work country/region    |
 | url             | Website address        |
 
-#### Settings
+#### Settings {#settings}
 
 You can choose the synchronization interval for contacts between:
 

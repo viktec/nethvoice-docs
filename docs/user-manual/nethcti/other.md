@@ -5,11 +5,11 @@ sidebar_position: 3
 
 # Other Features
 
-## Presence and Main Device Management
+## Presence and Main Device Management {#presence-and-main-device-management}
 
 Click on your NethVoice CTI Avatar to manage your presence status and select your main telephone device.
 
-### Presence Status
+### Presence Status {#presence-status}
 
 Communicate your telephone status to your colleagues to let them know if you are available or unavailable to receive calls:
 
@@ -21,7 +21,7 @@ Your status color will change accordingly:
 - **Away (Yellow)**: Away from your desk
 - **Do Not Disturb (Gray)**: Do not want to receive calls
 
-### Main Device
+### Main Device {#main-device}
 
 If you have multiple phones available, you can select which one to use for making calls:
 
@@ -29,9 +29,9 @@ If you have multiple phones available, you can select which one to use for makin
 
 This allows you to seamlessly switch between different devices.
 
-## Speed Dial and Recent Calls
+## Speed Dial and Recent Calls {#speed-dial-and-recent-calls}
 
-### Speed Dial
+### Speed Dial {#speed-dial}
 
 Add contacts to your speed dial menu for quick access:
 
@@ -39,7 +39,7 @@ Add contacts to your speed dial menu for quick access:
 
 Simply click on a speed dial entry to call that contact instantly.
 
-### Recent Calls
+### Recent Calls {#recent-calls}
 
 View your recent incoming and outgoing calls:
 
@@ -47,7 +47,7 @@ View your recent incoming and outgoing calls:
 
 You can quickly redial or check call history from this list.
 
-## Operator Panel
+## Operator Panel {#operator-panel}
 
 View the real-time status of your colleagues:
 
@@ -59,13 +59,13 @@ From here you can:
 - Filter and organize the display
 - See presence information
 
-## Queues Management
+## Queues Management {#queues-management}
 
 If you use call queues, you can manage them from here:
 
 ![Queues](/img/nethcti/Code.png)
 
-### Queue Operations
+### Queue Operations {#queue-operations}
 
 Monitor incoming calls and calls being handled by colleagues:
 
@@ -78,21 +78,21 @@ Monitor incoming calls and calls being handled by colleagues:
 
 ![Queue Access](/img/nethcti/Code_accesso.png)
 
-### Missed Calls
+### Missed Calls {#missed-calls}
 
 Verify if you missed any calls and call back your clients:
 
 ![Missed Calls](/img/nethcti/Code_Chiamate.png)
 
-### Statistics
+### Statistics {#statistics}
 
 Monitor your call statistics within queues:
 
 ![Queue Statistics](/img/nethcti/Code_Statistiche.png)
 
-## Address Book
+## Address Book {#address-book}
 
-### Viewing Contacts
+### Viewing Contacts {#viewing-contacts}
 
 View your NethVoice CTI address book:
 
@@ -100,7 +100,7 @@ View your NethVoice CTI address book:
 
 Search for contacts quickly and efficiently.
 
-### Creating Contacts
+### Creating Contacts {#creating-contacts}
 
 Add new contacts using the "Create Contact" function (subject to specific permissions):
 
@@ -113,7 +113,7 @@ You can add:
 - Organization
 - Notes
 
-## Call History
+## Call History {#call-history}
 
 Use convenient filters to search for calls from your extension, group, or entire phone system (subject to specific permissions):
 
@@ -126,13 +126,13 @@ Use convenient filters to search for calls from your extension, group, or entire
 - Duration
 - Call status
 
-## Queue Manager
+## Queue Manager {#queue-manager}
 
 Administer configured queues on the phone system (subject to specific permissions):
 
 ![Queue Manager](/img/nethcti/Gestore_Code.png)
 
-### Dashboard
+### Dashboard {#dashboard}
 
 View a summary of all configured queues on the system:
 
@@ -140,19 +140,19 @@ View a summary of all configured queues on the system:
 
 See graphs and statistics for all queues.
 
-### Queue Management
+### Queue Management {#queue-management}
 
 For each queue, view details of managed calls and control agent behavior:
 
 ![Queue Management Detail](/img/nethcti/Gestore_Code_Gestione_Code.png)
 
-### Unhandled Clients
+### Unhandled Clients {#unhandled-clients}
 
 Quickly verify if all calls have been answered:
 
 ![Unhandled Clients](/img/nethcti/Gestore_Code_Clienti_non_gestiti.png)
 
-### Real-time Summary
+### Real-time Summary {#real-time-summary}
 
 Real-time overview of queue situations:
 
@@ -160,29 +160,29 @@ Real-time overview of queue situations:
 
 Filter individual queues or operators to verify the day's performance.
 
-### Statistics
+### Statistics {#statistics-1}
 
 Summary graphs of queue situations:
 
 ![Statistics](/img/nethcti/Gestore_Code_Statistiche.png)
 
-### Monitor
+### Monitor {#monitor}
 
 Display the list of queued calls on a monitor:
 
 ![Monitor](/img/nethcti/Gestore_Monitor.png)
 
-## Applications
+## Applications {#applications}
 
 ![Applications](/img/nethcti/Applicazioni.png)
 
-### Phone Lines and Announcements
+### Phone Lines and Announcements {#phone-lines-and-announcements}
 
 Find and manage the phone lines of your PBX (subject to specific permissions):
 
 ![Phone Lines](/img/nethcti/Linee_telefoniche_e_annunci_gestione_linee.png)
 
-#### Line Details
+#### Line Details {#line-details}
 
 Click on your phone line to check closures and settings:
 
@@ -194,27 +194,27 @@ You can control:
 - **Announcement + Voicemail**: Play announcement and leave voicemail option
 - **Forward call**: Forward calls to another number
 
-#### Announcements
+#### Announcements {#announcements}
 
 Use the Announcements menu to upload or record new announcements. You can also listen to or delete existing announcements (subject to specific permissions):
 
 ![Announcements](/img/nethcti/Linee_telefoniche_e_annunci_annunci.png)
 
-### Video Sources
+### Video Sources {#video-sources}
 
 Advanced video intercom management. Manage and control your video intercoms (subject to specific permissions).
 
-### PBX Report
+### PBX Report {#pbx-report}
 
 Access [Advanced Reporting](https://docs.nethvoice.it/it/latest/pbxreport_manual.html) for your phone system (subject to specific permissions).
 
-## Settings
+## Settings {#settings}
 
 Customize your NethVoice CTI by accessing Settings:
 
 ![Settings](/img/nethcti/Impostazioni.png)
 
-### Available Settings
+### Available Settings {#available-settings}
 
 - **Devices**: Control your phones and their status
 - **Mobile App**: Generate QR code to connect your [smartphone](https://docs.nethvoice.it/it/latest/app_manual.html) (subject to specific permissions)
@@ -225,7 +225,7 @@ Customize your NethVoice CTI by accessing Settings:
 - **Integrations**: Integrate your Phone Island with external tools
 - **Cache**: Clearing browser cache can help resolve some page loading issues
 
-## Supported Browsers
+## Supported Browsers {#supported-browsers}
 
 Currently supported browsers are:
 - Google Chrome - Version 121.0.6167.189 and later

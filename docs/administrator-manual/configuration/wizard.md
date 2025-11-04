@@ -16,7 +16,7 @@ At the end of the wizard:
 - a new [Dashboard](./dashboard) page will be available to monitor system status and performance
 - a new [Applications](./applications) section will be available to manage CTI features
 
-## Extensions
+## Extensions {#extensions}
 
 VoIP (Voice over Internet Protocol) extensions are virtual phone numbers that let people make and receive calls using the network instead of a traditional phone line. Each extension is a unique number inside your NethVoice system — colleagues can call one another by dialing that number. An extension can also receive external calls once the system’s phone lines are configured.
 
@@ -37,7 +37,7 @@ Installation without an subscription are limited to 8 users.
 
 Click the **Next** button to proceed to the Trunks section.
 
-## Trunks
+## Trunks {#trunks}
 
 Trunks are the connections that allow your PBX to send and receive calls to and from external networks. They act as the bridge between internal extensions and the public telephone network or cloud telephony providers. Trunks can be implemented as cloud-based VoIP lines or as on‑premise physical connections using gateways to interface with the PSTN.
 
@@ -53,7 +53,7 @@ Trunks are the connections that allow your PBX to send and receive calls to and 
   - Cons: higher upfront hardware and maintenance cost, model-specific configuration, limited scalability compared to cloud trunks.
   - Best when local telco connectivity, regulatory constraints, or offline resilience are required.
 
-### Add physical lines
+### Add physical lines {#add-physical-lines}
 
 To add physical lines, you need to configure a supported SIP gateway. See the [Supported Gateways](./provisioning/supported_gateways) section for a list of compatible devices.
 
@@ -63,7 +63,7 @@ Once the settings are saved, you can download the configuration file to upload t
 
 If you do not wish to add physical lines, you can skip this section by clicking the **Next** button to proceed to VoIP trunks.
 
-### Add VoIP trunks
+### Add VoIP trunks {#add-voip-trunks}
 
 You can create VoIP trunks by selecting one of the supported providers and entering the necessary information.
 
@@ -79,11 +79,11 @@ Press **Save** to create the configuration for that VoIP trunk.
 
 Finally , click the **Next** button to proceed to the Routes section.
 
-## Routes
+## Routes {#routes}
 
 Inbound routes define how incoming calls are matched and routed to internal destinations; outbound routes determine how internal calls are sent out through trunks. Save the route to apply changes and start receiving calls according to the configured rules. In the Routes section you can configure both inbound and outbound routes — each type is explained in detail below.
 
-### Inbound
+### Inbound {#inbound}
 
 Inbound routes define how incoming calls from trunks are matched and handled before reaching your internal resources. They typically match on the called number (DID/DDI), caller ID, or time conditions and then forward the call to a destination such as an extension, IVR, queue, ring group, or a Visual Plan flow.
 
@@ -99,7 +99,7 @@ Click to **Create new route** to open the Visual Plan application, where you can
 By clicking the checkmark symbol in the Visual Plan application, the configuration of your route will be saved.
 From that moment on, you can receive calls following the configured flow.
 
-### Outbound
+### Outbound {#outbound}
 
 Outbound routes determine how outbound calls from your PBX are matched and sent out through available trunks. Think of them as the rules that map an internal dialed number to a trunk (or sequence of trunks) based on patterns, caller ID, time conditions, and other criteria. Properly configured outbound routes ensure calls take the best available path, provide predictable failover, and comply with local dialing plans.
 
@@ -115,13 +115,13 @@ Inside each route is possibile to add or remove associated trunks.
 
 By pressing **Save** button, the configuration is written to NethVoice and the route becomes active. 
 
-## Devices
+## Devices {#devices}
 
 Devices are physical (desk) phones that register to the PBX and are associated with users. 
 
 Configure desk phones and their models: add phones by MAC (manual or batch), choose or create models, and adjust provisioning, default settings, and per‑device options.
 
-### Phones
+### Phones {#phones}
 
 During the wizard you can add phones using one of the following methods:
 
@@ -146,7 +146,7 @@ If the model is not selected or the wrong model is chosen, some phone functions,
 :::
 
 
-### Models
+### Models {#models}
 
 The Devices > Models page shows the phone models available in Devices > Phones (built‑in models plus any custom models you create). Use Create new model to base a custom profile on an existing model.
 
@@ -160,11 +160,11 @@ Settings:
 
 Saved defaults can be edited later by clicking again **Default Settings** button.
 
-## Configurations
+## Configurations {#configurations}
 
 This section configures NethVoice CTI (Computer Telephony Integration) — the web client used by end users to manage calls, presence, contacts, queues and related telephony features. CTI = Computer Telephony Integration.The following subsections explain how to create groups, profiles and permissions that control what features are available in the CTI interface.
 
-### Groups
+### Groups {#groups}
 
 Groups are named collections of users that simplify management and control inside NethVoice CTI. Use groups to control visibility and permissions across multiple users at once.
 CTI groups are different from user domains groups.
@@ -187,7 +187,7 @@ To create a group, click **Create new group**, specify a name (and optional desc
 
 Click **Next** to proceed to the Profiles section.
 
-### Profiles
+### Profiles {#profiles}
 
 Profiles define a reusable set of [permissions](#permissions) that act as role templates. Apply a profile to a user to grant a predefined combination of CTI capabilities, routing access, CDR visibility, phone functions and other NethVoice features.
 
@@ -210,11 +210,11 @@ Best practices:
 
 Then click **Next** to proceed to the Users section.
 
-#### Permissions
+#### Permissions {#permissions}
 
 Permissions control specific features and capabilities within NethVoice CTI. They are grouped into sections that correspond to different functional areas. When creating or editing a profile, you can enable or disable individual permissions to tailor the user experience.
 
-##### Settings
+##### Settings {#settings}
 
 General permission enables or disables access to all the functionalities of the section and general notification settings.
 Available permissions are:
@@ -230,31 +230,31 @@ Available permissions are:
 - `Physical Phone Buttons`: Enables the configuration of physical phone buttons by the user in NethVoice CTI.
   These correspond to the Line Keys shown on the `wizard-devices` pages.
 
-##### Outbound Routes
+##### Outbound Routes {#outbound-routes}
 
 All configured outbound routes in NethVoice are displayed, and you can enable/disable their usage individually.
 
-##### NethVoice CTI
+##### NethVoice CTI {#nethvoice-cti}
 
 - `NethVoice CTI`: Enables all the underlying permissions by activating the following functionalities on NethVoice CTI.
 
-##### Address Book
+##### Address Book {#address-book}
 
 - `Address Book`: The general permission enables the viewing of the address book in NethVoice CTI and the ability to add, modify, and delete own contacts.
 - `Advanced Address Book`: Enables the ability to modify/delete non-owned contacts in the address book in NethVoice CTI.
 
-##### CDR
+##### CDR {#cdr}
 
 - `CDR`: The general permission enables the viewing of the call history related to the user.
 - `PBX CDR`: Enables the viewing of the call history for the entire PBX.
 - `Group CDR`: Enables the viewing of call history for calls within one's assigned group.
 
-##### Customer Cards
+##### Customer Cards {#customer-cards}
 
 - `Customer Cards`: The general permission enables the ability to view the customer card on NethVoice CTI.
 - For each section of the customer card, you can enable/disable visibility.
 
-##### Presence Panel
+##### Presence Panel {#presence-panel}
 
 - The general permission enables the display of the operator's panel in NethVoice CTI.
 - `Advanced Recording`: Enables recording of calls from other users.
@@ -264,29 +264,29 @@ All configured outbound routes in NethVoice are displayed, and you can enable/di
 - `Advanced Phone`: Enables phone functionalities (hang up, call, answer) on conversations that do not belong to the user.
 - For each configured user group in NethVoice, you can enable/disable visibility.
 
-##### Queue Agent Panel
+##### Queue Agent Panel {#queue-agent-panel}
 
 - The general permission enables the Queue section in NethVoice CTI with information about the assigned queues, the ability to log in/out, and enter/exit break.
 - `Advanced Queue Agent Panel`: Enables advanced information about the status of queues and agents.
 - `Unhanded Calls`: Enables access to the unhanded calls section.
 
-##### Phone Lines
+##### Phone Lines {#phone-lines}
 
 - The general permission enables access to the after-hours section of NethVoice CTI, allowing the user to change the path of their incoming calls.
 - `Advanced After Hours`: Allows modifying the call path for incoming calls for the user and generic incoming routes.
 - `Complete After Hours`: Allows modification of all call paths for incoming calls.
 
-##### Queue Manager
+##### Queue Manager {#queue-manager}
 
 - The general permission enables access to the QManager section in NethVoice CTI.
 - For each configured queue in NethVoice, you can enable/disable the visibility of the status and data.
 
-##### Operator Station
+##### Operator Station {#operator-station}
 
 - The general permission grants access to the operator station section in NethVoice CTI.
 - Only one configured queue in NethVoice needs to be enabled to serve as the source of calls to manage.
 
-## Users
+## Users {#users}
 
 The Users page lets you configure per-user settings and manage devices associated with each account.
 
@@ -323,21 +323,21 @@ If encryption is enabled, ensure the SSL/TLS certificate installed on the system
 
 Click **Next** to configure some final settings inside the Administration section.
 
-## Administration
+## Administration {#administration}
 
 The Administration section provides access to essential management functions for the NethVoice system, including language configuration, settings management, and advanced interface access.
 
-### Languages
+### Languages {#languages}
 
 In the Languages menu, you can set the default language for NethVoice. This language will be used throughout the administration interface and affects how content is displayed to users.
 
 The available languages depend on the language packs installed in your NethVoice instance.
 
-### Settings
+### Settings {#settings-1}
 
 The Settings page allows you to manage various aspects of the NethVoice configuration.
 
-### Password Management
+### Password Management {#password-management}
 
 - **Password**: You can change the password for the admin user who is dedicated to accessing the NethVoice web interface.
 
@@ -352,7 +352,7 @@ To change the administrator password:
 Ensure that you use a strong password to protect your NethVoice instance from unauthorized access.
 :::
 
-### Advanced
+### Advanced {#advanced}
 
 The Advanced section provides direct access to the NethVoice advanced interface.
 See the [Advanced](./advanced) section for more details.

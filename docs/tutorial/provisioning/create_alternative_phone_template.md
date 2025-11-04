@@ -18,7 +18,7 @@ dnf -y install vim
 
 For this example, we will perform this operation on a NethPhone X3 phone.
 
-## Accessing the Tancredi Container
+## Accessing the Tancredi Container {#accessing-the-tancredi-container}
 
 Before proceeding, you need to access the Tancredi container with the following command:
 
@@ -28,7 +28,7 @@ runagent -m nethvoiceX podman exec -it tancredi bash
 
 Replace `nethvoiceX` with the desired NethVoice instance (`nethvoice1`, `nethvoice2`, etc.).
 
-## Creating and Modifying the Template
+## Creating and Modifying the Template {#creating-and-modifying-the-template}
 
 1. Create a custom template with the following command:
 

@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Usage
 
-## Making a Call
+## Making a Call {#making-a-call}
 
 There are several ways to make a call:
 
@@ -25,14 +25,14 @@ Alternatively, you can:
 - Select a phone number in the operating system and use the shortcut
 - Use the context menu in the dialing field to paste a number
 
-## Receiving a Call
+## Receiving a Call {#receiving-a-call}
 
 1. When a call arrives, a notification will appear
 2. Click **Answer** to accept the call
 3. Click **Reject** to decline the call
 4. Use the controls during the call
 
-## Address Book Management
+## Address Book Management {#address-book-management}
 
 - Add new contacts
 - Modify existing contacts
@@ -40,14 +40,14 @@ Alternatively, you can:
 - Search for contacts
 - Import/export contacts
 
-## Call History
+## Call History {#call-history}
 
 - View complete call history
 - Filter calls by type (received, made, missed)
 - Quick dial from history
 - Clear history
 
-## Notifications
+## Notifications {#notifications}
 
 NethLink uses the operating system notification system to:
 
@@ -55,19 +55,19 @@ NethLink uses the operating system notification system to:
 - Show the status of calls
 - Confirm successful actions
 
-## Advanced Features
+## Advanced Features {#advanced-features}
 
-### Keyboard Shortcuts
+### Keyboard Shortcuts {#keyboard-shortcuts}
 
 Access quick calling and control features using customizable keyboard shortcuts from anywhere in the system.
 
-### Multi-Call Handling
+### Multi-Call Handling {#multi-call-handling}
 
 - Switch between active calls
 - Put calls on hold
 - Transfer calls between devices
 
-### Contact Search
+### Contact Search {#contact-search}
 
 - Quick search in address book
 - Search by name, company, or phone number

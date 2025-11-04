@@ -9,7 +9,7 @@ We support the following phones using automatic provisioning.
 However, all standard SIP phones should work with NethVoice. 
 For phones not listed as supported, it is possible to create custom provisioning templates using Tancredi.
 
-## NethPhone
+## NethPhone {#nethphone}
 
 **FIRMWARE Version 2.0 or higher**
 
@@ -18,7 +18,7 @@ For phones not listed as supported, it is possible to create custom provisioning
 - NP-X5
 - NP-X210
 
-## Fanvil
+## Fanvil {#fanvil}
 
 **FIRMWARE Version 2.0 or higher**
 
@@ -33,7 +33,7 @@ For phones not listed as supported, it is possible to create custom provisioning
 - X301/P/G/W, X303/P/G/W
 - H2U, H2U-V2, H5
 
-## Yealink
+## Yealink {#yealink}
 
 **FIRMWARE Version 0.86 or higher**
 
@@ -45,7 +45,7 @@ For phones not listed as supported, it is possible to create custom provisioning
 - T85W, T87W, T88W
 - AX83H, AX86R
 
-## Snom
+## Snom {#snom}
 
 **FIRMWARE Version 8.7.5 or higher**
 
@@ -58,7 +58,7 @@ For phones not listed as supported, it is possible to create custom provisioning
 The Snom D862 and D865 phones do not support HTTP commands, so it is not possible to use click-to-call.
 :::
 
-## Gigaset
+## Gigaset {#gigaset}
 
 **FIRMWARE Version 3.15.9 or higher**
 
@@ -66,7 +66,7 @@ The Snom D862 and D865 phones do not support HTTP commands, so it is not possibl
 
 
 
-## Provisioning compatibility
+## Provisioning compatibility {#provisioning-compatibility}
 
 The following table summarizes the provisioning methods used by each manufacturer at the phone's first boot.
 

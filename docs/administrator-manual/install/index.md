@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This section covers the complete installation process for NethVoice, from setting up the underlying NethServer 8 infrastructure to configuring NethVoice itself.
 
-## Overview
+## Overview {#overview}
 
 NethVoice installation is a multi-step process:
 
@@ -27,7 +27,7 @@ NethVoice installation is a multi-step process:
 See [NethVoice Proxy Installation](../nethvoice_proxy/) for details on proxy requirements.
 :::
 
-## What is NethServer 8?
+## What is NethServer 8? {#what-is-nethserver-8}
 
 NethServer 8 (NS8) is the underlying Linux infrastructure platform on which NethVoice runs. It provides:
 
@@ -41,9 +41,9 @@ NethServer 8 (NS8) is the underlying Linux infrastructure platform on which Neth
 NethVoice requires NethServer 8 to be installed first. Ensure you complete the NethServer 8 installation before proceeding with NethVoice.
 :::
 
-## Installation Path
+## Installation Path {#installation-path}
 
-### Step 1: Prerequisites
+### Step 1: Prerequisites {#step-1-prerequisites}
 
 Before starting, ensure you have:
 
@@ -54,7 +54,7 @@ Before starting, ensure you have:
 - Working internet connection
 - Fully Qualified Domain Name (FQDN) registered and resolved
 
-### Step 2: Install NethServer 8
+### Step 2: Install NethServer 8 {#step-2-install-nethserver-8}
 
 Follow the [NethServer Installation guide](nethserver) to:
 - Install NethServer 8 core components
@@ -62,7 +62,7 @@ Follow the [NethServer Installation guide](nethserver) to:
 - Access the web administration interface
 - Create your cluster
 
-### Step 3: Create User Domain
+### Step 3: Create User Domain {#step-3-create-user-domain}
 
 Create a user domain for NethVoice users and extensions:
 - Access NethServer 8 web interface → Domains and users
@@ -72,7 +72,7 @@ Create a user domain for NethVoice users and extensions:
 
 See [User Domains setup](nethserver#user-domains) in the NethServer Installation guide for details.
 
-### Step 4: Install NethVoice Proxy
+### Step 4: Install NethVoice Proxy {#step-4-install-nethvoice-proxy}
 
 After NethServer 8 and user domain are ready, install and configure the VoIP proxy:
 - Access the Software Center
@@ -83,7 +83,7 @@ After NethServer 8 and user domain are ready, install and configure the VoIP pro
 
 See [NethVoice Proxy Installation Guide](../nethvoice_proxy/) for detailed steps.
 
-### Step 5: Install NethVoice
+### Step 5: Install NethVoice {#step-5-install-nethvoice}
 
 With NethVoice Proxy configured and running:
 - Access the Software Center
@@ -92,7 +92,7 @@ With NethVoice Proxy configured and running:
 - Select the user domain created in Step 3
 - Set up virtual hosts and certificates
 
-### Step 6: Configure NethVoice
+### Step 6: Configure NethVoice {#step-6-configure-nethvoice}
 
 Follow the [NethVoice Installation guide](nethvoice_install) to:
 - Configure NethVoice virtual hosts
@@ -100,9 +100,9 @@ Follow the [NethVoice Installation guide](nethvoice_install) to:
 - Configure Let's Encrypt certificates
 - Access NethVoice administration and CTI
 
-## Quick Reference
+## Quick Reference {#quick-reference}
 
-### System Requirements (Minimum)
+### System Requirements (Minimum) {#system-requirements-minimum}
 
 | Component | Requirement |
 |-----------|-------------|
@@ -113,7 +113,7 @@ Follow the [NethVoice Installation guide](nethvoice_install) to:
 | OS | **Rocky Linux 9** (subscription supported) - AlmaLinux 9, CentOS Stream 9, Debian 12 (community supported) |
 | Browser | Firefox, Chrome, or Chromium (current version) |
 
-### Installation Methods
+### Installation Methods {#installation-methods}
 
 **NethServer 8** can be installed via:
 - Standard installation script (recommended)
@@ -122,7 +122,7 @@ Follow the [NethVoice Installation guide](nethvoice_install) to:
 **NethVoice** is installed via:
 - NethServer Software Center interface
 
-### Default Credentials
+### Default Credentials {#default-credentials}
 
 After installation, use these temporary credentials:
 
@@ -135,9 +135,9 @@ After installation, use these temporary credentials:
 Change default credentials immediately after first login for security.
 :::
 
-## Detailed Guides
+## Detailed Guides {#detailed-guides}
 
-### [NethServer 8 Installation](nethserver)
+### [NethServer 8 Installation](nethserver) {#nethserver-8-installation}
 
 Complete guide covering:
 - System requirements and hardware recommendations
@@ -149,7 +149,7 @@ Complete guide covering:
 - Cluster configuration
 - Troubleshooting
 
-### [NethVoice Proxy Installation](../nethvoice_proxy/)
+### [NethVoice Proxy Installation](../nethvoice_proxy/) {#nethvoice-proxy-installation}
 
 Complete guide covering:
 - Proxy overview and architecture
@@ -160,7 +160,7 @@ Complete guide covering:
 - Verification and testing
 - Must be installed BEFORE NethVoice
 
-### [NethVoice Installation](nethvoice_install)
+### [NethVoice Installation](nethvoice_install) {#nethvoice-installation}
 
 Complete guide covering:
 - Installation order (Proxy → NethVoice)
@@ -172,7 +172,7 @@ Complete guide covering:
 - Administrator access
 - Initial configuration
 
-## Installation Checklist
+## Installation Checklist {#installation-checklist}
 
 Before you begin, ensure:
 
@@ -196,7 +196,7 @@ During installation, ensure you complete:
 - [ ] NethVoice installation
 - [ ] NethVoice configuration with user domain
 
-## Important Notes
+## Important Notes {#important-notes}
 
 :::info
 **Supported Platforms Only**: Install NethServer 8 on supported distributions only. Desktop systems and servers running other services are not supported.
@@ -214,7 +214,7 @@ During installation, ensure you complete:
 **Default Credentials**: Change default admin passwords immediately after installation. This is a security requirement, not optional.
 :::
 
-## Scaling
+## Scaling {#scaling}
 
 After initial installation, NethServer 8 supports:
 
@@ -225,9 +225,9 @@ After initial installation, NethServer 8 supports:
 
 See the [NethServer 8 documentation](https://docs.nethserver.org/projects/ns8/) for clustering details.
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
-### Common Issues
+### Common Issues {#common-issues}
 
 **Cannot access web interface**
 - Verify static IP configuration
@@ -249,7 +249,7 @@ See the [NethServer 8 documentation](https://docs.nethserver.org/projects/ns8/) 
 
 For additional help, refer to the detailed guides or NethServer 8 documentation.
 
-## Next Steps
+## Next Steps {#next-steps}
 
 After successful installation:
 

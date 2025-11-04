@@ -12,12 +12,12 @@ Actions to be performed in NethVoice:
 1. Identification of phones.
 2. Assignment of phones to users.
 
-## Supported phones
+## Supported phones {#supported-phones}
 
 See [supported phones](supported_phones) for a list of supported phones and their firmware versions.
 
 
-## Identification of Phones
+## Identification of Phones {#identification-of-phones}
 
 The MAC address is fundamental for the **Provisioning** of NethVoice as it uniquely identifies the phone.
 
@@ -25,7 +25,7 @@ Entering the MAC address of the phones does not require connecting the phone to 
 
 Regardless, you can enter the MAC addresses of the phones by typing or copying the MAC address from a spreadsheet, invoice, or other document.
 
-## Associating Phones with Users
+## Associating Phones with Users {#associating-phones-with-users}
 
 The configuration of a phone is complete when it is associated with a user.
 
@@ -43,7 +43,7 @@ NethVoice assigns a progressive number to each device associated with the user u
 
 However, from the user perspective, the Main Extension is the only important number to remember.
 
-## Actions to Be Performed on the Phones
+## Actions to Be Performed on the Phones {#actions-to-be-performed-on-the-phones}
 
 :::note
 Let's consider the **first boot** for phones that are new, just taken out of the box, or those that have undergone a factory reset and have never been started up.
@@ -60,7 +60,7 @@ Verify the compatibility of the phones with supported provisioning methods. Plea
 If a phone is already in use, it is possible to prepare it for association with NethVoice through **firmware upgrade** and **factory reset** procedures. Both procedures are accessible via the phone's web administration interface.
 
 
-## Provisioning Methods
+## Provisioning Methods {#provisioning-methods}
 
 Phones can access their configuration via standard web protocols, HTTP or HTTPS (TCP port 80 or 443).
 
@@ -90,11 +90,11 @@ In any case, once the provisioning URL is obtained, the phone always uses this t
 Refer to section `provisioning-support-section` for further information on manufacturer support for RPS and DHCP.
 :::
 
-## Phone Configuration Specifications
+## Phone Configuration Specifications {#phone-configuration-specifications}
 
 If you want to modify or customize the settings of phones configured via provisioning, access the web administration interface of NethVoice, modifying the settings at the *Default*, *Model*, or *individual phone* level.
 
-### Phone Configuration Priority
+### Phone Configuration Priority {#phone-configuration-priority}
 
 Phone configuration follows a hierarchical structure where settings can be defined at three levels:
 
@@ -137,7 +137,7 @@ Provisioned phones will automatically update their configuration even upon a cha
 
 This configuration update does not cause any disruption or restart of the phone.
 
-## Admin Password
+## Admin Password {#admin-password}
 
 The phone web administration interface is accessible with the username `admin` and a password generated randomly during the installation of NethVoice.
 
@@ -145,7 +145,7 @@ The password is available in the NethVoice administration interface, on the `Mod
 
 
 
-## Automatic Updates
+## Automatic Updates {#automatic-updates}
 
 The phone automatically contacts NethVoice every night to update its configuration. It is possible to completely disable automatic updates.
 
@@ -153,7 +153,7 @@ In any case, the phone downloads the configuration every time it is restarted.
 
 
 
-## Firmware upgrade
+## Firmware upgrade {#firmware-upgrade}
 
 The phone manufacturer periodically publishes firmware updates for the various models of their phones on their website.
 

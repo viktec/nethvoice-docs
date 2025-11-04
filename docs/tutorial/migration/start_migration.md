@@ -7,7 +7,7 @@ sidebar_position: 2
 
 This guide walks you through the actual NethVoice migration process from NethServer 7 to NethServer 8. The migration involves connecting your NS7 system to the NS8 cluster, synchronizing data, and performing the final cutover.
 
-## Overview
+## Overview {#overview}
 
 The migration process converts your NethServer 7 NethVoice installation into a NethServer 8 application while preserving:
 
@@ -29,11 +29,11 @@ The migration process converts your NethServer 7 NethVoice installation into a N
 If NethVoice Proxy is not already installed on the destination node, the migration tool will install it automatically. However, you'll need to configure it manually after migration completes.
 :::
 
-## Step 1: Install Migration Tool on NS7
+## Step 1: Install Migration Tool on NS7 {#step-1-install-migration-tool-on-ns7}
 
 The migration starts by installing the migration tool on your NethServer 7 system.
 
-### Installation Steps
+### Installation Steps {#installation-steps}
 
 1. **Access NS7 Cockpit Interface**
    - Open your web browser
@@ -59,15 +59,15 @@ The migration starts by installing the migration tool on your NethServer 7 syste
 After installation, you should see a connection form asking for NS8 cluster details. If you see an error, check the NS7 system logs and ensure all updates are installed.
 :::
 
-## Step 2: Connect NS7 to NS8 Cluster
+## Step 2: Connect NS7 to NS8 Cluster {#step-2-connect-ns7-to-ns8-cluster}
 
 This step establishes a secure connection between your NS7 system and the NS8 cluster.
 
-### Connection Parameters
+### Connection Parameters {#connection-parameters}
 
 Fill in the connection form with the following information:
 
-#### Required Fields
+#### Required Fields {#required-fields}
 
 | Field | Description | Example |
 |-------|-------------|---------|
@@ -77,7 +77,7 @@ Fill in the connection form with the following information:
 | **LDAP user domain** | (Only if using local OpenLDAP) Unique domain name in NS8 | `nethvoice.local` |
 | **TLS validation** | Checkbox for certificate validation | Uncheck if no valid TLS cert |
 
-#### Field Details
+#### Field Details {#field-details}
 
 **NS8 Leader Node**:
 - Enter the fully qualified domain name (FQDN) of your NS8 leader
@@ -100,7 +100,7 @@ Fill in the connection form with the following information:
 - Uncheck if using self-signed certificates or IP address access
 - When unchecked, the connection accepts any certificate
 
-### Connection Process
+### Connection Process {#connection-process}
 
 1. **Fill in all required fields**
    - Double-check the NS8 leader address
@@ -121,7 +121,7 @@ Fill in the connection form with the following information:
 If your NS8 has an active subscription plan, automated system updates will be paused during migration. Updates resume automatically after NS7 is removed from the cluster at migration completion.
 :::
 
-### Troubleshooting Connection Issues
+### Troubleshooting Connection Issues {#troubleshooting-connection-issues}
 
 **Problem: Cannot connect to NS8 leader**
 - Verify the NS8 leader address is correct and reachable
@@ -140,15 +140,15 @@ If your NS8 has an active subscription plan, automated system updates will be pa
 
 For more details on account provider configuration, see the [Account Provider section](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#account-provider) of the official migration guide.
 
-## Step 3: Migrate NethVoice Application
+## Step 3: Migrate NethVoice Application {#step-3-migrate-nethvoice-application}
 
 Once connected, you can begin the NethVoice migration process. This involves three phases: starting the migration, synchronizing data, and finishing the migration.
 
-### Phase 1: Start Migration
+### Phase 1: Start Migration {#phase-1-start-migration}
 
 This phase installs NethVoice on NS8 and performs the initial data synchronization.
 
-#### Steps to Start
+#### Steps to Start {#steps-to-start}
 
 1. **Locate NethVoice in Application List**
    - After successful connection, you'll see a list of installed NS7 applications
@@ -184,7 +184,7 @@ This phase installs NethVoice on NS8 and performs the initial data synchronizati
    - Click **Confirm** or **Start**
    - The migration process begins
 
-#### What Happens During Start
+#### What Happens During Start {#what-happens-during-start}
 
 - NethVoice application is installed on the NS8 node
 - If NethVoice Proxy is not installed, it's installed automatically
@@ -200,11 +200,11 @@ This phase installs NethVoice on NS8 and performs the initial data synchronizati
 The first synchronization can take several hours depending on your data volume. The system uses Rsync for efficient data transfer.
 :::
 
-### Phase 2: Data Synchronization
+### Phase 2: Data Synchronization {#phase-2-data-synchronization}
 
 This is the most important phase for minimizing final downtime. Perform multiple sync cycles to keep NS8 data current.
 
-#### Sync Process
+#### Sync Process {#sync-process}
 
 1. **Monitor Initial Sync**
    - Watch the progress indicator
@@ -221,7 +221,7 @@ This is the most important phase for minimizing final downtime. Perform multiple
    - Each sync brings NS8 closer to NS7 current state
    - Final cutover time is reduced significantly
 
-#### What Gets Synchronized
+#### What Gets Synchronized {#what-gets-synchronized}
 
 Each sync transfers:
 - **New call recordings** since last sync
@@ -230,7 +230,7 @@ Each sync transfers:
 - **Configuration changes**
 - **New voicemail messages**
 
-#### Sync Strategy
+#### Sync Strategy {#sync-strategy}
 
 **Recommended approach**:
 ```
@@ -245,7 +245,7 @@ Day 5: Final sync → Finish migration (shortest)
 The more times you sync, the less data needs to be transferred during final cutover. Aim for at least 3-4 sync cycles before finishing migration.
 :::
 
-#### Monitoring Sync Progress
+#### Monitoring Sync Progress {#monitoring-sync-progress}
 
 - **NS7 Migration Interface**: Shows progress and status
 - **Log File**: `/var/log/ns8-migration.log` on NS7
@@ -255,7 +255,7 @@ The more times you sync, the less data needs to be transferred during final cuto
   ```
 - **NS8 Application Log**: Check the NethVoice application log in NS8
 
-#### Handling Sync Errors
+#### Handling Sync Errors {#handling-sync-errors}
 
 If errors occur during synchronization:
 
@@ -278,11 +278,11 @@ If errors occur during synchronization:
 Aborting migration removes all synced data from NS8. Only abort if you encounter persistent errors that cannot be resolved.
 :::
 
-### Phase 3: Finish Migration
+### Phase 3: Finish Migration {#phase-3-finish-migration}
 
 This is the final cutover phase. Plan this carefully to minimize user impact.
 
-#### Pre-Cutover Checklist
+#### Pre-Cutover Checklist {#pre-cutover-checklist}
 
 Before clicking "Finish migration":
 
@@ -293,7 +293,7 @@ Before clicking "Finish migration":
 - [ ] Support team on standby
 - [ ] Rollback plan documented
 
-#### Finish Migration Steps
+#### Finish Migration Steps {#finish-migration-steps}
 
 1. **Schedule Downtime**
    - Choose a low-usage period (evening, weekend)
@@ -316,7 +316,7 @@ Before clicking "Finish migration":
    - NethVoice started on NS8
    - NethVoice stopped on NS7
 
-#### What Happens Automatically
+#### What Happens Automatically {#what-happens-automatically}
 
 When you finish migration, the system performs these actions:
 
@@ -332,7 +332,7 @@ When you finish migration, the system performs these actions:
 Users accessing the old NethVoice URLs on NS7 will see a redirect page with links to the new NS8 FQDNs. This helps users find the new location.
 :::
 
-#### Post-Finish Tasks
+#### Post-Finish Tasks {#post-finish-tasks}
 
 After finishing migration:
 
@@ -346,18 +346,18 @@ After finishing migration:
    - Wait to verify everything works
    - See next steps for DNS update procedures
 
-## Step 4: Configure NethVoice Proxy
+## Step 4: Configure NethVoice Proxy {#step-4-configure-nethvoice-proxy}
 
 If NethVoice Proxy was automatically installed during migration, you must configure it now.
 
-### Check Proxy Status
+### Check Proxy Status {#check-proxy-status}
 
 1. **Access NS8 Interface**
 2. **Navigate to Applications**
 3. **Find "NethVoice Proxy"**
 4. **Check if it's newly installed** (installed during migration)
 
-### Configuration Required
+### Configuration Required {#configuration-required}
 
 If the proxy was auto-installed, configure:
 
@@ -384,11 +384,11 @@ For detailed configuration steps, see:
 External calls and phone registrations won't work properly until the proxy is correctly configured. Don't skip this step!
 :::
 
-## Step 5: Update DNS Records
+## Step 5: Update DNS Records {#step-5-update-dns-records}
 
 Once you've verified NethVoice is working on NS8, update your DNS records.
 
-### DNS Updates Required
+### DNS Updates Required {#dns-updates-required}
 
 Update the following DNS records to point to your NS8 node:
 
@@ -398,7 +398,7 @@ Update the following DNS records to point to your NS8 node:
 | **A Record** | NethVoice CTI FQDN | NS8 node IP | `cti.example.com` → `192.168.1.100` |
 | **A Record** | NethVoice Proxy FQDN | NS8 node IP | `proxy.example.com` → `192.168.1.100` |
 
-### DNS Update Process
+### DNS Update Process {#dns-update-process}
 
 1. **Access Your DNS Server**
    - Log in to your DNS management interface
@@ -431,7 +431,7 @@ Update the following DNS records to point to your NS8 node:
 Test DNS from different locations (internal network, external network, different ISPs) to ensure proper propagation before decommissioning NS7.
 :::
 
-## Migration Process Summary
+## Migration Process Summary {#migration-process-summary}
 
 Here's the complete migration workflow:
 
@@ -472,11 +472,11 @@ Here's the complete migration workflow:
    (See Post-Migration Steps)
 ```
 
-## Monitoring and Logs
+## Monitoring and Logs {#monitoring-and-logs}
 
 During migration, monitor these logs:
 
-### On NethServer 7
+### On NethServer 7 {#on-nethserver-7}
 
 **Migration Log**:
 ```bash
@@ -496,7 +496,7 @@ grep -i nethvoice /var/log/ns8-migration.log
 tail -f /var/log/messages
 ```
 
-### On NethServer 8
+### On NethServer 8 {#on-nethserver-8}
 
 **Application Log**:
 1. Access NS8 web interface
@@ -511,9 +511,9 @@ tail -f /var/log/messages
 api-cli run module/<nethvoice-instance>/get-logs
 ```
 
-## Troubleshooting Common Issues
+## Troubleshooting Common Issues {#troubleshooting-common-issues}
 
-### Issue: Migration Tool Won't Install
+### Issue: Migration Tool Won't Install {#issue-migration-tool-wont-install}
 
 **Symptoms**: Installation fails or times out
 
@@ -523,7 +523,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 - Check Software Center is working
 - Review `/var/log/messages` for errors
 
-### Issue: Cannot Connect to NS8
+### Issue: Cannot Connect to NS8 {#issue-cannot-connect-to-ns8}
 
 **Symptoms**: Connection fails with timeout or authentication error
 
@@ -534,7 +534,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 - Verify firewall rules
 - Ensure NS8 cluster is running
 
-### Issue: NethVoice Not Listed
+### Issue: NethVoice Not Listed {#issue-nethvoice-not-listed}
 
 **Symptoms**: After connection, NethVoice doesn't appear in application list
 
@@ -544,7 +544,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 - Check migration tool logs
 - Reconnect to NS8 cluster
 
-### Issue: Sync Keeps Failing
+### Issue: Sync Keeps Failing {#issue-sync-keeps-failing}
 
 **Symptoms**: Data synchronization fails repeatedly
 
@@ -555,7 +555,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 - Test connectivity between NS7 and NS8
 - Check file permissions on NS7
 
-### Issue: Finish Migration Hangs
+### Issue: Finish Migration Hangs {#issue-finish-migration-hangs}
 
 **Symptoms**: Final migration doesn't complete
 
@@ -566,7 +566,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 - Verify network connection stable
 - Contact support if hung for over 2 hours
 
-## Additional Resources
+## Additional Resources {#additional-resources}
 
 For more detailed information:
 
@@ -575,7 +575,7 @@ For more detailed information:
 - **[Account Provider Migration](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#account-provider)** - Account provider details
 - **[Migration Logs Documentation](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#logs)** - Log file locations and meanings
 
-## Next Steps
+## Next Steps {#next-steps}
 
 After completing the migration and updating DNS:
 

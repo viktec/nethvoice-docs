@@ -9,11 +9,11 @@ Learn how to configure and manage trunks within the platform. This section cover
 
 A trunk is a connection that links your NethVoice PBX to the public telephone network (PSTN) or to another VoIP system, allowing you to make and receive external calls.
 
-## Trunk Types
+## Trunk Types {#trunk-types}
 
 There are two primary types of SIP trunks used in NethVoice, distinguished by their authentication method.
 
-### Trunks with Registration (Register Trunks)
+### Trunks with Registration (Register Trunks) {#trunks-with-registration-register-trunks}
 
 This is the most common type of trunk, typically used to connect to an Internet Telephony Service Provider (ITSP).
 
@@ -21,7 +21,7 @@ This is the most common type of trunk, typically used to connect to an Internet 
 - **IP Address**: This method is suitable for environments where NethVoice has a dynamic public IP address, as the registration process informs the provider of the current IP.
 - **Use Case**: Ideal for most business connections that rely on a standard internet line.
 
-### Trunks without Registration (IP-Based or Peer Trunks)
+### Trunks without Registration (IP-Based or Peer Trunks) {#trunks-without-registration-ip-based-or-peer-trunks}
 
 This type of trunk authenticates based on the IP address of your NethVoice system.
 
@@ -29,7 +29,7 @@ This type of trunk authenticates based on the IP address of your NethVoice syste
 - **IP Address**: This method requires your NethVoice system to have a static, public IP address that does not change.
 - **Use Case**: Commonly used for direct inter-office connections between two PBXs or for connecting to providers that offer IP-based authentication.
 
-## Best Practices for Trunk Management
+## Best Practices for Trunk Management {#best-practices-for-trunk-management}
 
 Following these best practices will help ensure your trunk connections are secure, reliable, and efficient.
 

@@ -5,11 +5,11 @@ sidebar_position: 4
 
 # Gateway provisioning
 
-## Supported Gateways
+## Supported Gateways {#supported-gateways}
 
 See [supported gateways](supported_gateways) for a list of supported gateways and their firmware versions.
 
-## Provisioning
+## Provisioning {#provisioning}
 
 Gateway configuration is performed using the Wizard.
 
@@ -17,7 +17,7 @@ Provisioning follows the same general rules as phone provisioning, with one impo
 
 Gateways must be online to receive an automatic upload; by default they boot in `DHCP` mode. However, you can also prepare a configuration file in advance for a gateway that is not yet connected by using **Add Gateway**. The generated file can then be uploaded manually via the gateway’s web interface when the device is available.
 
-### Configuring Gateways
+### Configuring Gateways {#configuring-gateways}
 
 To configure the gateway, it is necessary to specify a few required configuration parameters:
 

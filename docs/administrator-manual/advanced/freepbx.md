@@ -13,7 +13,7 @@ Ensure you are familiar with the [basic NethVoice configuration](/docs/administr
 For help with advanced configurations, consult the [official FreePBX documentation](https://wiki.freepbx.org/) or contact NethVoice support.
 :::
 
-### When to Use the Advanced Interface
+### When to Use the Advanced Interface {#when-to-use-the-advanced-interface}
 
 Access the Advanced interface when you need to:
 
@@ -23,7 +23,7 @@ Access the Advanced interface when you need to:
 - Perform system maintenance and troubleshooting
 - Configure custom extensions and applications
 
-### Best Practices
+### Best Practices {#best-practices}
 
 - Always make a system backup before making advanced configuration changes
 - Document any custom configurations you make for future reference
@@ -32,7 +32,7 @@ Access the Advanced interface when you need to:
 
 
 
-## Final settings
+## Final settings {#final-settings}
 
 The wizard is almost complete. You can now configure some final settings before accessing the NethVoice CTI interface:
 

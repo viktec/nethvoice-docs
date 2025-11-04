@@ -14,7 +14,7 @@ The application is available for the following operating systems:
 - macOS 10.13 and later
 - Linux (AppImage) - Not officially supported
 
-## Key Features
+## Key Features {#key-features}
 
 - Complete desktop call management
 - Integration with NethVoice telephone system
@@ -32,7 +32,7 @@ The application is available for the following operating systems:
 - Phone number copy and paste support
 - Operating system notification system integration
 
-## Getting Started
+## Getting Started {#getting-started}
 
 Refer to the following sections:
 

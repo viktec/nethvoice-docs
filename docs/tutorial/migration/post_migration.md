@@ -7,9 +7,9 @@ sidebar_position: 3
 
 After completing the NethVoice migration from NethServer 7 to NethServer 8, verify that everything works correctly before decommissioning the old system.
 
-## System Verification
+## System Verification {#system-verification}
 
-### Check Service Status
+### Check Service Status {#check-service-status}
 
 1. **Access NS8 Interface**
    - Navigate to `https://<ns8-server>/cluster-admin/`
@@ -24,9 +24,9 @@ After completing the NethVoice migration from NethServer 7 to NethServer 8, veri
    - From NethVoice admin, go to **Advanced (FreePBX)** → **Reports** → **CDR Reports**
    - Verify historical call records are present
 
-## Users and Extensions
+## Users and Extensions {#users-and-extensions}
 
-### Account Provider
+### Account Provider {#account-provider}
 
 1. **Verify Users**
    - NS8 interface → **Domains and users**
@@ -45,9 +45,9 @@ After completing the NethVoice migration from NethServer 7 to NethServer 8, veri
    - Reboot test phones and check registration
    - Update DHCP option 66 if needed for new provisioning server
 
-## Telephony Testing
+## Telephony Testing {#telephony-testing}
 
-### Core Features
+### Core Features {#core-features}
 
 Test the following systematically:
 
@@ -64,7 +64,7 @@ Test the following systematically:
 Create a checklist for your specific features and test each one systematically.
 :::
 
-## Data Verification
+## Data Verification {#data-verification}
 
 Verify migrated data is accessible:
 
@@ -73,9 +73,9 @@ Verify migrated data is accessible:
 - **CDR data**: Historical reports from before migration
 - **Extensions configuration**: Device associations, codec settings
 
-## Network Configuration
+## Network Configuration {#network-configuration}
 
-### DNS and Certificates
+### DNS and Certificates {#dns-and-certificates}
 
 1. **Verify DNS Records**
    ```bash
@@ -92,9 +92,9 @@ Verify migrated data is accessible:
    - Verify certificates are valid
    - No browser warnings when accessing interfaces
 
-## Account Provider Finalization
+## Account Provider Finalization {#account-provider-finalization}
 
-### For Samba Active Directory
+### For Samba Active Directory {#for-samba-active-directory}
 
 - Verify all users and groups present
 - Test authentication
@@ -103,7 +103,7 @@ Verify migrated data is accessible:
 
 See: [Samba DC Migration Documentation](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#samba-dc)
 
-### For OpenLDAP
+### For OpenLDAP {#for-openldap}
 
 ⚠️ **Important**: Password policies were NOT migrated automatically
 
@@ -111,9 +111,9 @@ See: [Samba DC Migration Documentation](https://docs.nethserver.org/projects/ns8
 2. Configure password strength and expiration policies
 3. Test with new password changes
 
-## NS7 Cleanup
+## NS7 Cleanup {#ns7-cleanup}
 
-### Monitor and Redirect
+### Monitor and Redirect {#monitor-and-redirect}
 
 1. **Check Redirect Pages**
    - Access old NethVoice URL on NS7
@@ -138,9 +138,9 @@ Keep NS7 offline but preserved for 30-90 days for emergency rollback if needed.
 :::
 
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
-### Common Issues
+### Common Issues {#common-issues}
 
 **Phones Not Registering**
 - Update provisioning server address to NS8
@@ -171,7 +171,7 @@ dig cti.example.com +short
 - Wait 24-48 hours for DNS propagation
 - Use alternate DNS (8.8.8.8) for testing
 
-## Final Checklist
+## Final Checklist {#final-checklist}
 
 Before considering migration complete:
 
@@ -185,7 +185,7 @@ Before considering migration complete:
 - [ ] No phones registered to NS7
 - [ ] Account provider finalized
 
-## Next Steps
+## Next Steps {#next-steps}
 
 1. **Establish Backup Schedule**
    - Configure automated backups for NS8
@@ -196,7 +196,7 @@ Before considering migration complete:
    - Verify no dependencies
    - Archive final backup
 
-## Congratulations!
+## Congratulations! {#congratulations}
 
 You have successfully completed the NethVoice migration to NethServer 8. Your system is now running on the modern NS8 platform with improved performance and security.
 

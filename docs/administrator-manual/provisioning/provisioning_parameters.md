@@ -7,7 +7,7 @@ sidebar_position: 6
 
 The functions of phones that can be configured through provisioning are grouped in various panels within the NethVoice administration interface. This guide describes the configurable provisioning parameters organized by functional category.
 
-## Overview
+## Overview {#overview}
 
 Not all phone models offer the same functions, so some parameters or entire panels might not be displayed for all devices.
 
@@ -15,7 +15,7 @@ Not all phone models offer the same functions, so some parameters or entire pane
 
 Refer to [Phone Configuration Priority](./phone_provisioning.md#phone-configuration-priority) for more information about the configuration hierarchy.
 
-## Soft Keys
+## Soft Keys {#soft-keys}
 
 The **soft keys** are programmable phone keys designated for calling phone functions.
 
@@ -41,7 +41,7 @@ In the Label column, the term "default" signifies that if the Label field is lef
 | Prefix | Add the specified digits to the dialed number | The digits of the prefix | Yes (default) |
 | LDAP | Display the LDAP address book configured on the phone | No | Yes (default) |
 
-## Line Keys
+## Line Keys {#line-keys}
 
 The **line keys** are programmable phone keys that resemble soft keys but are more specifically designed for call management and monitoring the status of extensions.
 
@@ -76,7 +76,7 @@ In the Label column, the term "default" signifies that if the Label field is lef
 | Phone lock | Activate the phone lock feature, restricting access to the keys and interface. The unlock sequence needs to be configured according to the phone's documentation | No | Yes (default) |
 | LDAP | Show configured LDAP address book on the phone | No | Yes (default) |
 
-## Expansion Keys
+## Expansion Keys {#expansion-keys}
 
 The **Expansion Keys** are programmable buttons on expansion modules, devices that can be connected to the phone to increase the number of available keys.
 
@@ -84,7 +84,7 @@ If the expansion module provides more keys than are displayed in the NethVoice a
 
 Expansion keys are configured similarly to [Line Keys](#line-keys), so refer to that section for the available types and parameters.
 
-## Screen and Ringtone
+## Screen and Ringtone {#screen-and-ringtone}
 
 This section allows configuration of the phone's display and audio alert settings:
 
@@ -104,11 +104,11 @@ This section allows configuration of the phone's display and audio alert setting
 
 - **Screen Contrast**: Select the contrast level of the screen.
 
-## Preferences
+## Preferences {#preferences}
 
 This section contains important configuration parameters for phone operation:
 
-### Time Settings
+### Time Settings {#time-settings}
 
 - **NTP Server Address**: The hostname or IP address of the Network Time Protocol (NTP) server to automatically set the phone's time.
 
@@ -118,40 +118,40 @@ This section contains important configuration parameters for phone operation:
 
 - **Date Format**: Choice of the date format displayed on the phone's screen.
 
-### Provisioning Schedule
+### Provisioning Schedule {#provisioning-schedule}
 
 - **Provisioning Schedule**: 
   - *Only at startup*: Phones renew their configuration after turning on or restarting
   - *Every day*: Phones autonomously renew their configuration at a random time during the night
 
-### Call Transfer
+### Call Transfer {#call-transfer}
 
 - **Transfer Mode for Line Keys**: Specifies how line keys transfer the ongoing call to another extension:
   - **New Call**: Initiates a new call to the extension configured on the line key, placing the current call on hold
   - **Consultative**: Always places the current call on hold, and the transfer completion can occur while the extension is ringing or even after the answer
   - **Blind/No Confirmation**: Immediately transfers the current call to the configured extension
 
-### Language and Localization
+### Language and Localization {#language-and-localization}
 
 - **Phone Language**: Language used by the phone's screen and its web interface.
 
 - **Ring Tones**: These are specific to each country and indicate call status through an audible signal (free tone, busy tone, hang-up tone, etc.).
 
-### Firmware Management
+### Firmware Management {#firmware-management}
 
 - **Firmware**: Upload and selection of a new firmware version for the phone. Refer to [Phone Provisioning](./phone_provisioning.md#firmware-upgrade) for details on firmware updates.
 
-## LDAP Phonebook
+## LDAP Phonebook {#ldap-phonebook}
 
 The LDAP Phonebook section allows integration with external directory services.
 
-### Address Book Type
+### Address Book Type {#address-book-type}
 
 The first two options in the **Address Book Type** do not allow further modifications:
 - Phones will use the fixed and unmodifiable centralized phonebook of NethVoice
 - By selecting "Custom phonebook," you can modify the remaining fields to connect phones to a third-party LDAP server
 
-### LDAP Configuration Parameters
+### LDAP Configuration Parameters {#ldap-configuration-parameters}
 
 - **Server Address**: Hostname or IP address of the LDAP server.
 
@@ -182,15 +182,15 @@ The first two options in the **Address Book Type** do not allow further modifica
 
 - **Attribute for Other Phone Number**: LDAP attribute containing other phone numbers.
 
-## Network
+## Network {#network}
 
 This section configures network-level parameters for the phone.
 
-### DHCP Configuration
+### DHCP Configuration {#dhcp-configuration}
 
 Phones use the DHCP protocol to receive network configuration: IP address, subnet mask, DNS, and gateway. In some cases, DHCP is also used to obtain the provisioning URL (refer to [Provisioning Methods](./phone_provisioning.md#provisioning-methods)).
 
-### VLAN Configuration
+### VLAN Configuration {#vlan-configuration}
 
 The following parameters can be configured for VLAN support:
 
@@ -202,7 +202,7 @@ The following parameters can be configured for VLAN support:
 Entering an incorrect VLAN identifier can render the phone unreachable. Test VLAN configurations carefully.
 :::
 
-### VLAN Field Values
+### VLAN Field Values {#vlan-field-values}
 
 In the VLAN fields:
 - Empty string `""` usually considers the setting at a lower priority (model or default)
@@ -210,7 +210,7 @@ In the VLAN fields:
 
 ---
 
-## Best Practices for Provisioning Parameters
+## Best Practices for Provisioning Parameters {#best-practices-for-provisioning-parameters}
 
 1. **Test in Development**: Always test parameter configurations on a non-production phone before deploying to production devices.
 

@@ -11,11 +11,11 @@ New features and improvements are only available in the new API.
 
 ---
 
-## Authentication
+## Authentication {#authentication}
 
 The new authentication method uses JWT (JSON Web Tokens) for secure API access.
 
-### Login
+### Login {#login}
 
 **Endpoint:** `POST /api/login`
 
@@ -39,7 +39,7 @@ curl -X POST https://nethcti.example.com/api/login \
 - `expire`: Token expiration timestamp
 - `token`: JWT token to use in subsequent requests
 
-### Logout
+### Logout {#logout}
 
 **Endpoint:** `POST /api/logout`
 
@@ -52,7 +52,7 @@ curl -X POST https://nethcti.example.com/api/logout \
 
 **Note:** Logout only invalidates the specific token. Other sessions for the same user remain active.
 
-### Using JWT Tokens
+### Using JWT Tokens {#using-jwt-tokens}
 
 Include the JWT token in all authenticated requests using the `Authorization: Bearer` header:
 
@@ -63,11 +63,11 @@ curl https://nethcti.example.com/api/user/me \
 
 ---
 
-## WebSocket
+## WebSocket {#websocket}
 
 Connect to the CTI server using WebSocket for real-time event streaming and bidirectional communication.
 
-### Connection
+### Connection {#connection}
 
 **Endpoint:** `/api/ws/`
 
@@ -90,7 +90,7 @@ socket.on('event', (data) => {
 });
 ```
 
-### WebSocket CLI Testing
+### WebSocket CLI Testing {#websocket-cli-testing}
 
 Use `websocat` to test WebSocket connections from the command line:
 
@@ -109,11 +109,11 @@ websocat "wss://nethcti.example.com/api/ws/?EIO=4&transport=websocket"
 
 ---
 
-## Two-Factor Authentication (2FA)
+## Two-Factor Authentication (2FA) {#two-factor-authentication-2fa}
 
 Secure API access with optional two-factor authentication using time-based one-time passwords (TOTP).
 
-### Generate QR Code
+### Generate QR Code {#generate-qr-code}
 
 **Endpoint:** `GET /api/2fa/qr-code`
 
@@ -136,7 +136,7 @@ curl -X GET https://nethcti.example.com/api/2fa/qr-code \
 
 The `url` can be converted to a QR code image or entered directly into an authenticator app (Google Authenticator, Microsoft Authenticator, Authy, etc.).
 
-### Verify OTP Code
+### Verify OTP Code {#verify-otp-code}
 
 **Endpoint:** `POST /api/2fa/verify-otp`
 
@@ -161,7 +161,7 @@ curl -X POST https://nethcti.example.com/api/2fa/verify-otp \
 
 **Important:** After OTP verification, a new token is returned with `otp_verified: true`. Use the new token for subsequent API requests.
 
-### Generate Recovery Codes
+### Generate Recovery Codes {#generate-recovery-codes}
 
 **Endpoint:** `POST /api/2fa/recovery-codes`
 
@@ -179,7 +179,7 @@ curl -X POST https://nethcti.example.com/api/2fa/recovery-codes \
 
 You receive 5 single-use 6-digit codes. Store them securely.
 
-### Check 2FA Status
+### Check 2FA Status {#check-2fa-status}
 
 **Endpoint:** `GET /api/2fa/status`
 
@@ -193,7 +193,7 @@ curl -X GET https://nethcti.example.com/api/2fa/status \
 {"status": true}
 ```
 
-### Disable 2FA
+### Disable 2FA {#disable-2fa}
 
 **Endpoint:** `POST /api/2fa/disable`
 
@@ -208,7 +208,7 @@ curl -X POST https://nethcti.example.com/api/2fa/disable \
 
 **Note:** This operation requires your password and invalidates all JWT tokens for the user.
 
-### Login Flow with 2FA
+### Login Flow with 2FA {#login-flow-with-2fa}
 
 Complete login process when 2FA is enabled:
 
@@ -233,14 +233,14 @@ curl https://nethcti.example.com/api/user/me \
 
 ---
 
-## Legacy Method (Deprecated)
+## Legacy Method (Deprecated) {#legacy-method-deprecated}
 
 :::warning Deprecation Notice
 The legacy authentication method using HMAC-SHA1 tokens will no longer be available after **June 1, 2026**. 
 Please migrate to the new JWT-based authentication method as soon as possible.
 :::
 
-### Legacy Login
+### Legacy Login {#legacy-login}
 
 The legacy method required a challenge-response process with HMAC-SHA1:
 
@@ -265,7 +265,7 @@ curl https://nethcti.example.com/webrest/user/me \
   -H "Authorization: user:calculated_token_here"
 ```
 
-### Legacy Token Usage
+### Legacy Token Usage {#legacy-token-usage}
 
 Include the token in the `Authorization` header for authenticated requests:
 
@@ -274,7 +274,7 @@ curl https://nethcti.example.com/webrest/user/me \
   -H "Authorization: username:abc123def456..."
 ```
 
-### Legacy WebSocket
+### Legacy WebSocket {#legacy-websocket}
 
 **Endpoint:** `/socket.io/`
 
@@ -286,7 +286,7 @@ const socket = io('https://nethcti.example.com', {
 
 ---
 
-## Migration Guide: Legacy to New Method
+## Migration Guide: Legacy to New Method {#migration-guide-legacy-to-new-method}
 
 To migrate from the legacy authentication to the new JWT-based method:
 

@@ -9,14 +9,14 @@ NethVoice CTI is the web client of [NethVoice](https://www.nethesis.it/soluzioni
 
 It allows you to make calls and collaborate with customers and colleagues through your browser.
 
-## Supported Browsers
+## Supported Browsers {#supported-browsers}
 
 The currently supported browsers are:
 - Google Chrome - Version 121.0.6167.189 and later
 - Mozilla Firefox - Version 123.0 and later
 - Microsoft Edge - Version 122.0.2365.59 and later
 
-## Key Features
+## Key Features {#key-features}
 
 - **Web-based access**: Access from any browser without installation
 - **Call management**: Make, receive, and manage calls directly from your browser
@@ -29,7 +29,7 @@ The currently supported browsers are:
 - **Call notifications**: Get alerts for incoming calls
 - **Multi-tab support**: Use multiple tabs simultaneously
 
-## Getting Started
+## Getting Started {#getting-started}
 
 To start using NethVoice CTI:
 

@@ -7,11 +7,11 @@ sidebar_position: 2
 
 NethVoice runs on top of **NethServer 8 (NS8)**, an open-source unified Linux infrastructure platform. This page guides you through installing NethServer 8, which is a prerequisite for NethVoice installation.
 
-## System Requirements
+## System Requirements {#system-requirements}
 
 Before installing NethServer 8, ensure your system meets the following requirements:
 
-### Hardware Requirements
+### Hardware Requirements {#hardware-requirements}
 
 For a single node installation:
 
@@ -24,7 +24,7 @@ For a single node installation:
 Additional nodes can be added later. When scaling, use similar hardware and the same Linux distribution for consistency. Requirements should be increased based on users, applications, and load.
 :::
 
-### Supported Linux Distributions
+### Supported Linux Distributions {#supported-linux-distributions}
 
 NethServer 8 can be installed on the following distributions:
 
@@ -41,15 +41,15 @@ NethServer 8 can be installed on the following distributions:
 Install on a **clean Linux server** only. Do not install on desktop systems or servers running other services.
 :::
 
-### Network Requirements
+### Network Requirements {#network-requirements}
 
-#### Static IP Address
+#### Static IP Address {#static-ip-address}
 
 - **Mandatory**: Assign a static IP address to the node
 - **Not allowed**: DHCP and dynamic IP discovery protocols
 - **Internet**: Working internet connection required for installation, configuration, and updates
 
-#### Name Resolution
+#### Name Resolution {#name-resolution}
 
 Configure DNS servers for the node:
 
@@ -64,7 +64,7 @@ Configure DNS servers for the node:
 - Do not mix DNS servers from different scopes (e.g., public Cloudflare + private DNS)
 :::
 
-#### DNS Configuration
+#### DNS Configuration {#dns-configuration}
 
 The node's **Fully Qualified Domain Name (FQDN)** must be properly configured:
 
@@ -75,7 +75,7 @@ The node's **Fully Qualified Domain Name (FQDN)** must be properly configured:
 3. **Routable IP**: The FQDN must resolve to a routable IP address
 4. **TLS Certificates**: Correct FQDN and DNS setup are essential for TLS encryption to work properly
 
-#### Worker Node Requirements (for clustering)
+#### Worker Node Requirements (for clustering) {#worker-node-requirements-for-clustering}
 
 If adding worker nodes to a cluster:
 
@@ -83,22 +83,22 @@ If adding worker nodes to a cluster:
 2. HTTPS server (TCP port 443) at that address must handle API requests
 3. VPN UDP port (default 55820) must not be blocked by firewalls or network appliances
 
-### Web Browser Requirements
+### Web Browser Requirements {#web-browser-requirements}
 
 To access the NethServer 8 web interface, use an up-to-date version of:
 - Firefox
 - Chrome
 - Chromium
 
-## Installation Methods
+## Installation Methods {#installation-methods}
 
 NethServer 8 can be installed using two methods:
 
-### Method 1: Standard Procedure
+### Method 1: Standard Procedure {#method-1-standard-procedure}
 
 For most installations, use the standard installation procedure.
 
-#### Installation Steps
+#### Installation Steps {#installation-steps}
 
 1. **Install curl** (if not already available):
 ```bash
@@ -112,14 +112,14 @@ curl https://raw.githubusercontent.com/NethServer/ns8-core/ns8-stable/core/insta
 
 3. **Wait for completion**: The script will install all NethServer 8 core components.
 
-### Method 2: Pre-built Virtual Machine Image
+### Method 2: Pre-built Virtual Machine Image {#method-2-pre-built-virtual-machine-image}
 
 A pre-built Rocky Linux 9 image is available for quick deployment on virtual platforms.
 
 See the official NethServer documentation for more details: [NethServer 8 Pre-built Images](https://docs.nethserver.org/projects/ns8/en/latest/install.html#pre-built-image).
 
 
-## Post-Installation Steps
+## Post-Installation Steps {#post-installation-steps}
 
 After installation completes:
 
@@ -142,11 +142,11 @@ After cluster setup, you can:
 2. **Install NethVoice**: Proceed with [NethVoice installation](nethvoice_install) via the Software Center
 
 
-## User Domains
+## User Domains {#user-domains}
 
 User domains store users and groups in an LDAP database. NethVoice requires at least one user domain to manage extensions, users, and authentication.
 
-### Overview
+### Overview {#overview}
 
 NethServer 8 supports two types of LDAP account providers:
 
@@ -161,7 +161,7 @@ NethServer 8 supports two types of LDAP account providers:
 NethVoice requires at least one configured user domain. Choose **OpenLDAP (RFC2307)** for simpler deployments or **Active Directory** if you need Windows client support.
 :::
 
-### Quick Setup: OpenLDAP (Recommended for NethVoice)
+### Quick Setup: OpenLDAP (Recommended for NethVoice) {#quick-setup-openldap-recommended-for-nethvoice}
 
 OpenLDAP is the simplest option for NethVoice-only deployments:
 
@@ -193,9 +193,9 @@ Key topics in the official docs:
 - **LDAP Provider Replicas**: Fault tolerance and redundancy
 - **LDAP binding settings**: Connect external application to a local-running LDAP server
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
-### Node Unreachable
+### Node Unreachable {#node-unreachable}
 
 If the node is unreachable after installation:
 - Verify static IP configuration
@@ -203,7 +203,7 @@ If the node is unreachable after installation:
 - Ensure firewall allows HTTPS (port 443)
 - Review network interface configuration
 
-### Network Configuration Issues
+### Network Configuration Issues {#network-configuration-issues}
 
 If you need to reconfigure network settings:
 - Access the console directly or via IPMI/KVM

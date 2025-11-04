@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # NethVoice Administrator Manual
 
-## What is NethVoice?
+## What is NethVoice? {#what-is-nethvoice}
 
 NethVoice is a comprehensive, unified communications platform built on open-source technologies. It integrates voice, video, and mobile capabilities into a single, powerful PBX system that organizations of any size can deploy and manage.
 
@@ -15,7 +15,7 @@ Unlike traditional proprietary PBX systems, NethVoice combines the flexibility o
 This documentation covers the complete installation, configuration, and management of NethVoice on NethServer 8. Whether you're deploying your first system or managing multiple instances, you'll find comprehensive guides for every aspect of NethVoice.
 :::
 
-## Quick Navigation
+## Quick Navigation {#quick-navigation}
 
 Get started quickly by jumping to the most important sections:
 
@@ -24,7 +24,7 @@ Get started quickly by jumping to the most important sections:
 - **[User Management & Administration](../user-manual/)** - CTI, extensions, and user administration
 - **[Administrator Resources](#core-components)** - System configuration and advanced topics
 
-## Core Components
+## Core Components {#core-components}
 
 NethVoice is built on seven main open-source components:
 
@@ -40,9 +40,9 @@ NethVoice is built on seven main open-source components:
 
 Additional services include **MariaDB** for data storage and **Let's Encrypt** for SSL certificate automation.
 
-## Key Features Overview
+## Key Features Overview {#key-features-overview}
 
-### Communication & Routing
+### Communication & Routing {#communication--routing}
 
 - **FreePBX & Asterisk Integration**: Web-based GUI for managing complete telephony services
 - **Inbound/Outbound Routing**: Visual call flow editor with customizable route priorities
@@ -50,7 +50,7 @@ Additional services include **MariaDB** for data storage and **Let's Encrypt** f
 - **User and Extension Management**: Associate users with extensions with granular control
 - **Click-to-Call**: Initiate calls from web or desktop clients with NethLink integration
 
-### Device Management & Provisioning
+### Device Management & Provisioning {#device-management--provisioning}
 
 - **Automated Phone Provisioning**: Tancredi provisioning engine for supported phone models
 - **Supported Devices**: Compatibility with NethPhone, Fanvil, Yealink, Snom, Gigaset, Grandstream, Patton and more
@@ -60,21 +60,21 @@ Additional services include **MariaDB** for data storage and **Let's Encrypt** f
 - **Gateway Provisioning**: Automated and manual configuration for supported gateways
 - **Provisioning Parameters**: Configure soft keys, line keys, expansion keys, screen/ringtone settings, LDAP phonebook
 
-### User Management & Permissions
+### User Management & Permissions {#user-management--permissions}
 
 - **Group and Profile Management**: Create user groups with granular permission profiles
 - **Permissions System**: Fine-grained control over telephony features, address book, CDR, customer cards, presence, queues
 - **Operator Stations**: Configure dedicated switchboard operator environments
 - **User Domains**: Support for LDAP or Active Directory integration for centralized user management
 
-### Communication Tools & Interfaces
+### Communication Tools & Interfaces {#communication-tools--interfaces}
 
 - **CTI Server and Client**: APIs and web applications for switchboard operations
 - **WebRTC Support**: Integration with Janus for video and web communications
 - **Dashboard**: Real-time overview of users, devices, trunks, and system status
 - **Reporting System**: Call Detail Records (CDR) and queue analytics
 
-### Advanced Features
+### Advanced Features {#advanced-features}
 
 - **Multi-instance Support**: Install multiple NethVoice instances on the same NethServer node
 - **Applications Framework**: Create and manage customer cards, address book sources, and parameterized URLs
@@ -82,9 +82,9 @@ Additional services include **MariaDB** for data storage and **Let's Encrypt** f
 - **Parameterized URLs**: Trigger custom URLs on call events with dynamic parameters
 - **Let's Encrypt Integration**: Automated SSL certificate management
 
-## Getting Started
+## Getting Started {#getting-started}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
 Before deploying NethVoice, ensure you have:
 
@@ -94,7 +94,7 @@ Before deploying NethVoice, ensure you have:
 - ✅ **User Domain**: Created for users and authentication (see [User Domains in NethServer Installation](./install/nethserver.md#user-domains))
 - ✅ **NethVoice Proxy**: Installed and configured with proper FQDN and DNS records (required for any NethVoice deployment)
 
-### Deployment Steps
+### Deployment Steps {#deployment-steps}
 
 1. **[Review System Requirements](./install/nethserver#system-requirements)** - Ensure your infrastructure meets requirements
 2. **[Install NethServer 8](./install/nethserver/)** - Deploy the base infrastructure platform
@@ -106,7 +106,7 @@ Before deploying NethVoice, ensure you have:
    - [Manage Extensions](../user-manual/nethcti/) - Create extensions and assign to users
 7. **[Advanced Configuration](./advanced/)** - Configure trunks, gateways, routing, and advanced features
 
-## Key Documentation Sections
+## Key Documentation Sections {#key-documentation-sections}
 
 | Section | Purpose | Learn About |
 |---------|---------|------------|
@@ -131,14 +131,14 @@ The NethVoice module requires that the **NethVoice proxy** be already installed,
 If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation](./advanced/nethvoice_proxy) before installing NethVoice.
 :::
 
-## Support & Additional Resources
+## Support & Additional Resources {#support--additional-resources}
 
 - **Official Documentation**: Full technical reference and advanced configuration guides
 - **Community Support**: Join the NethVoice community for questions and discussions
 - **Professional Services**: Reach out to Nethesis for enterprise deployments and support
 - **Provisioning Guide**: Detailed information on supported phones and gateways in the [Provisioning section](./provisioning/)
 
-## Documentation Structure
+## Documentation Structure {#documentation-structure}
 
 This manual is organized as follows:
 

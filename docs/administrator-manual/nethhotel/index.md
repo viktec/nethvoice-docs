@@ -7,7 +7,7 @@ sidebar_position: 12
 
 NethHotel is a specialized module of NethVoice designed for the management of extensions properly configured as hotel rooms. It provides comprehensive features for managing guest communications, billing, and property management system integration.
 
-## Overview
+## Overview {#overview}
 
 NethHotel enables hotel operators to:
 
@@ -17,7 +17,7 @@ NethHotel enables hotel operators to:
 - **Control Rooms**: Manage room status, groups, and service policies
 - **Generate Reports**: Track call history, billing, and guest usage
 
-## Key Features
+## Key Features {#key-features}
 
 - ✅ **Room Check-in/Check-out** - Manage guest room activation and deactivation
 - ✅ **Wake-up Calls** - Single and group wake-up call scheduling for guests
@@ -29,9 +29,9 @@ NethHotel enables hotel operators to:
 - ✅ **Extras Management** - Track and bill minibar and other charges
 - ✅ **Room Management** - Visual status display and room operations
 
-## Quick Links
+## Quick Links {#quick-links}
 
-### [NethHotel Configuration & Management](nethhotel)
+### [NethHotel Configuration & Management](nethhotel) {#nethhotel-configuration--management}
 
 Complete guide for setting up and managing the NethHotel module:
 - Enable NethHotel in NethVoice configuration
@@ -43,7 +43,7 @@ Complete guide for setting up and managing the NethHotel module:
 - Billing and reporting
 - Phone feature codes
 
-### [FIAS Integration](fias_integration)
+### [FIAS Integration](fias_integration) {#fias-integration}
 
 Property Management System (PMS) integration via FIAS protocol:
 - Oracle Hospitality OPERA certification
@@ -55,7 +55,7 @@ Property Management System (PMS) integration via FIAS protocol:
 - Guest language configuration
 - Integration benefits and workflow
 
-## Getting Started
+## Getting Started {#getting-started}
 
 1. **Enable NethHotel** - Check the Enable Hotel module option in NethVoice settings
 2. **Configure PBX** - Create outbound routes and hotel profiles in NethVoice
@@ -63,7 +63,7 @@ Property Management System (PMS) integration via FIAS protocol:
 4. **Manage Rooms** - Access the NethHotel interface to manage guests and billing
 5. **(Optional) Integrate PMS** - Connect Oracle OPERA for automated guest management
 
-## Access NethHotel
+## Access NethHotel {#access-nethhotel}
 
 The NethHotel application is accessible at:
 ```
@@ -73,7 +73,7 @@ https://<nethvoice_domain>/freepbx/hotel/rooms.php
 Or from NethVoice administrator wizard:
 **Administration** → **Advanced (freepbx)** → **Applications** → **NethHotel**
 
-## Learn More
+## Learn More {#learn-more}
 
 - See the [NethHotel Configuration & Management](nethhotel) guide for comprehensive setup and operation details
 - Review [FIAS Integration](fias_integration) for PMS connection and automation

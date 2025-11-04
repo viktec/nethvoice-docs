@@ -7,11 +7,11 @@ sidebar_position: 11
 
 The Dashboard serves as the initial page of NethVoice following the first configuration. It offers a comprehensive overview of the elements involved in NethVoice's operation, providing administrators with real-time insights into system status and user activity.
 
-## Users
+## Users {#users}
 
 The Users section of the Dashboard showcases all users configured in NethVoice along with their presence status and associated telephone devices.
 
-### Presence Status
+### Presence Status {#presence-status}
 
 Each user's current presence status is displayed, which can include:
 
@@ -20,11 +20,11 @@ Each user's current presence status is displayed, which can include:
 - **Away**: User is temporarily unavailable
 - **Offline**: User is not registered or connected
 
-### Resetting Presence Status
+### Resetting Presence Status {#resetting-presence-status}
 
 If a user's presence configuration deviates from the expected state, you can reset it to the default "Available" state by clicking the eraser/reset symbol next to their name. This is useful when presence status becomes stuck due to technical issues or unexpected disconnections.
 
-### Device Details
+### Device Details {#device-details}
 
 Clicking to view details about an individual device displays the following telephone device information:
 
@@ -40,7 +40,7 @@ Clicking to view details about an individual device displays the following telep
 
 This detailed view helps administrators troubleshoot device connectivity issues and monitor device-specific configurations.
 
-## Trunks
+## Trunks {#trunks}
 
 The Trunks section displays all configured VoIP trunks in NethVoice along with their operational status. Each trunk entry shows:
 
@@ -53,7 +53,7 @@ The Trunks section displays all configured VoIP trunks in NethVoice along with t
 | **Status** | Current operational status (e.g., Online, Offline, Error) |
 | **Codec** | The audio codec(s) supported by this trunk |
 
-### Monitoring Trunk Health
+### Monitoring Trunk Health {#monitoring-trunk-health}
 
 Regularly monitoring trunk status from the Dashboard helps ensure:
 
@@ -66,7 +66,7 @@ Regularly monitoring trunk status from the Dashboard helps ensure:
 If a trunk shows as offline or with errors, check the trunk configuration in the Wizard and verify that the provider credentials and connection parameters are correct.
 :::
 
-## Real-time System Overview
+## Real-time System Overview {#real-time-system-overview}
 
 The Dashboard provides a quick visual representation of:
 

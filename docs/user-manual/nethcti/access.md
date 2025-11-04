@@ -11,14 +11,14 @@ Access is provided through a web browser:
 
 The connection link and login credentials are specific to your installation and are provided during the initial setup phase.
 
-## Requirements
+## Requirements {#requirements}
 
 - A modern web browser (Chrome, Firefox, or Edge)
 - Active internet connection
 - Valid NethVoice account
 - Access to your organization's NethVoice server
 
-## Login Steps
+## Login Steps {#login-steps}
 
 1. Open your web browser
 2. Navigate to your NethVoice CTI URL (provided by your administrator)

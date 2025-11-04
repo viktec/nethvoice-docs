@@ -8,13 +8,13 @@ sidebar_position: 5
 We support the following gateway using automatic provisioning. 
 Before using any other gateway, please open a support ticket.
 
-## GRANDSTREAM
+## GRANDSTREAM {#grandstream}
 
 - FXS Models HT801 and HT802
 - FXS Models HT812 and HT814
 - FXS Models GXW4216, GXW4224, GXW4232, and GXW4248
 
-## PATTON
+## PATTON {#patton}
 
 - BRI Trinity Models
 - PRI Trinity Models

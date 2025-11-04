@@ -13,7 +13,7 @@ NethLink configuration is simple and requires only:
 
 Once configured, the Phone Island of NethVoice CTI will automatically run in NethLink instead of in the browser.
 
-## Audio Configuration
+## Audio Configuration {#audio-configuration}
 
 To ensure optimal call quality:
 
@@ -22,7 +22,7 @@ To ensure optimal call quality:
 3. Run the audio test to verify the configuration
 4. Adjust volume levels as needed
 
-## Keyboard Shortcut Configuration
+## Keyboard Shortcut Configuration {#keyboard-shortcut-configuration}
 
 NethLink allows you to customize keyboard shortcuts for common operations:
 
@@ -40,22 +40,22 @@ Currently available shortcuts are:
 - Mute/unmute
 - Hold/resume
 
-## Application Settings
+## Application Settings {#application-settings}
 
-### General Settings
+### General Settings {#general-settings}
 
 - Auto-start with operating system
 - Show notifications
 - Enable system tray integration
 - Theme (light/dark mode)
 
-### Privacy Settings
+### Privacy Settings {#privacy-settings}
 
 - Call history retention period
 - Automatic logout after inactivity
 - Password security settings
 
-### Advanced Settings
+### Advanced Settings {#advanced-settings}
 
 - Proxy configuration
 - SSL certificate verification

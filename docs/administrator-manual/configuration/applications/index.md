@@ -9,7 +9,7 @@ The *Applications* section allows for the creation, modification, or deletion of
 
 For instance, customer cards are set up in the wizard to access the database and to practically display the obtained information, but the actual usage occurs within the NethVoice CTI, during calls or when searching for specific information.
 
-## Available Applications
+## Available Applications {#available-applications}
 
 The following applications are available in the *Applications* section:
 

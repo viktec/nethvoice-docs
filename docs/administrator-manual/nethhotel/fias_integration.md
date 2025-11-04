@@ -7,7 +7,7 @@ sidebar_position: 2
 
 FIAS (Fidelio Interface Application Specification) integration enables NethHotel to connect with hotel Property Management Systems (PMS) such as Oracle Hospitality OPERA for seamless guest management and billing automation.
 
-## Overview
+## Overview {#overview}
 
 NethHotel can be connected to a hotel Property Management System (PMS) compatible with the FIAS data exchange protocol. **NethVoice is Oracle certified**, ensuring smooth integration with Oracle Hospitality systems.
 
@@ -20,7 +20,7 @@ By connecting NethHotel to a compatible PMS, the following functions can be mana
 - **Extras/Minibar Billing**: Billing of minibar items and other extras, including via telephone feature codes
 - **Language Settings**: Automatic configuration of guest's audio message language based on reservation language
 
-## Oracle Certification
+## Oracle Certification {#oracle-certification}
 
 NethVoice has been certified by Oracle for FIAS protocol compatibility, ensuring:
 
@@ -29,22 +29,22 @@ NethVoice has been certified by Oracle for FIAS protocol compatibility, ensuring
 - Support for standard Oracle workflow processes
 - Regular compatibility verification with Oracle updates
 
-## Supported Versions
+## Supported Versions {#supported-versions}
 
-### FIAS Protocol
+### FIAS Protocol {#fias-protocol}
 
 | Component | Version |
 |-----------|---------|
 | **FIAS Protocol** | Fidelio Interface Application Specification (FIAS) 2.20.23 |
 
-### Oracle Hospitality Components
+### Oracle Hospitality Components {#oracle-hospitality-components}
 
 | Component | Version |
 |-----------|---------|
 | **Oracle Hospitality OPERA** | 5.5 |
 | **Oracle Hospitality Interface IFC8** | 8.14.7.0 |
 
-### Oracle PMS Minimum Required Versions
+### Oracle PMS Minimum Required Versions {#oracle-pms-minimum-required-versions}
 
 The following are the minimum required versions (higher versions are also compatible):
 
@@ -55,9 +55,9 @@ The following are the minimum required versions (higher versions are also compat
 | **Opera 5 PMS** | V5.0.04.02 E17 |
 | **Opera 5 PMS** | V5.0.04.03 E10 |
 
-## Configuration
+## Configuration {#configuration}
 
-### Enabling FIAS Integration
+### Enabling FIAS Integration {#enabling-fias-integration}
 
 To enable FIAS integration with your NethHotel installation:
 
@@ -68,7 +68,7 @@ To enable FIAS integration with your NethHotel installation:
 5. Enter the **Hotel FIAS server port** (typically port 7001 for Oracle OPERA)
 6. Save the changes
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
 Before configuring FIAS integration, ensure:
 
@@ -78,25 +78,25 @@ Before configuring FIAS integration, ensure:
 - Firewall rules allow communication between NethVoice and the PMS on the specified port
 - FIAS protocol is enabled in your PMS configuration
 
-## Data Synchronization
+## Data Synchronization {#data-synchronization}
 
 Once FIAS integration is enabled, the systems synchronize data in real-time:
 
-### From PMS to NethVoice
+### From PMS to NethVoice {#from-pms-to-nethvoice}
 
 - Guest check-in triggers room phone activation
 - Guest check-out triggers room phone deactivation
 - Guest language preferences are applied to room phones
 - Wake-up call requests are processed
 
-### From NethVoice to PMS
+### From NethVoice to PMS {#from-nethvoice-to-pms}
 
 - Call detail records (CDR) are sent for billing purposes
 - Extra charges (minibar, services) are recorded
 - Wake-up call status and completion reports are sent
 - Room availability status is updated
 
-## Benefits of FIAS Integration
+## Benefits of FIAS Integration {#benefits-of-fias-integration}
 
 1. **Automated Guest Management**: Eliminate manual room phone activation/deactivation
 2. **Accurate Billing**: Automatically synchronize call charges to guest bills
@@ -105,16 +105,16 @@ Once FIAS integration is enabled, the systems synchronize data in real-time:
 5. **Language Localization**: Automatically set phone messages in guest's language
 6. **Complete Audit Trail**: Maintain detailed records of all calls and charges
 
-## Troubleshooting FIAS Integration
+## Troubleshooting FIAS Integration {#troubleshooting-fias-integration}
 
-### Connection Issues
+### Connection Issues {#connection-issues}
 
 **Problem**: NethVoice cannot connect to PMS
 - **Solution**: Verify the FIAS server host and port are correct and the PMS is running
 - Verify firewall rules allow TCP connection on the specified port
 - Check network connectivity between systems: `telnet <fias_server_host> <port>`
 
-### Synchronization Issues
+### Synchronization Issues {#synchronization-issues}
 
 **Problem**: Guest data is not syncing from PMS to NethVoice
 - **Solution**: Verify FIAS integration is enabled in NethVoice settings
@@ -127,14 +127,14 @@ Once FIAS integration is enabled, the systems synchronize data in real-time:
 - Check that room extensions are properly configured in NethVoice
 - Verify the PMS has billing rules configured for NethHotel integration
 
-### Version Compatibility
+### Version Compatibility {#version-compatibility}
 
 **Problem**: FIAS compatibility errors with newer PMS versions
 - **Solution**: Refer to the [Supported Versions](#supported-versions) section
 - Contact your PMS vendor to confirm FIAS 2.20.23 compatibility
 - Check NethVoice release notes for compatibility updates
 
-## Best Practices
+## Best Practices {#best-practices}
 
 1. **Regular Testing**: Test FIAS integration in a test environment before production deployment
 2. **Backup Strategy**: Maintain regular backups of both NethVoice and PMS configurations
@@ -143,13 +143,13 @@ Once FIAS integration is enabled, the systems synchronize data in real-time:
 5. **Documentation**: Document your PMS connection details securely
 6. **Support Access**: Maintain contact information for both NethVoice and PMS support teams
 
-## Related Documentation
+## Related Documentation {#related-documentation}
 
 - [NethHotel Module Documentation](./configuration) - Complete NethHotel feature reference
 - [Administration Settings](/docs/administrator-manual/administration) - General NethVoice administration
 - [Hotel Configuration Guide](./configuration#how-to-configure-the-pbx) - Detailed PBX configuration for hotel deployments
 
-## Further Information
+## Further Information {#further-information}
 
 For additional details about FIAS protocol specifications and Oracle Hospitality integration, refer to:
 

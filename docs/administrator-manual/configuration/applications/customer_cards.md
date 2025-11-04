@@ -10,7 +10,7 @@ sidebar_position: 1
 The *customer cards* section enables the grouping of information from external databases to the PBX and its display during calls. For example, when receiving a call from a specific customer, retrieve information from the database related to their invoices or any outstanding payments and evaluate whether to provide assistance or not.
 To create a new customer card, follow these steps:
 
-#### Address Book Sources
+#### Address Book Sources {#address-book-sources}
 
 Click on `Create New Source` and complete the form that appears:
 
@@ -24,7 +24,7 @@ Click on `Create New Source` and complete the form that appears:
 
 Press `Save` to add the database source. The newly created source will be listed among the available sources.
 
-#### Template
+#### Template {#template}
 
 Templates serve as the blueprint for your customer cards. They utilize the `ejs` engine, which boasts a JavaScript-like syntax. This allows for the writing of HTML code using specific directives available on the [EJS website](https://github.com/tj/ejs).
 
@@ -37,7 +37,7 @@ To begin the creation process, click on the `Create New Template` button:
 
 The PBX already offers some predefined templates with pre-written HTML code that you can duplicate and modify by altering the color.
 
-#### Customer Cards
+#### Customer Cards {#customer-cards}
 
 After creating the data source and the template for your card, this section requires you to merge the two pieces of information to ensure the card's correct creation. Click on the `Create New Card` button and fill out the form:
 
