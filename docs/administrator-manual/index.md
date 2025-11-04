@@ -19,10 +19,10 @@ This documentation covers the complete installation, configuration, and manageme
 
 Get started quickly by jumping to the most important sections:
 
-- **[Installation Guide](./install/)** - Complete setup instructions from NethServer prerequisites to NethVoice deployment
-- **[Phone Provisioning](./provisioning/)** - Automated phone device management and provisioning
-- **[User Management & Administration](../user-manual/)** - CTI, extensions, and user administration
-- **[Administrator Resources](#core-components)** - System configuration and advanced topics
+- **[Installation Guide](./install/index.md)** - Complete setup instructions from NethServer prerequisites to NethVoice deployment
+- **[Configuration](./configuration/index.md)** - CTI, extensions, and user administration
+- **[Phone Provisioning](./provisioning/index.md)** - Automated phone device management and provisioning
+- **[Advanced Resources](./advanced/index.md)** - System configuration and advanced topics
 
 ## Core Components {#core-components}
 
@@ -90,30 +90,30 @@ Before deploying NethVoice, ensure you have:
 
 - ✅ **System Resources**: Minimum 2 vCPU, 2GB RAM, 40GB storage per instance
 - ✅ **Network Requirements**: Static IP, DNS configured, internet connectivity
-- ✅ **NethServer 8**: Fully installed and configured (see [Installation Guide](./install/))
+- ✅ **NethServer 8**: Fully installed and configured (see [Installation Guide](./install/index.md))
 - ✅ **User Domain**: Created for users and authentication (see [User Domains in NethServer Installation](./install/nethserver.md#user-domains))
 - ✅ **NethVoice Proxy**: Installed and configured with proper FQDN and DNS records (required for any NethVoice deployment)
 
 ### Deployment Steps {#deployment-steps}
 
-1. **[Review System Requirements](./install/nethserver#system-requirements)** - Ensure your infrastructure meets requirements
-2. **[Install NethServer 8](./install/nethserver/)** - Deploy the base infrastructure platform
+1. **[Review System Requirements](./install/nethserver.md#system-requirements)** - Ensure your infrastructure meets requirements
+2. **[Install NethServer 8](./install/nethserver.md)** - Deploy the base infrastructure platform
 3. **[Create User Domain](./install/nethserver.md#user-domains)** - Set up LDAP for users and authentication
-4. **[Install & Configure NethVoice Proxy](./advanced/nethvoice_proxy)** - Deploy the external VoIP gateway (REQUIRED before NethVoice)
-5. **[Deploy NethVoice](./install/nethvoice_install/)** - Install NethVoice module(s) on top of the proxy
+4. **[Install & Configure NethVoice Proxy](./advanced/nethvoice_proxy.md)** - Deploy the external VoIP gateway (REQUIRED before NethVoice)
+5. **[Deploy NethVoice](./install/nethvoice_install.md)** - Install NethVoice module(s) on top of the proxy
 6. **Configure Your System**:
-   - [Provision Phones](./provisioning/) - Deploy and configure telephone devices
-   - [Manage Extensions](../user-manual/nethcti/) - Create extensions and assign to users
-7. **[Advanced Configuration](./advanced/)** - Configure trunks, gateways, routing, and advanced features
+   - [Provision Phones](./provisioning/index.md) - Deploy and configure telephone devices
+   - [Manage Extensions](../user-manual/nethcti/index.md) - Create extensions and assign to users
+7. **[Advanced Configuration](./advanced/index.md)** - Configure trunks, gateways, routing, and advanced features
 
 ## Key Documentation Sections {#key-documentation-sections}
 
 | Section | Purpose | Learn About |
 |---------|---------|------------|
-| **[Installation](./install/)** | System setup and deployment | NethServer, NethVoice installation, prerequisites |
-| **[Provisioning](./provisioning/)** | Phone device management | Supported devices, provisioning methods, configuration |
-| **[Administrator Manual](./administrator-manual/)** | System administration | Users, extensions, trunks, gateways, routing |
-| **[User Manual](../user-manual/)** | End-user features | CTI client, NethCTI, NethLink, calling features |
+| **[Installation](./install/index.md)** | System setup and deployment | NethServer, NethVoice installation, prerequisites |
+| **[Provisioning](./provisioning/index.md)** | Phone device management | Supported devices, provisioning methods, configuration |
+| **[Administrator Manual](./index.md)** | System administration | Users, extensions, trunks, gateways, routing |
+| **[User Manual](../user-manual/index.md)** | End-user features | CTI client, NethCTI, NethLink, calling features |
 
 :::tip Multi-Instance Deployments
 You can install multiple NethVoice instances on the same NethServer 8 node from the Software Center. Each instance requires separate configuration and runs independently. This is useful for multi-tenant deployments or separate business units.
@@ -128,7 +128,7 @@ The NethVoice module requires that the **NethVoice proxy** be already installed,
 - Enables external access even with a single NethVoice instance
 - Routes traffic between multiple NethVoice installations on the same node
 
-If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation](./advanced/nethvoice_proxy) before installing NethVoice.
+If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation](./advanced/nethvoice_proxy.md) before installing NethVoice.
 :::
 
 ## Support & Additional Resources {#support--additional-resources}
@@ -136,7 +136,7 @@ If you haven't set up the proxy yet, refer to the [NethVoice Proxy documentation
 - **Official Documentation**: Full technical reference and advanced configuration guides
 - **Community Support**: Join the NethVoice community for questions and discussions
 - **Professional Services**: Reach out to Nethesis for enterprise deployments and support
-- **Provisioning Guide**: Detailed information on supported phones and gateways in the [Provisioning section](./provisioning/)
+- **Provisioning Guide**: Detailed information on supported phones and gateways in the [Provisioning section](./provisioning/index.md)
 
 ## Documentation Structure {#documentation-structure}
 

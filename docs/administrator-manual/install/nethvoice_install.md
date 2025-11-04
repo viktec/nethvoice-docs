@@ -59,7 +59,7 @@ Make sure that:
 
 Those requeirements are critical to obtain a valid SSL/TLS certificate for secure communications.
 
-See [NethVoice Proxy Documentation](advanced/nethvoice_proxy) for more info.
+See [NethVoice Proxy Documentation](../advanced/nethvoice_proxy.md) for more info.
 
 ### Step 3: Install NethVoice {#step-3-install-nethvoice}
 
@@ -82,7 +82,7 @@ You can install multiple NethVoice instances on the same node. Each will use the
 :::warning Required Prerequisites
 Before proceeding with the configuration of any NethVoice instance, ensure:
 
-1. **NethVoice Proxy is installed** - See [NethVoice Proxy Installation](../nethvoice_proxy/)
+1. **NethVoice Proxy is installed** - See [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md)
 2. **NethVoice Proxy is configured** - Proxy domain (FQDN) must be set and DNS records created
 3. **NethVoice Proxy is running** - Verify proxy status in the node management interface
 4. **User Domain is created** - See [User Domains in NethServer Installation](./nethserver.md#user-domains) (required for NethVoice users and extensions)
@@ -120,7 +120,7 @@ Advanced configuration options:
 The following options are available only with an active Enterprise subscription:
 
 - **Enable Hotel module**: Activate the Hotel module for managing hotel-specific telephony features.
-  See [NethVoice Hotel Module Documentation](/nethhotel/) for more details.
+  See [NethVoice Hotel Module Documentation](/docs/administrator-manual/nethhotel/index.md) for more details.
 - **Hotel FIAS server host**: Enter the IP address or hostname of the Hotel FIAS server.
 - **Hotel FIAS server port**: Specify the port number for the Hotel FIAS server connection.
 

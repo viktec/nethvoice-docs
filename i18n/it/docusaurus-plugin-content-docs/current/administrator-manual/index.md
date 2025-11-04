@@ -19,10 +19,11 @@ Questa documentazione copre l'installazione completa, la configurazione e la ges
 
 Iniziate velocemente passando alle sezioni più importanti:
 
-- **[Guida all'Installazione](./install/)** - Istruzioni di configurazione complete dai prerequisiti di NethServer alla distribuzione di NethVoice
-- **[Provisioning Telefonico](./provisioning/)** - Gestione e provisioning automatico dei dispositivi telefonici
-- **[Gestione Utenti e Amministrazione](../user-manual/)** - CTI, interni e amministrazione utenti
-- **[Risorse Amministratore](#core-components)** - Configurazione del sistema e argomenti avanzati
+- **[Guida all'Installazione](./install/index.md)** - Istruzioni complete per l'installazione, dai prerequisiti di NethServer al deployment di NethVoice
+- **[Configurazione](./configuration/index.md)** - CTI, interni e gestione utenti
+- **[Provisioning Telefoni](./provisioning/index.md)** - Gestione automatica dei dispositivi telefonici e provisioning
+- **[Risorse Avanzate](./advanced/index.md)** - Configurazione di sistema e argomenti avanzati
+
 
 ## Componenti Principali
 

@@ -27,9 +27,9 @@ The destination NS8 system requires:
 - **Adequate Resources**: Sufficient CPU, RAM, and disk space to accommodate NethVoice and its data
   - Minimum: 4 vCPU, 8GB RAM, 100GB disk space
   - Recommended: Scale based on your NS7 usage and data volume
-- **NethVoice Proxy**: Should be pre-installed and configured (see [NethVoice Proxy documentation](/docs/administrator-manual/install/nethvoice_proxy))
+- **NethVoice Proxy**: Should be pre-installed and configured (see [NethVoice Proxy documentation](/docs/administrator-manual/advanced/nethvoice_proxy.md))
   - Note: If not installed, the migration tool will install it automatically, but manual configuration will be required afterward
-- **Supported VoIP trunks and phones**: Ensure that all VoIP trunks and phones used in NS7 are supported in NS8. Check the [Supported Phones](../../administrator-manual/provisioning/supported_phones), [Supported Gateways](../../administrator-manual/provisioning/supported_gateways) and [Supported trunks](../../administrator-manual/provisioning/supported_trunks) documentation for compatibility information.
+- **Supported VoIP trunks and phones**: Ensure that all VoIP trunks and phones used in NS7 are supported in NS8. Check the [Supported Phones](/docs/administrator-manual/provisioning/supported_phones.md), [Supported Gateways](/docs/administrator-manual/provisioning/supported_gateways.md) and [Supported trunks](/docs/administrator-manual/provisioning/supported_trunks.md) documentation for compatibility information.
 
 :::tip Pre-install NethVoice Proxy
 It's highly recommended to install and configure NethVoice Proxy **before** starting the migration. This ensures proper network configuration and reduces post-migration tasks.
@@ -240,7 +240,7 @@ Complete this checklist before starting the migration:
 Before proceeding, review these resources:
 
 - **[NethServer 8 Installation Guide](/docs/administrator-manual/install/nethserver)** - Complete NS8 setup
-- **[NethVoice Proxy Installation](/docs/administrator-manual/install/nethvoice_proxy)** - Proxy setup and configuration
+- **[NethVoice Proxy Installation](/docs/administrator-manual/advanced/nethvoice_proxy)** - Proxy setup and configuration
 - **[Official NS8 Migration Guide](https://docs.nethserver.org/projects/ns8/en/latest/migration.html)** - General NS8 migration procedures
 - **[Account Provider Configuration](https://docs.nethserver.org/projects/ns8/en/latest/user_domains.html)** - User domain setup in NS8
 

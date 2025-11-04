@@ -6,7 +6,7 @@ sidebar_position: 1
 This section grants access to the underlying FreePBX administration panel and other advanced configuration options.
 
 :::warning Prerequisites
-Ensure you are familiar with the [basic NethVoice configuration](/docs/administrator-manual/wizard) before proceeding with advanced settings. Incorrect configurations in this section may impact system stability.
+Ensure you are familiar with the [basic NethVoice configuration](/docs/administrator-manual/configuration/wizard) before proceeding with advanced settings. Incorrect configurations in this section may impact system stability.
 :::
 
 :::info Support

@@ -77,8 +77,8 @@ Step-by-step guides for new users:
 
 **New to NethVoice?** Follow these steps:
 
-1. **[Introduction](/docs/administrator-manual/introduction)** - Understand NethVoice basics and architecture
-2. **[Installation](/docs/administrator-manual/install)** - Set up your NethVoice system
+1. **[Introduction](/docs/administrator-manual/)** - Understand NethVoice basics and architecture
+2. **[Installation](/docs/administrator-manual/install/)** - Set up your NethVoice system
 3. **[Phone Provisioning](/docs/administrator-manual/provisioning/)** - Configure and provision your phones
 4. **[User Manual](/docs/user-manual/)** - Train your users on NethVoice applications
 

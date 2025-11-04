@@ -27,7 +27,6 @@ The migration process converts your NethServer 7 NethVoice installation into a N
 
 :::info Automatic NethVoice Proxy Installation
 If NethVoice Proxy is not already installed on the destination node, the migration tool will install it automatically. However, you'll need to configure it manually after migration completes.
-:::
 
 ## Step 1: Install Migration Tool on NS7 {#step-1-install-migration-tool-on-ns7}
 
@@ -378,7 +377,7 @@ If the proxy was auto-installed, configure:
    - Ensure ports are open in firewall
 
 For detailed configuration steps, see:
-➡️ **[NethVoice Proxy Configuration Guide](/docs/administrator-manual/install/nethvoice_proxy)**
+➡️ **[NethVoice Proxy Configuration Guide](/docs/administrator-manual/advanced/nethvoice_proxy)**
 
 :::warning Proxy Configuration is Critical
 External calls and phone registrations won't work properly until the proxy is correctly configured. Don't skip this step!
@@ -571,7 +570,7 @@ api-cli run module/<nethvoice-instance>/get-logs
 For more detailed information:
 
 - **[Full NS8 Migration Guide](https://docs.nethserver.org/projects/ns8/en/latest/migration.html)** - Complete migration procedures
-- **[NethVoice Proxy Configuration](/docs/administrator-manual/install/nethvoice_proxy)** - Proxy setup guide
+- **[NethVoice Proxy Configuration](/docs/administrator-manual/advanced/nethvoice_proxy)** - Proxy setup guide
 - **[Account Provider Migration](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#account-provider)** - Account provider details
 - **[Migration Logs Documentation](https://docs.nethserver.org/projects/ns8/en/latest/migration.html#logs)** - Log file locations and meanings
 

@@ -43,7 +43,7 @@ Complete guide for setting up and managing the NethHotel module:
 - Billing and reporting
 - Phone feature codes
 
-### [FIAS Integration](fias_integration) {#fias-integration}
+### [FIAS Integration](fias_integration.md) {#fias-integration}
 
 Property Management System (PMS) integration via FIAS protocol:
 - Oracle Hospitality OPERA certification
@@ -76,5 +76,5 @@ Or from NethVoice administrator wizard:
 ## Learn More {#learn-more}
 
 - See the [NethHotel Configuration & Management](nethhotel) guide for comprehensive setup and operation details
-- Review [FIAS Integration](fias_integration) for PMS connection and automation
-- Check [NethVoice main documentation](../../introduction) for general NethVoice features
+- Review [FIAS Integration](fias_integration.md) for PMS connection and automation
+- Check [NethVoice main documentation](../index.md) for general NethVoice features

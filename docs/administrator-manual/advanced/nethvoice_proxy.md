@@ -73,7 +73,7 @@ In this scenario:
 You can install only one NethVoice Proxy per node from the Software Center.
 :::
 
-NethVoice Proxy must be installed **before** deploying any NethVoice instances. See [NethVoice Installation](./nethvoice_install/) for the complete installation sequence.
+NethVoice Proxy must be installed **before** deploying any NethVoice instances. See [NethVoice Installation](../install/nethvoice_install.md) for the complete installation sequence.
 
 ### Installation Steps {#installation-steps}
 
@@ -159,7 +159,7 @@ If your node has multiple public IP addresses, configure the proxy with the spec
 Once NethVoice Proxy is fully configured and running:
 
 1. **Verify proxy is operational**: Check the proxy status in the NethServer management interface
-2. **Proceed to install NethVoice**: See [NethVoice Installation](./nethvoice_install/)
+2. **Proceed to install NethVoice**: See [NethVoice Installation](../install/nethvoice_install.md)
 3. **Configure NethVoice instances**: Each instance requires separate configuration with dedicated FQDNs
 
 :::info Network Diagram
@@ -178,4 +178,4 @@ External Users/Trunks
 The proxy acts as a gateway between external VoIP traffic and internal NethVoice instances.
 :::
 
-Now, you can install and configure one or more NethVoice instances. See [NethVoice Installation](./nethvoice_install/) for detailed steps.
+Now, you can install and configure one or more NethVoice instances. See [NethVoice Installation](../install/nethvoice_install.md) for detailed steps.

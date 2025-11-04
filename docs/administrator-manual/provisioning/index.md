@@ -23,7 +23,7 @@ Provisioning involves the automatic deployment of configuration settings to IP p
 
 This section covers the complete provisioning workflow:
 
-### [Phone Provisioning](phone_provisioning) {#phone-provisioning}
+### [Phone Provisioning](phone_provisioning.md) {#phone-provisioning}
 Learn how to identify phones, associate them with users, and configure automatic provisioning through supported methods (RPS and DHCP). Discover how to manage phone firmware updates and customize phone settings.
 
 **Key Topics:**
@@ -34,7 +34,7 @@ Learn how to identify phones, associate them with users, and configure automatic
 - Firmware upgrades
 - Automatic updates
 
-### [Supported Phones](supported_phones) {#supported-phones}
+### [Supported Phones](supported_phones.md) {#supported-phones}
 Browse the comprehensive list of supported phone models from major manufacturers including NethPhone, Fanvil, Yealink, Snom, and Gigaset. This section details firmware requirements and provisioning compatibility for each manufacturer.
 
 **Featured Manufacturers:**
@@ -44,7 +44,7 @@ Browse the comprehensive list of supported phone models from major manufacturers
 - Snom
 - Gigaset
 
-### [Gateway Provisioning](gateway_provisioning) {#gateway-provisioning}
+### [Gateway Provisioning](gateway_provisioning.md) {#gateway-provisioning}
 Configure gateways for ISDN, analog, and FXO connectivity. Unlike phones, gateways are provisioned via direct telnet connections, allowing real-time configuration uploads to online devices or pre-configuration files for later deployment.
 
 **Key Topics:**
@@ -53,14 +53,14 @@ Configure gateways for ISDN, analog, and FXO connectivity. Unlike phones, gatewa
 - Direct connection configuration
 - File-based configuration deployment
 
-### [Supported Gateways](supported_gateways) {#supported-gateways}
+### [Supported Gateways](supported_gateways.md) {#supported-gateways}
 Review the list of supported gateway models from Grandstream and Patton, including FXS, FXO, BRI, and PRI variants. These gateways enable integration with traditional phone lines and legacy systems.
 
 **Supported Brands:**
 - Grandstream (FXS and analog models)
 - Patton (BRI, PRI, and FXO Trinity models)
 
-### [Provisioning Parameters](provisioning_parameters) {#provisioning-parameters}
+### [Provisioning Parameters](provisioning_parameters.md) {#provisioning-parameters}
 Understand all available provisioning parameters organized by functional categories. This comprehensive guide covers soft keys, line keys, expansion keys, screen and ringtone settings, preferences, LDAP phonebook configuration, and network settings.
 
 **Configuration Areas:**
@@ -73,7 +73,7 @@ Understand all available provisioning parameters organized by functional categor
 - Firmware Management
 - Best Practices for Provisioning
 
-### [Click to Call](click_to_call) {#click-to-call}
+### [Click to Call](click_to_call.md) {#click-to-call}
 Enable users to initiate calls by clicking on phone numbers. This guide covers three implementation methods: Web Phone (browser-based), NethLink (desktop client), and Physical Phones (provisioned desk phones). Learn setup requirements, configuration steps, and troubleshooting for each scenario.
 
 **Coverage:**
@@ -94,8 +94,8 @@ Enable users to initiate calls by clicking on phone numbers. This guide covers t
 
 ## Next Steps {#next-steps}
 
-- **New to Provisioning?** Start with [Phone Provisioning](phone_provisioning) to understand the basics
-- **Setting up Phones?** Check [Supported Phones](supported_phones) for compatibility information
-- **Configuring Gateways?** See [Gateway Provisioning](gateway_provisioning) for detailed instructions
-- **Fine-tuning Settings?** Review [Provisioning Parameters](provisioning_parameters) for all available options
+- **New to Provisioning?** Start with [Phone Provisioning](phone_provisioning.md) to understand the basics
+- **Setting up Phones?** Check [Supported Phones](supported_phones.md) for compatibility information
+- **Configuring Gateways?** See [Gateway Provisioning](gateway_provisioning.md) for detailed instructions
+- **Fine-tuning Settings?** Review [Provisioning Parameters](provisioning_parameters.md) for all available options
 

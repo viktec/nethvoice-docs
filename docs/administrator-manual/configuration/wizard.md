@@ -55,9 +55,9 @@ Trunks are the connections that allow your PBX to send and receive calls to and 
 
 ### Add physical lines {#add-physical-lines}
 
-To add physical lines, you need to configure a supported SIP gateway. See the [Supported Gateways](./provisioning/supported_gateways) section for a list of compatible devices.
+To add physical lines, you need to configure a supported SIP gateway. See the [Supported Gateways](../provisioning/supported_gateways.md) section for a list of compatible devices.
 
-See the [Gateway provisioning](./provisioning/gateway_provisioning) section for detailed instructions on configuring and provisioning your
+See the [Gateway provisioning](../provisioning/gateway_provisioning.md) section for detailed instructions on configuring and provisioning your
 
 Once the settings are saved, you can download the configuration file to upload to the device through its interface.
 
@@ -185,7 +185,7 @@ You can create user groups that will be visible and usable in applications such 
 
 To create a group, click **Create new group**, specify a name (and optional description), save, then assign users and enable the group where needed in profiles and CTI settings.
 
-Click **Next** to proceed to the Profiles section.
+Click the **Next** button to proceed to the Profiles section.
 
 ### Profiles {#profiles}
 
@@ -355,4 +355,4 @@ Ensure that you use a strong password to protect your NethVoice instance from un
 ### Advanced {#advanced}
 
 The Advanced section provides direct access to the NethVoice advanced interface.
-See the [Advanced](./advanced) section for more details.
+See the [Advanced](../advanced/index.md) section for more details.

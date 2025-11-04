@@ -11,11 +11,11 @@ This section covers the complete installation process for NethVoice, from settin
 
 NethVoice installation is a multi-step process:
 
-1. **[NethServer 8 Installation](nethserver)** - Install the NethServer 8 base platform
-2. **[Create User Domain](nethserver#user-domains)** - Set up LDAP for users and authentication (in NethServer)
-3. **[NethVoice Proxy Installation & Configuration](../nethvoice_proxy/)** - Install and configure the external VoIP gateway (REQUIRED first)
-4. **[NethVoice Installation](nethvoice_install)** - Install NethVoice on top of configured proxy
-5. **[Module Configuration](nethvoice_install#module-configuration)** - Configure NethVoice with your requirements
+1. **[NethServer 8 Installation](nethserver.md)** - Install the NethServer 8 base platform
+2. **[Create User Domain](nethserver.md#user-domains)** - Set up LDAP for users and authentication (in NethServer)
+3. **[NethVoice Proxy Installation & Configuration](../advanced/nethvoice_proxy.md)** - Install and configure the external VoIP gateway (REQUIRED first)
+4. **[NethVoice Installation](nethvoice_install.md)** - Install NethVoice on top of configured proxy
+5. **[Module Configuration](nethvoice_install.md#module-configuration)** - Configure NethVoice with your requirements
 
 :::warning Installation Order
 1. NethServer 8 must be installed first
@@ -24,7 +24,7 @@ NethVoice installation is a multi-step process:
 4. NethVoice can only be installed after proxy is ready
 5. NethVoice configuration uses the user domain created in step 2
 
-See [NethVoice Proxy Installation](../nethvoice_proxy/) for details on proxy requirements.
+See [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md) for details on proxy requirements.
 :::
 
 ## What is NethServer 8? {#what-is-nethserver-8}
@@ -56,7 +56,7 @@ Before starting, ensure you have:
 
 ### Step 2: Install NethServer 8 {#step-2-install-nethserver-8}
 
-Follow the [NethServer Installation guide](nethserver) to:
+Follow the [NethServer Installation guide](nethserver.md) to:
 - Install NethServer 8 core components
 - Configure network and DNS
 - Access the web administration interface
@@ -70,7 +70,7 @@ Create a user domain for NethVoice users and extensions:
 - Set admin credentials
 - Note LDAP bind settings (needed for NethVoice configuration)
 
-See [User Domains setup](nethserver#user-domains) in the NethServer Installation guide for details.
+See [User Domains setup](nethserver.md#user-domains) in the NethServer Installation guide for details.
 
 ### Step 4: Install NethVoice Proxy {#step-4-install-nethvoice-proxy}
 
@@ -81,7 +81,7 @@ After NethServer 8 and user domain are ready, install and configure the VoIP pro
 - Set network interface and public IP
 - Verify proxy is running
 
-See [NethVoice Proxy Installation Guide](../nethvoice_proxy/) for detailed steps.
+See [NethVoice Proxy Installation Guide](../advanced/nethvoice_proxy.md) for detailed steps.
 
 ### Step 5: Install NethVoice {#step-5-install-nethvoice}
 
@@ -94,7 +94,7 @@ With NethVoice Proxy configured and running:
 
 ### Step 6: Configure NethVoice {#step-6-configure-nethvoice}
 
-Follow the [NethVoice Installation guide](nethvoice_install) to:
+Follow the [NethVoice Installation guide](nethvoice_install.md) to:
 - Configure NethVoice virtual hosts
 - Verify user domain is selected
 - Configure Let's Encrypt certificates
@@ -137,7 +137,7 @@ Change default credentials immediately after first login for security.
 
 ## Detailed Guides {#detailed-guides}
 
-### [NethServer 8 Installation](nethserver) {#nethserver-8-installation}
+### [NethServer 8 Installation](nethserver.md) {#nethserver-8-installation}
 
 Complete guide covering:
 - System requirements and hardware recommendations
@@ -149,7 +149,7 @@ Complete guide covering:
 - Cluster configuration
 - Troubleshooting
 
-### [NethVoice Proxy Installation](../nethvoice_proxy/) {#nethvoice-proxy-installation}
+### [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md) {#nethvoice-proxy-installation}
 
 Complete guide covering:
 - Proxy overview and architecture
@@ -160,7 +160,7 @@ Complete guide covering:
 - Verification and testing
 - Must be installed BEFORE NethVoice
 
-### [NethVoice Installation](nethvoice_install) {#nethvoice-installation}
+### [NethVoice Installation](nethvoice_install.md) {#nethvoice-installation}
 
 Complete guide covering:
 - Installation order (Proxy → NethVoice)
@@ -255,10 +255,10 @@ After successful installation:
 
 1. **Configure NethVoice**: Complete the NethVoice configuration wizard
 2. **Set up Users**: Create user domains (LDAP or Active Directory)
-3. **Provision Phones**: See [Phone Provisioning guide](../provisioning/)
-4. **User Training**: Use [User Manual](../../user-manual/) to train end users
+3. **Provision Phones**: See [Phone Provisioning guide](../provisioning/index.md)
+4. **User Training**: Use [User Manual](../../user-manual/index.md) to train end users
 5. **Security Hardening**: Configure firewalls and access controls
 
 ---
 
-**Ready to get started?** Begin with the [NethServer 8 Installation guide](nethserver).
+**Ready to get started?** Begin with the [NethServer 8 Installation guide](nethserver.md).

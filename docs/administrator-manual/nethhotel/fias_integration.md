@@ -146,7 +146,7 @@ Once FIAS integration is enabled, the systems synchronize data in real-time:
 ## Related Documentation {#related-documentation}
 
 - [NethHotel Module Documentation](./configuration) - Complete NethHotel feature reference
-- [Administration Settings](/docs/administrator-manual/administration) - General NethVoice administration
+- [Administration Settings](../configuration/wizard.md#administration) - General NethVoice administration
 - [Hotel Configuration Guide](./configuration#how-to-configure-the-pbx) - Detailed PBX configuration for hotel deployments
 
 ## Further Information {#further-information}
