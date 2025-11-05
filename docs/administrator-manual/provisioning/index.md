@@ -83,6 +83,16 @@ Enable users to initiate calls by clicking on phone numbers. This guide covers t
 - Network Requirements and Troubleshooting
 - Best Practices for Users and Administrators
 
+### [Trunk Certification](trunk_certification.md) {#trunk-certification}
+Learn about the VoIP provider certification process for adding new providers to the NethVoice wizard. This section covers certification requirements, testing procedures, and the process for getting your provider certified and supported by Nethesis.
+
+**Key Topics:**
+- Certification process overview
+- Support level differences (certified vs non-certified)
+- Technical contact requirements
+- Testing procedures
+- Certification workflow
+
 ## Provisioning Workflow {#provisioning-workflow}
 
 1. **Register Device MAC Address**: Enter the phone or gateway MAC address into NethVoice

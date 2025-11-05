@@ -82,6 +82,16 @@ Comprendi tutti i parametri di provisioning disponibili organizzati per categori
 5. **Configurazione applicata**: Le impostazioni vengono applicate automaticamente al dispositivo
 6. **Gestione continua**: Aggiorna le impostazioni centralmente; le modifiche vengono trasmesse ai dispositivi
 
+### [Certificazione Trunk](trunk_certification.md)
+Scopri il processo di certificazione dei provider VoIP per aggiungere nuovi provider al wizard di NethVoice. Questa sezione copre i requisiti di certificazione, le procedure di test e il processo per ottenere la certificazione del tuo provider e il supporto di Nethesis.
+
+**Argomenti chiave:**
+- Panoramica del processo di certificazione
+- Differenze di livello di supporto (certificato vs non certificato)
+- Requisiti di contatto tecnico
+- Procedure di test
+- Flusso di lavoro della certificazione
+
 ## Passaggi successivi
 
 - **Nuovo al provisioning?** Inizia con [Phone Provisioning](phone_provisioning.md) per comprendere le basi

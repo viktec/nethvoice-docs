@@ -105,6 +105,7 @@ module.exports = function generateTrunksPlugin(context, options) {
       let mdContent = `---
 id: supported-trunks
 title: Supported VoIP trunks
+sidebar_position: 5
 ---
 
 `;
