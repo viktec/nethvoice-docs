@@ -7,3 +7,4 @@ Benvenuti nel manuale utente di NethVoice. Questa sezione contiene guide rivolte
 
 - [NethVoice CTI](/docs/user-manual/nethcti/) — client web per la gestione delle chiamate e la collaborazione tramite browser.
 - [NethLink](/docs/user-manual/nethlink/) — applicazione desktop (Windows/macOS/Linux) per il controllo nativo delle chiamate.
+- [App Mobile NethVoice](/docs/user-manual/mobile_app/) — applicazione mobile per dispositivi iOS e Android per effettuare e ricevere chiamate in movimento.
