@@ -7,6 +7,11 @@ sidebar_position: 2
 
 NethVoice gira sopra **NethServer 8 (NS8)**, una piattaforma infrastruttura Linux unificata open-source. Questa pagina ti guida attraverso l'installazione di NethServer 8, che è un prerequisito per l'installazione di NethVoice.
 
+
+:::tip
+Se desideri un'installazione pronta all'uso di NethServer, prendi in considerazione il nostro servizio **[NethServer 8 SaaS](saas.md#nethserver-8-saas)**, che fornisce un'istanza NethServer completamente gestita nel cloud.
+:::
+
 ## Requisiti di sistema {#system-requirements}
 
 Prima di installare NethServer 8, assicurati che il tuo sistema soddisfi i seguenti requisiti:

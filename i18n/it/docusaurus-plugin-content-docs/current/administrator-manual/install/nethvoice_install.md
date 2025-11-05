@@ -5,6 +5,12 @@ sidebar_position: 4
 
 # Installazione di NethVoice
 
+NethVoice è un'applicazione VoIP che richiede un'installazione specifica su NethServer. Questa guida ti accompagnerà nel processo di installazione.
+
+:::tip
+Se desideri un'installazione di NethVoice pronta all'uso, prendi in considerazione il nostro servizio **[NethVoice SaaS](saas.md#nethvoice-as-a-service)**, che fornisce un'istanza NethVoice completamente gestita nel cloud.
+:::
+
 ## Panoramica
 
 NethVoice è installato in due passaggi:
