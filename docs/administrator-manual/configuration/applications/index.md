@@ -16,3 +16,4 @@ The following applications are available in the *Applications* section:
 - **Customer Cards**: Display information from external databases during calls.
 - **Phonebook Sources**: Integrate external address books for contact resolution.
 - **Parameterized URLs**: Trigger custom URLs with call-related parameters during call events.
+- **Video Sources**: Configure IP cameras and video sources for integration with NethVoice.
