@@ -1,4 +1,12 @@
 {
+  "homepage.title": {
+    "message": "Documentazione NethVoice",
+    "description": "The title of the homepage"
+  },
+  "homepage.tagline": {
+    "message": "NethVoice è una soluzione VoIP completa e flessibile per NethServer",
+    "description": "The tagline of the homepage"
+  },
   "theme.ErrorPageContent.title": {
     "message": "Questa pagina è andata in crash.",
     "description": "The title of the fallback page when the page crashed"

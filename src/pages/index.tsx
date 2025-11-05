@@ -33,8 +33,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="NethVoice is a complete and flexible VoIP solution for NethServer">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
