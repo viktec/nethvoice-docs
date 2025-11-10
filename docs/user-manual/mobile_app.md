@@ -5,6 +5,8 @@ sidebar_position: 3
 
 # NethVoice Mobile App
 
+![Nethvoiceapp](/img/nethvoiceapp/nethvoiceapp_presentazione.png)
+
 The **NethVoice Mobile App** (NethCTI) brings enterprise VoIP capabilities to your smartphone or tablet, allowing you to make and receive calls using your business phone number from anywhere with an internet connection.
 
 :::warning Enterprise Subscription Required
@@ -23,9 +25,8 @@ The NethVoice mobile app provides a complete phone system experience on your mob
 - **Call History** — View detailed call logs including placed, received, and missed calls
 - **Presence Management** — Set your availability status (available, busy, away) and see colleagues' presence in real time
 - **Call Management** — Transfer calls, record conversations, place calls on hold, and manage conference calls
-- **Queue Integration** — For call center agents: log in/out of queues, view queue status, and manage calls
-- **Advanced Features** — Intrusion, call monitoring, and call pickup capabilities (based on user permissions)
-- **Group Organization** — View colleagues grouped by department and quickly locate team members
+- **Queue Integration** — For call center agents: log in/out of queues by dialing simple feature codes
+- **Speed Dial** — View the colleagues you’ve added to your favorites, see their status, and call them quickly
 
 ## Supported Platforms
 
@@ -47,6 +48,8 @@ Download the NethVoice mobile app from your device's app store:
 
 ### Configuration
 
+![Nethvoiceapp](/img/nethvoiceapp/app_accesso.png)
+
 Configuration is simple and requires only a QR code:
 
 1. Open the NethVoice mobile app
@@ -57,9 +60,19 @@ Configuration is simple and requires only a QR code:
 3. The app auto-configures itself in seconds — no manual entry required
 4. Once configured, you're ready to make and receive calls
 
+If you’re unable to access the CTI to scan the QR code, you can also configure the app manually.
+Simply enter your username followed by the NethVoice FQDN, and then your password:
+
+| Campo    | Valore                           |
+| -------- | -------------------------------- |
+| Username | `username@hostnamenethvoice.com` |
+| Password | `your-password`                  |
+
+The app will still connect to your account correctly.
+
 ## Supported Operating Systems
 
-- **iOS**: iOS 13.0 and later
+- **iOS**: iOS 16.0 and later
 - **Android**: Android 8.0 (API level 26) and later
 
 ## Device Compatibility
