@@ -131,7 +131,8 @@ Above these buttons, you will find a bar with the following controls:
 
 ### Contacts
 
-In the Contacts section, you can access both your personal Address Book and the NethVoice directory, where you can add or edit contacts.
+In the Contacts section, you can access both your personal Address Book and the NethVoice directory. 
+In your personal Address Book, you can add or edit contacts, while in the NethVoice directory you can only view contacts or make calls.
 To create a new contact, tap “+”, then fill in the First Name, Last Name, Company, phone number, and email.
 By selecting an existing contact you can edit it, make a call, or start a video call. You can also set a custom ringtone for the selected contact.
 
