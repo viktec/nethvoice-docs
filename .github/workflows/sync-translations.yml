@@ -1,0 +1,179 @@
+name: Sync Documentation Translations
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/**/*.mdx'
+      - 'i18n/it/docusaurus-plugin-content-docs/current/**/*.md'
+      - 'i18n/it/docusaurus-plugin-content-docs/current/**/*.mdx'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+jobs:
+  sync-translations:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.head.repo.full_name == github.repository
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests PyYAML gitpython
+
+      - name: Analyze changed documentation files
+        id: analyze-files
+        run: |
+          # Get the list of changed files between main branch (target) and current PR branch (source)
+          git fetch origin main
+          git fetch origin ${{ github.event.pull_request.head.ref }}
+          
+          echo "🔍 Debug: Branch information:"
+          echo "Target branch: ${{ github.event.pull_request.base.ref }}"
+          echo "Source branch: ${{ github.event.pull_request.head.ref }}"
+          echo "Current HEAD: $(git rev-parse HEAD)"
+          echo "Main branch: $(git rev-parse origin/main)"
+          
+          # Use two-dot notation to compare the branches directly
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }}..HEAD -- 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' || true)
+          
+          echo "🔍 Debug: All changed files in PR:"
+          git diff --name-only origin/${{ github.event.pull_request.base.ref }}..HEAD || true
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "✅ No documentation files changed between main and PR branch"
+            echo "needs-translation=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          echo "📝 Found changed files:"
+          echo "$CHANGED_FILES"
+          
+          # Function to map English file to Italian equivalent
+          map_en_to_it() {
+            local en_file="$1"
+            echo "${en_file/docs\//i18n\/it\/docusaurus-plugin-content-docs\/current\/}"
+          }
+          
+          # Function to map Italian file to English equivalent  
+          map_it_to_en() {
+            local it_file="$1"
+            echo "${it_file/i18n\/it\/docusaurus-plugin-content-docs\/current\//docs\/}"
+          }
+          
+          # Convert changed files to array for easier checking
+          CHANGED_FILES_ARRAY=($CHANGED_FILES)
+          FILES_NEEDING_TRANSLATION=""
+          
+          # Analyze which files need translation
+          for file in $CHANGED_FILES; do
+            if [ -n "$file" ]; then
+              # Determine counterpart file path
+              if [[ "$file" == docs/* ]]; then
+                # English file - check if Italian counterpart was also modified
+                counterpart=$(map_en_to_it "$file")
+                direction="EN → IT"
+              elif [[ "$file" == i18n/it/docusaurus-plugin-content-docs/current/* ]]; then
+                # Italian file - check if English counterpart was also modified
+                counterpart=$(map_it_to_en "$file")
+                direction="IT → EN"
+              else
+                echo "⚠️ Unrecognized file path: $file"
+                continue
+              fi
+              
+              # Check if counterpart file was also modified in this PR
+              if [[ " ${CHANGED_FILES_ARRAY[*]} " =~ " ${counterpart} " ]]; then
+                echo "✅ Both files modified ($direction): $file ↔ $counterpart"
+                echo "⏭️ Skipping - manual translation detected"
+              else
+                echo "🤖 Single file modified ($direction): $file → $counterpart"
+                echo "📋 Will need translation agent"
+                FILES_NEEDING_TRANSLATION="$FILES_NEEDING_TRANSLATION $file"
+              fi
+            fi
+          done
+          
+          # Set output variables
+          if [ -n "$FILES_NEEDING_TRANSLATION" ]; then
+            echo "needs-translation=true" >> $GITHUB_OUTPUT
+            echo "$FILES_NEEDING_TRANSLATION" > /tmp/files-for-translation.txt
+            echo "📝 Files that need translation: $FILES_NEEDING_TRANSLATION"
+          else
+            echo "needs-translation=false" >> $GITHUB_OUTPUT
+            echo "✅ All files have manual translations - no agent needed"
+          fi
+          
+          echo "✅ Analysis completed."
+
+      - name: Test GitHub Models API access
+        if: steps.analyze-files.outputs.needs-translation == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🔍 Testing GitHub Models API connectivity..."
+          python .github/scripts/translation-agent/test-copilot-access.py
+          echo "✅ API test passed, proceeding with translation sync"
+
+      - name: Run translation sync
+        if: steps.analyze-files.outputs.needs-translation == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Read files that need translation
+          FILES_NEEDING_TRANSLATION=$(cat /tmp/files-for-translation.txt)
+          
+          echo "🤖 Running translation agent for files: $FILES_NEEDING_TRANSLATION"
+          
+          # Process each file that needs translation
+          for file in $FILES_NEEDING_TRANSLATION; do
+            if [ -n "$file" ]; then
+              echo "🔄 Processing: $file"
+              python .github/scripts/translation-agent/translation-sync-agent.py "$file"
+            fi
+          done
+          
+          echo "✅ All translations completed."
+        continue-on-error: false
+
+      - name: Check for changes and commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Translation Sync Bot"
+          
+          # Check if there are any changes to commit
+          if git diff --quiet; then
+            echo "✅ No translation changes needed"
+          else
+            # Show what files were modified
+            echo "📝 Files with translation changes:"
+            git diff --name-only
+            
+            # Add all changes and commit
+            git add .
+            
+            # Count modified files for commit message
+            MODIFIED_COUNT=$(git diff --cached --name-only | wc -l)
+            
+            git commit -m "docs: auto-sync translations for PR #${{ github.event.pull_request.number }}"
+            
+            git push
+            echo "✅ Translation changes committed and pushed ($MODIFIED_COUNT files)"
+          fi
