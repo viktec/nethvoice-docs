@@ -94,6 +94,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/NethServer/nethvoice-docs/blob/main'
         },
         blog: {
           showReadingTime: true,

@@ -1,21 +1,23 @@
 ---
-title: API CTI
+title: API CTI quickstart
 sidebar_position: 2
 ---
 
-# API CTI
+# API CTI quickstart 
 
 L'API CTI fornisce accesso programmatico alle funzionalità CTI (Computer Telephony Integration) di NethVoice. Questa guida copre l'autenticazione, la connessione WebSocket e l'autenticazione a due fattori.
 I metodi legacy sono documentati per riferimento, ma è fortemente consigliato eseguire la migrazione ai nuovi metodi.
 Le nuove funzionalità e i miglioramenti sono disponibili solo nella nuova API.
 
+Le specifiche complete sono disponibili qui: [NethCTI Server full reference](https://documenter.getpostman.com/view/15699632/TzRRC88p#41f9b8cc-bea8-4917-a293-84eaedcaed08)
+
 ---
 
-## Autenticazione
+## Autenticazione {#authentication}
 
 Il nuovo metodo di autenticazione utilizza JWT (JSON Web Tokens) per un accesso API sicuro.
 
-### Login
+### Login {#login}
 
 **Endpoint:** `POST /api/login`
 

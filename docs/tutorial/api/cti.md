@@ -1,13 +1,15 @@
 ---
-title: CTI APIs
+title: CTI APIs quickstart
 sidebar_position: 2
 ---
 
-# CTI APIs
+# CTI APIs quickstart
 
 The CTI API provides programmatic access to the NethVoice CTI (Computer Telephony Integration) features. This guide covers authentication, WebSocket connection, and two-factor authentication.
 Legacy methods are also documented for reference, but migrating to the new methods is strongly recommended.
 New features and improvements are only available in the new API.
+
+Full API specification is available at: [NethCTI Server full reference](https://documenter.getpostman.com/view/15699632/TzRRC88p#41f9b8cc-bea8-4917-a293-84eaedcaed08)
 
 ---
 

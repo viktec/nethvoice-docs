@@ -63,7 +63,7 @@ Configuration is simple and requires only a QR code:
 If you’re unable to access the CTI to scan the QR code, you can also configure the app manually.
 Simply enter your username followed by the NethVoice FQDN, and then your password:
 
-| Campo    | Valore                           |
+| Field    | Value                            |
 | -------- | -------------------------------- |
 | Username | `username@hostnamenethvoice.com` |
 | Password | `your-password`                  |

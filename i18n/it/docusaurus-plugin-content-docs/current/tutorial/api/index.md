@@ -1,13 +1,23 @@
 ---
-title: Accesso alle API
+title: API
 sidebar_position: 10
 ---
 
-# Accesso alle API
+# API
+Questa sezione contiene tutorial e guide per integrare NethVoice tramite le sue API.
 
-Questa sezione contiene tutorial e guide per l'integrazione con NethVoice tramite le sue API.
+## API disponibili {#available-apis}
 
-## Guide disponibili
+I tutorial e le guide per l'utilizzo di queste API sono disponibili nelle seguenti sezioni:
 
-L'API di NethVoice fornisce accesso programmatico per gestire e interagire con il vostro sistema di telefonia.
-Utilizzate queste guide per iniziare con l'integrazione e lo sviluppo delle API.
+- [Guida rapida alle API CTI](./cti.md) - Introduzione all'utilizzo delle API CTI di NethVoice
+
+Riferimenti e documentazione delle API per i servizi correlati a NethVoice:
+
+- [Riferimento completo API CTI](https://documenter.getpostman.com/view/15699632/TzRRC88p#41f9b8cc-bea8-4917-a293-84eaedcaed08) interazione con il server NethCTI che gestisce le funzionalità di telefonia web.
+- [Provisioning Tancredi](https://nethesis.github.io/tancredi/API)
+    - Il server Tancredi è disponibile per tutte le installazioni NethVoice, l'URL è:
+     - `https://netvoice.tuo-dominio.tld/tancredi/api/v1` per le API
+     - `https://netvoice.tuo-dominio.tld/privisioning/<token>/<filename>` per i file di configurazione utilizzati dai dispositivi
+- [Configurazione (wizard)](https://bump.sh/nethvoice/hub/nethvoice/doc/wizard/)
+
