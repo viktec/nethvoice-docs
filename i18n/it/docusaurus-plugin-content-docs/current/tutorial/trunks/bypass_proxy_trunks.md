@@ -79,14 +79,14 @@ Aggiungere una regola di forward globale:
 
 ```bash
 firewall-cmd --permanent --add-rich-rule="rule family=ipv4 forward-port port=5060 protocol=udp to-port=$ASTERISK_SIP_PORT"
-firewall-cmd reload
+firewall-cmd --reload
 ```
 
 Limitare il forward a un singolo IP (esempio 1.2.3.4):
 
 ```bash
 firewall-cmd --permanent --add-rich-rule="rule family=ipv4 forward-port port=5060 protocol=udp to-port=$ASTERISK_SIP_PORT source address=1.2.3.4"
-firewall-cmd reload
+firewall-cmd --reload
 ```
 
 ### Verifica e rimozione
@@ -112,7 +112,7 @@ firewall-cmd --permanent --remove-rich-rule="rule family=ipv4 forward-port port=
 Applicare le modifiche:
 
 ```bash
-firewall-cmd reload
+firewall-cmd --reload
 ```
 
 ### Note

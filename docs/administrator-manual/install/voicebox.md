@@ -119,7 +119,7 @@ Register the NethServer 8 instance in the service center:
 - Complete the registration process
 
 :::note User Database
-The appliance comes pre-configured with an internal LDAP user database. To use an existing user database instead, see [User Domains Configuration in NethServer](nethserver.md#user-domains).
+The appliance comes pre-configured with an internal LDAP user database. To use an existing user database instead, see [User Domains Configuration](nethvoice_install.md#user-domains).
 :::
 
 ### 3. Enable Let's Encrypt Certificates

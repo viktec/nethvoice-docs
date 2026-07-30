@@ -26,25 +26,34 @@ Per garantire una qualità ottimale delle chiamate:
 3. Eseguire il test audio per verificare la configurazione
 4. Regolare i livelli del volume secondo necessità
 
+## Chiamate in entrata {#configurazione-chiamate-in-entrata}
+
+![Nethlinkaudio](/img/nethlink/nethlink_ringtone.png)
+
+1. Scegli il suono che verrà riprodotto quando si riceve una chiamata in entrata.  
+2. Seleziona quale dispositivo audio riprodurrà la suoneria.
+
 ## Configurazione delle scorciatoie da tastiera
 
 ![Nethlinkshortcut](/img/nethlink/nethlink_scorciatoia.png)
 
 NethLink permette di personalizzare le scorciatoie da tastiera per le operazioni più comuni:
 
-1. Accedere a **Profilo → Impostazioni → Scorciatoie**
+1. Accedere a **Profilo → Impostazioni → Scorciatoie** (Command bar o Per Chiamare)
 2. Selezionare l'operazione da configurare
 3. Premere la combinazione di tasti desiderata
 4. Salvare le impostazioni
 
 Al momento le scorciatoie disponibili sono:
 
-- Avvio chiamata
-- Rispondere a una chiamata
-- Rifiutare una chiamata
-- Terminare una chiamata
-- Silenziamento/attivazione audio
-- Attesa/ripresa
+- Avvio chiamata (Command bar)
+- Rispondere a una chiamata (Command bar)
+- Rifiutare una chiamata (Command bar)
+- Terminare una chiamata (Command bar)
+- Silenziamento/attivazione audio (Command bar)
+- Attesa/ripresa (Command bar)
+- Ricerca rubrica (Command bar)
+- Click to call (Per Chiamare)
 
 ## Impostazioni dell'applicazione
 
@@ -54,6 +63,12 @@ Al momento le scorciatoie disponibili sono:
 - Mostra notifiche
 - Abilita integrazione barra delle applicazioni
 - Tema (modalità chiara/scura)
+
+### Impostazioni notifiche
+
+Quando il riassunto chiamata è abilitato per il tuo utente, NethLink mostra una finestra **Notifiche** nelle impostazioni. Da lì puoi abilitare o disabilitare le notifiche di sistema operativo per i riassunti chiamata pronti.
+
+Questa preferenza viene salvata sul tuo account NethVoice ed è condivisa con il web phone CTI.
 
 ### Impostazioni della privacy
 

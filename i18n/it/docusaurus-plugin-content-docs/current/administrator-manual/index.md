@@ -20,10 +20,9 @@ Questa documentazione copre l'installazione completa, la configurazione e la ges
 Iniziate velocemente passando alle sezioni più importanti:
 
 - **[Guida all'Installazione](./install/index.md)** - Istruzioni complete per l'installazione, dai prerequisiti di NethServer al deployment di NethVoice
-- **[Configurazione](./configuration/index.md)** - CTI, interni e gestione utenti
+- **[Configurazione](./configuration/index.md)** - Gestione di NethVoice dopo la configurazione iniziale.
 - **[Provisioning Telefoni](./provisioning/index.md)** - Gestione automatica dei dispositivi telefonici e provisioning
 - **[Risorse Avanzate](./advanced/index.md)** - Configurazione di sistema e argomenti avanzati
-
 
 ## Componenti Principali
 
@@ -92,22 +91,18 @@ Prima di distribuire NethVoice, assicuratevi di avere:
 - ✅ **Risorse di Sistema**: Minimo 2 vCPU, 2GB RAM, 40GB storage per istanza
 - ✅ **Requisiti di Rete**: IP statico, DNS configurato, connettività internet
 - ✅ **NethServer 8**: Completamente installato e configurato (vedere [Guida all'Installazione](./install/index.md))
-- ✅ **Dominio Utente**: Creato per utenti e autenticazione (vedere [Domini Utente nell'Installazione NethServer](./install/nethserver.md#user-domains))
-- ✅ **Proxy NethVoice**: Installato e configurato con FQDN appropriato e record DNS (richiesto per qualsiasi distribuzione di NethVoice)
 
-### Passaggi di Distribuzione
+### Passaggi di configurazione {#deployment-steps}
 
 1. **[Verificare i Requisiti di Sistema](./install/nethserver.md#system-requirements)** - Assicuratevi che la vostra infrastruttura soddisfi i requisiti
 2. **[Installare NethServer 8](./install/nethserver.md)** - Distribuire la piattaforma infrastruttura base
-3. **[Creare Dominio Utente](./install/nethserver.md#user-domains)** - Configurare LDAP per utenti e autenticazione
-4. **[Installare e Configurare Proxy NethVoice](./advanced/nethvoice_proxy.md)** - Distribuire il gateway VoIP esterno (RICHIESTO prima di NethVoice)
-5. **[Distribuire NethVoice](./install/nethvoice_install.md)** - Installare il modulo NethVoice sopra il proxy
-6. **Configurare il Vostro Sistema**:
+3. **[Installa e configura NethVoice](./install/nethvoice_install.md)** - Installa i moduli NethVoice Proxy NethVoice.
+4. **Configurare il Vostro Sistema**:
    - [Provisioning Telefoni](./provisioning/index.md) - Distribuire e configurare dispositivi telefonici
    - [Gestire Interni](../user-manual/nethcti/index.md) - Creare interni e assegnare agli utenti
-7. **[Configurazione Avanzata](./advanced/index.md)** - Configurare trunk, gateway, instradamento e funzionalità avanzate
+5. **[Configurazione Avanzata](./advanced/index.md)** - Configurare trunk, gateway, instradamento e funzionalità avanzate
 
-## Sezioni Documentazione Principale
+## Sezioni Documentazione Principale {#key-documentation-sections}
 
 | Sezione | Scopo | Argomenti |
 |---------|-------|----------|
@@ -121,15 +116,15 @@ Potete installare più istanze di NethVoice sullo stesso nodo NethServer 8 dal S
 :::
 
 :::warning Prerequisiti
-Il modulo NethVoice richiede che il **proxy NethVoice** sia già installato, configurato e in esecuzione sul sistema. 
+Il modulo NethVoice richiede che il **NethVoice Proxy** sia già installato, configurato e in esecuzione sul sistema. 
 
-**Perché?** Il Proxy NethVoice:
+**Perché?** Il NethVoice Proxy:
 - Gestisce tutto il traffico VoIP esterno da internet
 - Gestisce instradamento del traffico SIP/RTP e delegazione
 - Abilita l'accesso esterno anche con una singola istanza di NethVoice
 - Instrada il traffico tra più installazioni di NethVoice sullo stesso nodo
 
-Se non avete ancora configurato il proxy, fare riferimento alla [documentazione Proxy NethVoice](./advanced/nethvoice_proxy.md) prima di installare NethVoice.
+Se non avete ancora configurato il proxy, fare riferimento alla [documentazione NethVoice Proxy](./advanced/nethvoice_proxy.md) prima di installare NethVoice.
 :::
 
 ## Subscription {#subscription}
@@ -192,5 +187,4 @@ Nethesis offre una suite completa di soluzioni ICT modulari e indipendenti che r
 
 - **[NethSpot](https://www.nethesis.it/soluzioni/nethspot)** — Gestione hotspot WiFi pubblici. Migliora l'esperienza guest con proximity marketing, login social, gestione centralizzata del WiFi e controllo della banda.
 
-Tutte le soluzioni sono indipendenti dalla modalità di distribuzione: installabili su appliance certificate, macchine virtuali, cloud privati o hardware compatibile. Per maggiori informazioni visitate [www.nethesis.it](https://www.nethesis.it) o contattate [marketing@nethesis.it](mailto:marketing@nethesis.it).
-
+Tutte le soluzioni sono indipendenti dal tipo di distribuzione: installabili su appliance certificati, macchine virtuali, cloud privati o hardware compatibile. Per maggiori informazioni, visita [www.nethesis.it](https://www.nethesis.it) o contatta [info@nethesis.it](mailto:info@nethesis.it).

@@ -13,17 +13,60 @@ If you want a ready-to-use NethVoice installation, please consider:
 - a **[VoiceBox Appliance](voicebox.md)**, a hardware appliance with NethServer and NethVoice pre-installed
 :::
 
-## Overview {#overview}
+## Module Installation {#module-installation}
 
-NethVoice is installed in two steps:
+1. **Access the Software Center** on your NethServer 8 system.
+2. **Search for "NethVoice"** in the Software Center search bar.
+3. **Click "Install"** next to NethVoice.
+4. **Wait for installation** to complete (this may take a few minutes).
 
-1. **NethVoice Proxy** (required first)
-2. **NethVoice** module(s)
+## First-time setup wizard {#setup-wizard}
 
-The NethVoice Proxy is a mandatory component that must be installed and configured **before** deploying NethVoice instances. This applies even if you are installing only a single NethVoice instance.
+Open the NethVoice application from the **Applications** page or the **Application Launcher** (the 9-dot icon in the top-right corner, or press **Ctrl + Shift + A**) in NethServer 8. A first-time configuration wizard will appear and guide you through:
+- Configuring an account provider for NethVoice
+- Installing and configuring the NethVoice Proxy
+- Configuring the NethVoice application
 
-:::warning Installation Order
-**NethVoice Proxy must be installed FIRST, before NethVoice.**
+### Account Provider {#user-domains}
+
+The first step of the setup wizard helps you configure the user domain used by NethVoice.
+
+User domains store users and groups in an LDAP database. NethVoice requires a user domain to manage extensions, users, and authentication. 
+NethServer 8 supports two types of LDAP account providers:
+
+| Provider | Type | Best For | Features |
+|----------|------|----------|----------|
+| **OpenLDAP (RFC2307)** | Internal | Unix/Linux clients, simple setup | Lightweight, easy configuration, smaller deployments, multiple instances per node |
+| **Active Directory (Samba)** | Internal | Windows clients, SMB file sharing | Domain controller, Windows compatibility, higher complexity, one instance per node |
+| **External LDAP** | External | Existing LDAP infrastructure | Connect to existing servers (Active Directory, OpenLDAP, etc.) |
+
+
+:::info NethVoice Requirement
+NethVoice requires at least one configured user domain. Choose **OpenLDAP (RFC2307)** for simpler deployments or **Active Directory** if you need Windows client support.
+:::
+
+#### Quick Setup: OpenLDAP (Recommended for NethVoice) {#quick-setup-openldap-recommended-for-nethvoice}
+
+The setup wizard lets you quickly and easily install an OpenLDAP account provider. To configure it, you have to:
+
+- **Enter domain name** (e.g., `nethvoice.local`) - this is a logical name, not DNS-related
+- **Set OpenLDAP admin username and password**
+
+For advanced scenarios (external LDAP, Active Directory, DNS setup, password policies, user management), see the [official NethServer 8 User Domains documentation](https://docs.nethserver.org/projects/ns8/en/latest/user_domains.html).
+
+Key topics in the official docs:
+- **Active Directory Setup**: Complete domain controller configuration
+- **External LDAP Connection**: Binding to existing LDAP servers
+- **Password Policies**: Age, strength, and expiration settings
+- **User Management Portal**: Self-service password changes
+- **LDAP Provider Replicas**: Fault tolerance and redundancy
+- **LDAP binding settings**: Connect external application to a local-running LDAP server
+
+### NethVoice Proxy
+
+The next step of the first setup wizard installs and configures the NethVoice Proxy.
+
+NethVoice Proxy is a component that must be installed and configured before deploying NethVoice application instances. Even with a single NethVoice installation, the proxy is essential for proper network traffic management.
 
 The proxy handles all external internet access and manages SIP/RTP traffic routing. It is required for:
 - External access from the internet
@@ -31,114 +74,60 @@ The proxy handles all external internet access and manages SIP/RTP traffic routi
 - Managing SIP and RTP connections for all NethVoice instances
 - SSL/TLS termination for internet-facing VoIP traffic
 
-Even with a single NethVoice installation, the proxy is essential for proper network traffic management.
-:::
+NethVoice Proxy is a standard NethServer 8 application: its settings can be reviewed and changed by accessing it from the **Applications** page or the **Application Launcher** (the 9-dot icon in the top-right corner, or press **Ctrl + Shift + A**).
 
-## Installation Steps {#installation-steps}
+#### Prerequisites
 
-### Step 1: Install NethVoice Proxy {#step-1-install-nethvoice-proxy}
+Before configuring NethVoice Proxy, ensure:
 
-1. **Access the Software Center** on your NethServer 8 system.
-2. **Search for "NethVoice Proxy"** in the Software Center search bar.
-3. **Click "Install"** next to NethVoice Proxy.
-4. **Wait for installation** to complete (this may take a few minutes).
-5. **Proceed to proxy configuration** before moving to the next step (see [NethVoice Proxy Configuration](#step-2-configure-nethvoice-proxy)).
+1. **DNS Records Created**: Create a DNS A/AAAA record for the proxy domain (e.g., `proxy.nethserver.org`) pointing to your public IP address
+2. **Public IP Address**: Identify the public IPv4 or IPv6 address where the proxy will be accessible from the internet
+3. **Network Interface**: Identify which network interface will handle VoIP traffic
 
-:::tip Important
-Ensure NethVoice Proxy is fully installed and configured with proper FQDNs and DNS records before proceeding to install NethVoice instances.
-:::
+The setup wizard detects automatically if there already is a proxy on the installation node of NethVoice and proposes to install it if needed. Then, to configure the NethVoice Proxy:
 
-### Step 2: Configure NethVoice Proxy {#step-2-configure-nethvoice-proxy}
-
-Before installing NethVoice, you must configure the NethVoice Proxy:
-
-1. **Configure the proxy domain** this is the public FQDN where the proxy will be reachable.
+1. **Configure the Proxy domain** this is the public FQDN where the proxy will be reachable.
    Do not enter NethServer FQDN but use a dedicated one, like `proxy.nethserver.org`.
    This name will be used by external clients to reach your VoIP services, but
    it will not be used directly by final users.
-2. **Set the network interface** that will handle VoIP traffic
-3. **Configure public IP address** if different from the interface IP
+2. **Enable Request Let's Encrypt certificate** checkbox if needed: a Let's Encrypt certificate will be requested for the proxy domain.
+3. **Set the Network interface** that will handle VoIP traffic
+4. **Configure Public IP address** if different from the interface IP
 
-Above configuration will be the entry point for all external VoIP traffic.
+The above configuration will be the entrypoint for all external VoIP traffic.
 
 Make sure that:
 - the configured FQDN resolves correctly to the public IP address
 - any DNS records are properly set up to point to the proxy
 
-Those requeirements are critical to obtain a valid SSL/TLS certificate for secure communications.
+These requirements are critical to obtain a valid SSL/TLS certificate for secure communications.
 
 See [NethVoice Proxy Documentation](../advanced/nethvoice_proxy.md) for more info.
 
-### Step 3: Install NethVoice {#step-3-install-nethvoice}
+### NethVoice application
 
-Once the NethVoice Proxy is running, you can install NethVoice instances:
-
-1. **Return to Software Center** on your NethServer 8 system.
-2. **Search for "NethVoice"** in the Software Center search bar.
-3. **Click "Install"** next to NethVoice.
-4. **Wait for installation** to complete.
-5. **Proceed with Module Configuration** as described in the next section.
-6. **Access the NethVoice instance** and follow the initial configuration wizard to complete the setup.
-
-:::info Multiple Instances
-You can install multiple NethVoice instances on the same node. Each will use the shared NethVoice Proxy for external access and traffic routing. Each instance requires separate configuration and dedicated FQDNs.
-:::
-
-
-## Module Configuration {#module-configuration}
-
-:::warning Required Prerequisites
-Before proceeding with the configuration of any NethVoice instance, ensure:
-
-1. **NethVoice Proxy is installed** - See [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md)
-2. **NethVoice Proxy is configured** - Proxy domain (FQDN) must be set and DNS records created
-3. **NethVoice Proxy is running** - Verify proxy status in the node management interface
-4. **User Domain is created** - See [User Domains in NethServer Installation](./nethserver.md#user-domains) (required for NethVoice users and extensions)
-
-The NethVoice module requires at least one user domain to manage users, extensions, and authentication. If you haven't created a user domain yet, follow the [User Domains setup guide](./nethserver.md#user-domains) before configuring NethVoice.
-:::
-
-
+:::warning DNS configuration
 To set up NethVoice, you need to have two dedicated virtual hosts:
 
-- one for the NethVoice administration page, eg. `nethvoice.nethserver.org`
-- one for the NethVoice CTI web application, eg. `cti.nethserver.org`
-
+- A **NethVoice base host** for the NethVoice administration interface, eg. `nethvoice.nethserver.org`
+- A **NethVoice CTI base host** for the NethVoice CTI web application, eg. `cti.nethserver.org`
 
 Before proceeding with the configuration, ensure that you have created the corresponding DNS records for these FQDNs in your DNS server.
 
 If you plan to use a Let's Encrypt certificate as the default certificate, make sure you have the necessary public DNS records.
-
-During the module configuration wizard, you will be prompted to provide the following information:
-
-- **NethVoice base host**: Insert a valid FQDN to access the application administration page, this is where you will manage NethVoice settings, eg. `nethvoice.nethserver.org`.
-- **NethVoice CTI base host**: Insert a valid FQDN to access the NethVoice CTI web application, eg. `cti.nethserver.org`.
-- **User Domain**: Choose one of the [user domains](./nethserver.md#user-domains) already configured.
-- **Timezone**: Select the appropriate timezone for your NethVoice instance, this is important for accurate call logging and scheduling.
-- **Request Let's Encrypt certificate**: If enabled, a Let's Encrypt certificate will be requested for each of the two hosts.
-- **Reports Prefix**: Insert the international telephone prefix to be considered local in the reporting system.
-- **Reset NethVoice admin password to access user interface**: Insert a valid password for the NethVoice administrator user (optional, the default password is *Nethesis,1234*).
-
-Advanced configuration options:
-
-- **Deepgram API Key**: Insert your Deepgram API key to enable advanced speech recognition features and voice transcription.
-  - **Enable call transcription**: Enable this option to allow users to transcribe calls in real-time using Deepgram's speech-to-text service. This feature incurs additional costs based on your Deepgram usage.
-  - **Voicemail transcription**: Enable voicemail transcription to convert voicemail messages to text using Deepgram. This feature also incurs additional costs based on your Deepgram usage.
-
-:::info Voice Transcription
-For detailed information on how users can access and use voice transcription features, see [Voice Transcription](../../user-manual/nethcti/other.md#voice-transcription) in the User Manual.
 :::
 
-The following options are available only with an active Enterprise subscription:
+In the last step of the setup wizard, you will be prompted to provide the following information:
 
-- **Enable Hotel module**: Activate the Hotel module for managing hotel-specific telephony features.
-  See [NethVoice Hotel Module Documentation](/docs/administrator-manual/nethhotel/index.md) for more details.
-- **Hotel FIAS server host**: Enter the IP address or hostname of the Hotel FIAS server.
-- **Hotel FIAS server port**: Specify the port number for the Hotel FIAS server connection.
+- **NethVoice base host**: Enter a valid FQDN to access the application administration page; this is where you will manage NethVoice settings, e.g. `nethvoice.nethserver.org`.
+- **NethVoice CTI base host**: Enter a valid FQDN for the NethVoice CTI web application, e.g. `cti.nethserver.org`.
+- **Request Let's Encrypt certificate**: If enabled, a Let's Encrypt certificate will be requested for both the **NethVoice base host** and the **NethVoice CTI base host**.
+- **Timezone**: Select the appropriate timezone for your NethVoice application; this is important for accurate call logging and scheduling.
+- **Admin password to access user interface**: Sets the password for the NethVoice administration page.
 
-## Next steps {#next-steps}
+### Next steps {#next-steps}
 
-After saving the configuration parameters, NethVoice will be accessible on its base host, eg:
+At the end of the first-time setup wizard, NethVoice will be accessible on the base host configured, e.g.:
 ```
 https://nethvoice.nethserver.org
 ```
@@ -146,5 +135,59 @@ https://nethvoice.nethserver.org
 To access the NethVoice administration interface, use the following credentials:
 
 - User: `admin`
-- Password: `Nethesis,1234`, the default password if the *Reset NethVoice admin password to access user interface* option was not used during the configuration
+- Password: The password you have chosen in the first-time setup wizard
 
+After completing NethVoice configuration in the administration interface, users can access NethVoice CTI on the base host configured, e.g.:
+```
+https://cti.nethserver.org
+```
+
+## Module Configuration {#module-configuration}
+
+The settings of the NethVoice module can be reviewed and changed by accessing the NethVoice module of NethServer 8. To do this:
+
+- Access the NethServer cluster administration page.
+- Open the NethVoice application from the **Applications** page or the **Application Launcher** (the 9-dot icon in the top-right corner, or press **Ctrl + Shift + A**).
+- Go to the specific configuration page you want to modify.
+
+On the **Settings** page you can review and change most of the configuration parameters:
+
+- **NethVoice base host**: virtual host for the NethVoice administration interface.
+- **NethVoice CTI base host**: virtual host for NethVoice CTI web application.
+- **Request Let's Encrypt certificate**: if enabled, a Let's Encrypt certificate will be requested for both the **NethVoice base host** and the **NethVoice CTI base host**.
+- **Account provider**: user domain used by NethVoice.
+- **Timezone**: timezone for your NethVoice application, this is important for accurate call logging and scheduling.
+- **Reports prefix**: telephone prefix number used in reports
+- **New admin password for NethVoice**: define a new password for the `admin` user
+
+On the **Integrations** page you can configure speech-to-text and AI services:
+- **Deepgram API Key**: required to enable call and voicemail transcription.
+- **Call transcription**: enables transcription for calls handled by NethVoice. Users with the required profile permission can open live transcription during a call, and supported completed calls can expose post-call transcription data in CTI History. This feature may consume Deepgram credits quickly on systems with many calls.
+- **Voicemail transcription**: converts voicemail audio to text with Deepgram and includes the transcription in voicemail messages when the voicemail flow provides an audio attachment.
+- **OpenAI API Key**: required to enable AI-generated call summaries. When an OpenAI API Key is configured, users with the required profile permission can review generated summaries from CTI History and configure summary-ready notifications.
+- **Call summary**: enables AI-generated summaries of completed calls. It can only be turned on when an OpenAI API Key is configured and **Call transcription** is enabled, since summaries are built from the post-call transcription data.
+
+AI-generated call summaries use the post-call transcription data and require both a working Deepgram configuration and a configured OpenAI API Key.
+
+:::info Transcription and summaries
+For user-facing details about live transcription, post-call transcription, summaries, notifications, and History integration, see [Voice Transcription and Call Summary](../../user-manual/nethcti/other.md#voice-transcription) in the User Manual.
+:::
+
+On the **Rebranding** page you can customize the NethVoice user interface with the brand identity of your company. To enable this feature, you have to contact Nethesis sales team and have an active Enterprise subscription.
+
+Rebranding is organized in tabs, one for each interface:
+
+- **CTI**: brand name, logos, favicon and background of the NethVoice CTI login page.
+- **Admin**: brand name, logos, favicon and background of the wizard login page, plus the **FreePBX admin interface** section, where you can set the top-left logo and the favicon of the FreePBX administration GUI. The brand name shown in the FreePBX admin interface follows the wizard brand name.
+- **Report**: brand name, logo and favicon of the NethVoice Reports login page.
+- **NethLink**: company name and company URL shown in the *About* window of the NethLink desktop client.
+
+All images must be reachable at a public URL, and SVG is the recommended format. Fields left empty fall back to the default assets. Saving applies the pending changes of all tabs at once.
+
+On the **Hotel** page you can configure the Hotel module; an active subscription is required for this feature.
+
+- **Status**: Activate the Hotel module for managing hotel-specific telephony features.
+- **Hotel FIAS server host**: Enter the IP address or hostname of the Hotel FIAS server.
+- **Hotel FIAS server port**: Specify the port number for the Hotel FIAS server connection.
+
+See [NethVoice Hotel Module Documentation](/docs/administrator-manual/nethhotel/) for more details.

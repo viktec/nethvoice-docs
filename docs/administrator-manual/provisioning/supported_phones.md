@@ -32,6 +32,7 @@ For phones not listed as supported, it is possible to create custom provisioning
 - X7A/C
 - X301/P/G/W, X303/P/G/W
 - H2U, H2U-V2, H5
+- W610W, W611W, W620W
 
 ## Yealink {#yealink}
 
@@ -60,9 +61,9 @@ The Snom D862 and D865 phones do not support HTTP commands, so it is not possibl
 
 ## Gigaset {#gigaset}
 
-**FIRMWARE Version 3.15.9 or higher**
+**FIRMWARE Version 10.1.0 or higher**
 
-- Maxwell Basic, Maxwell 2, Maxwell 3, Maxwell 4
+- P710 IP PRO, P810-P810B IP PRO, P820-P825 IP PRO, P850W-P855BW IP PRO
 
 
 
@@ -82,4 +83,3 @@ The following table summarizes the provisioning methods used by each manufacture
 
 
 For a complete list of provisioning parameters, see [Provisioning Parameters](provisioning_parameters).
-

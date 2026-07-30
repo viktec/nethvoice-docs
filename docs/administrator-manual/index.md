@@ -20,7 +20,7 @@ This documentation covers the complete installation, configuration, and manageme
 Get started quickly by jumping to the most important sections:
 
 - **[Installation Guide](./install/index.md)** - Complete setup instructions from NethServer prerequisites to NethVoice deployment
-- **[Configuration](./configuration/index.md)** - CTI, extensions, and user administration
+- **[Configuration](./configuration/index.md)** - NethVoice management after the initial setup.
 - **[Phone Provisioning](./provisioning/index.md)** - Automated phone device management and provisioning
 - **[Advanced Resources](./advanced/index.md)** - System configuration and advanced topics
 
@@ -91,20 +91,16 @@ Before deploying NethVoice, ensure you have:
 - ✅ **System Resources**: Minimum 2 vCPU, 2GB RAM, 40GB storage per instance
 - ✅ **Network Requirements**: Static IP, DNS configured, internet connectivity
 - ✅ **NethServer 8**: Fully installed and configured (see [Installation Guide](./install/index.md))
-- ✅ **User Domain**: Created for users and authentication (see [User Domains in NethServer Installation](./install/nethserver.md#user-domains))
-- ✅ **NethVoice Proxy**: Installed and configured with proper FQDN and DNS records (required for any NethVoice deployment)
 
 ### Deployment Steps {#deployment-steps}
 
 1. **[Review System Requirements](./install/nethserver.md#system-requirements)** - Ensure your infrastructure meets requirements
 2. **[Install NethServer 8](./install/nethserver.md)** - Deploy the base infrastructure platform
-3. **[Create User Domain](./install/nethserver.md#user-domains)** - Set up LDAP for users and authentication
-4. **[Install & Configure NethVoice Proxy](./advanced/nethvoice_proxy.md)** - Deploy the external VoIP gateway (REQUIRED before NethVoice)
-5. **[Deploy NethVoice](./install/nethvoice_install.md)** - Install NethVoice module(s) on top of the proxy
-6. **Configure Your System**:
+3. **[Install & Configure NethVoice](./install/nethvoice_install.md)** - Install NethVoice Proxy and NethVoice modules
+4. **Configure Your System**:
    - [Provision Phones](./provisioning/index.md) - Deploy and configure telephone devices
    - [Manage Extensions](../user-manual/nethcti/index.md) - Create extensions and assign to users
-7. **[Advanced Configuration](./advanced/index.md)** - Configure trunks, gateways, routing, and advanced features
+5. **[Advanced Configuration](./advanced/index.md)** - Configure trunks, gateways, routing, and advanced features
 
 ## Key Documentation Sections {#key-documentation-sections}
 
@@ -191,4 +187,4 @@ Nethesis offers a comprehensive suite of modular, independent ICT solutions that
 
 - **[NethSpot](https://www.nethesis.it/soluzioni/nethspot)** — Public WiFi hotspot management. Improve guest experience with proximity marketing, social login, centralized WiFi management, and bandwidth controls.
 
-All solutions are deployment-agnostic: install on certified appliances, virtual machines, private clouds, or compatible hardware. For more information, visit [www.nethesis.it](https://www.nethesis.it) or contact [marketing@nethesis.it](mailto:marketing@nethesis.it).
+All solutions are deployment-agnostic: install on certified appliances, virtual machines, private clouds, or compatible hardware. For more information, visit [www.nethesis.it](https://www.nethesis.it) or contact [info@nethesis.it](mailto:info@nethesis.it).

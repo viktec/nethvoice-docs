@@ -32,6 +32,7 @@ Per i telefoni non elencati come supportati, è possibile creare modelli di prov
 - X7A/C
 - X301/P/G/W, X303/P/G/W
 - H2U, H2U-V2, H5
+- W610W, W611W, W620W
 
 ## Yealink
 
@@ -50,9 +51,9 @@ Per i telefoni non elencati come supportati, è possibile creare modelli di prov
 **FIRMWARE Versione 8.7.5 o superiore**
 
 - D120, D140, D150
-- D305, D315, D345, D375, D385
+- D305, D315, D335, D345, D375, D385
 - D710, D712, D713, D715, D717, D725, D735, D745, D765, D785
-- D812, D815, D862, D865
+- D810, D812, D815, D862, D865, D892
 
 :::note
 I telefoni Snom D862 e D865 non supportano i comandi HTTP, quindi non è possibile utilizzare click-to-call.
@@ -60,11 +61,9 @@ I telefoni Snom D862 e D865 non supportano i comandi HTTP, quindi non è possibi
 
 ## Gigaset
 
-**FIRMWARE Versione 3.15.9 o superiore**
+**FIRMWARE Version 10.1.0 or superiore**
 
-- Maxwell Basic, Maxwell 2, Maxwell 3, Maxwell 4
-
-
+- P710 IP PRO, P810-P810B IP PRO, P820-P825 IP PRO, P850W-P855BW IP PRO
 
 ## Compatibilità Provisioning
 

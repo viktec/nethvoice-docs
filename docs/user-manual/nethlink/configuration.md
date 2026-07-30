@@ -26,6 +26,15 @@ To ensure optimal call quality:
 3. Run the audio test to verify the configuration
 4. Adjust volume levels as needed
 
+
+## Incoming Calls {#incoming-calls-configuration}
+
+![Nethlinkaudio](/img/nethlink/nethlink_ringtone.png)
+
+1. Choose the sound that plays when an incoming call is received.
+2. Select which audio device will play the ringtone.
+
+
 ## Keyboard Shortcut Configuration {#keyboard-shortcut-configuration}
 
 ![Nethlinkshortcut](/img/nethlink/nethlink_scorciatoia.png)
@@ -33,18 +42,20 @@ To ensure optimal call quality:
 NethLink allows you to customize keyboard shortcuts for common operations:
 
 1. Go to **Profile → Settings → Shortcuts**
-2. Select the operation to configure
+2. Select the operation to configure (Command bar or Call shortcut) 
 3. Press the desired key combination
 4. Save the settings
 
 Currently available shortcuts are:
 
-- Call initiation
-- Answer call
-- Reject call
-- End call
-- Mute/unmute
-- Hold/resume
+- Call start (Command bar)
+- Answer (Command bar)
+- Reject (Command bar)
+- Hangup (Command bar)
+- Mute/Unmute (Command bar)
+- Hold/Unhold (Command bar)
+- Phonebook search (Command bar)
+- Click to call (Call shortcut)
 
 ## Application Settings {#application-settings}
 
@@ -54,6 +65,12 @@ Currently available shortcuts are:
 - Show notifications
 - Enable system tray integration
 - Theme (light/dark mode)
+
+### Notification Settings {#notification-settings}
+
+When call summary is enabled for your user, NethLink shows a **Notifications** settings dialog. From there you can enable or disable operating system notifications for ready call summaries.
+
+This preference is saved on your NethVoice account and is shared with the CTI web phone.
 
 ### Privacy Settings {#privacy-settings}
 

@@ -119,7 +119,7 @@ Registra l'istanza di NethServer 8 nel centro servizi:
 - Completa il processo di registrazione
 
 :::note Database utenti
-L'appliance è pre-configurata con un database utenti LDAP interno. Per usare un database utenti esistente, vedi [Configurazione dei domini utente in NethServer](nethserver.md#user-domains).
+L'appliance è pre-configurata con un database utenti LDAP interno. Per usare un database utenti esistente, vedi [Configurazione dei domini utente in NethServer](nethvoice_install.md#user-domains).
 :::
 
 ### 3. Abilita i certificati Let's Encrypt

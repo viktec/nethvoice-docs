@@ -7,7 +7,6 @@ sidebar_position: 2
 
 NethVoice gira sopra **NethServer 8 (NS8)**, una piattaforma infrastruttura Linux unificata open-source. Questa pagina ti guida attraverso l'installazione di NethServer 8, che è un prerequisito per l'installazione di NethVoice.
 
-
 :::tip
 Se desideri un'installazione pronta all'uso di NethServer, prendi in considerazione il nostro servizio **[NethServer 8 SaaS](saas.md#nethserver-8-saas)**, che fornisce un'istanza NethServer completamente gestita nel cloud.
 :::
@@ -95,15 +94,15 @@ Per accedere all'interfaccia web di NethServer 8, utilizza una versione aggiorna
 - Chrome
 - Chromium
 
-## Metodi di installazione
+## Metodi di installazione {#installation-methods}
 
 NethServer 8 può essere installato utilizzando due metodi:
 
-### Metodo 1: Procedura standard
+### Metodo 1: Procedura standard {#method-1-standard-procedure}
 
 Per la maggior parte delle installazioni, utilizza la procedura di installazione standard.
 
-#### Passaggi di installazione
+#### Passaggi di installazione {#installation-steps}
 
 1. **Installa curl** (se non già disponibile):
 ```bash
@@ -117,13 +116,13 @@ curl https://raw.githubusercontent.com/NethServer/ns8-core/ns8-stable/core/insta
 
 3. **Attendi il completamento**: Lo script installerà tutti i componenti core di NethServer 8.
 
-### Metodo 2: Immagine di macchina virtuale pre-costruita
+### Metodo 2: Immagine di macchina virtuale pre-costruita {#method-2-pre-built-virtual-machine-image}
 
 Un'immagine Rocky Linux 9 pre-costruita è disponibile per la distribuzione rapida su piattaforme virtuali.
 
 Vedi la documentazione ufficiale di NethServer per più dettagli: [Immagini pre-costruite di NethServer 8](https://docs.nethserver.org/projects/ns8/en/latest/install.html#pre-built-image).
 
-## Passaggi post-installazione
+## Passaggi post-installazione {#post-installation-steps}
 
 Dopo il completamento dell'installazione:
 
@@ -141,60 +140,10 @@ Ulteriori informazioni disponibili nella [documentazione ufficiale di NethServer
 
 Dopo la configurazione del cluster, puoi:
 
-1. **Installa dominio utente**: [Configura LDAP o Active Directory](#user-domains)
-2. **Installa NethVoice**: Procedi con l'[installazione di NethVoice](nethvoice_install) tramite il Software Center
-3. **Registra NethServer**: Attiva il tuo [abbonamento Enterprise](#register-nethserver)
+1. **Installare NethVoice**: Procedi con l'[installazione di NethVoice](nethvoice_install) tramite il Software Center
+2. **Registrare NethServer**: Attiva il tuo [abbonamento Enterprise](#register-nethserver)
 
-## Domini utente {#user-domains}
-
-I domini utente archiviano utenti e gruppi in un database LDAP. NethVoice richiede almeno un dominio utente per gestire interni, utenti e autenticazione.
-
-### Panoramica
-
-NethServer 8 supporta due tipi di provider di account LDAP:
-
-| Provider | Tipo | Ideale per | Funzionalità |
-|----------|------|----------|----------|
-| **OpenLDAP (RFC2307)** | Interno | Client Unix/Linux, setup semplice | Lightweight, configurazione facile, distribuzioni più piccole, più istanze per nodo |
-| **Active Directory (Samba)** | Interno | Client Windows, condivisione file SMB | Domain controller, compatibilità Windows, complessità più elevata, un'istanza per nodo |
-| **LDAP esterno** | Esterno | Infrastruttura LDAP esistente | Connessione a server esistenti (Active Directory, OpenLDAP, ecc.) |
-
-:::info Requisito di NethVoice
-NethVoice richiede almeno un dominio utente configurato. Scegli **OpenLDAP (RFC2307)** per distribuzioni più semplici o **Active Directory** se hai bisogno del supporto del client Windows.
-:::
-
-### Setup veloce: OpenLDAP (consigliato per NethVoice)
-
-OpenLDAP è l'opzione più semplice per distribuzioni solo NethVoice:
-
-1. **Accedi all'interfaccia web di NethServer 8** dopo il completamento dell'installazione
-2. **Naviga alla sezione Domini e utenti**
-3. **Fai clic su "Crea dominio"** e scegli **"Interno"**
-4. **Seleziona "OpenLDAP"** come provider
-5. **Immetti il nome del dominio** (ad es. `nethvoice.local`) - questo è un nome logico, non correlato a DNS
-6. **Imposta il nome utente e la password dell'amministratore di OpenLDAP**
-7. **Fai clic su "Installa provider"**
-
-Il dominio sarà pronto immediatamente. Puoi ora:
-- Creare utenti e gruppi per gli interni di NethVoice
-- Gestire l'autenticazione dell'utente
-- Configurare NethVoice per utilizzare questo dominio
-
-:::tip
-Mantieni le credenziali dell'amministratore di OpenLDAP in un luogo sicuro. Le avrai bisogno per attività amministrative.
-:::
-
-Per scenari avanzati (LDAP esterno, Active Directory, setup DNS, policy di password, gestione utenti), vedi la [documentazione ufficiale dei domini utente di NethServer 8](https://docs.nethserver.org/projects/ns8/en/latest/user_domains.htm).
-
-Argomenti chiave nella documentazione ufficiale:
-- **Setup di Active Directory**: Configurazione completa del domain controller
-- **Connessione LDAP esterna**: Binding a server LDAP esistenti
-- **Policy di password**: Impostazioni di età, forza e scadenza
-- **Portale di gestione utenti**: Modifiche della password self-service
-- **Repliche del provider LDAP**: Tolleranza ai guasti e ridondanza
-- **Impostazioni di binding LDAP**: Connessione di applicazione esterna a un server LDAP in esecuzione localmente
-
-## Registra NethServer {#register-nethserver}
+## Registrare NethServer {#register-nethserver}
 
 NethServer deve avere una subscription Enterprise per sbloccare tutte le funzionalità di NethVoice.
 Consulta la [sezione subscription](../index.md#subscription) per ulteriori informazioni.

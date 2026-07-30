@@ -137,66 +137,13 @@ After installation completes:
    - Password: `Nethesis,1234`
 
 Follow the wizard to create a cluster and configure the node.
-More info available in the [official NethServerdocumentation](https://docs.nethserver.org/projects/ns8/en/latest/install.html#post-installation-steps).
+More info available in the [official NethServer documentation](https://docs.nethserver.org/projects/ns8/en/latest/install.html#post-installation-steps).
 
 
 After cluster setup, you can:
 
-1. **Install User Domain**: [Set up LDAP or Active Directory](#user-domains)
-2. **Install NethVoice**: Proceed with [NethVoice installation](nethvoice_install) via the Software Center
-3. **Register NethServer**: Activate your [Enterprise subscription](#register-nethserver)
-
-
-## User Domains {#user-domains}
-
-User domains store users and groups in an LDAP database. NethVoice requires at least one user domain to manage extensions, users, and authentication.
-
-### Overview {#overview}
-
-NethServer 8 supports two types of LDAP account providers:
-
-| Provider | Type | Best For | Features |
-|----------|------|----------|----------|
-| **OpenLDAP (RFC2307)** | Internal | Unix/Linux clients, simple setup | Lightweight, easy configuration, smaller deployments, multiple instances per node |
-| **Active Directory (Samba)** | Internal | Windows clients, SMB file sharing | Domain controller, Windows compatibility, higher complexity, one instance per node |
-| **External LDAP** | External | Existing LDAP infrastructure | Connect to existing servers (Active Directory, OpenLDAP, etc.) |
-
-
-:::info NethVoice Requirement
-NethVoice requires at least one configured user domain. Choose **OpenLDAP (RFC2307)** for simpler deployments or **Active Directory** if you need Windows client support.
-:::
-
-### Quick Setup: OpenLDAP (Recommended for NethVoice) {#quick-setup-openldap-recommended-for-nethvoice}
-
-OpenLDAP is the simplest option for NethVoice-only deployments:
-
-1. **Access the NethServer 8 web interface** after installation completes
-2. **Navigate to Domains and users** section
-3. **Click "Create domain"** and choose **"Internal"**
-4. **Select "OpenLDAP"** as the provider
-5. **Enter domain name** (e.g., `nethvoice.local`) - this is a logical name, not DNS-related
-6. **Set OpenLDAP admin username and password**
-7. **Click "Install provider"**
-
-The domain will be ready immediately. You can now:
-- Create users and groups for NethVoice extensions
-- Manage user authentication
-- Configure NethVoice to use this domain
-
-:::tip
-Keep the OpenLDAP admin credentials in a secure location. You'll need them for administrative tasks.
-:::
-
-
-For advanced scenarios (external LDAP, Active Directory, DNS setup, password policies, user management), see the [official NethServer 8 User Domains documentation](https://docs.nethserver.org/projects/ns8/en/latest/user_domains.htm).
-
-Key topics in the official docs:
-- **Active Directory Setup**: Complete domain controller configuration
-- **External LDAP Connection**: Binding to existing LDAP servers
-- **Password Policies**: Age, strength, and expiration settings
-- **User Management Portal**: Self-service password changes
-- **LDAP Provider Replicas**: Fault tolerance and redundancy
-- **LDAP binding settings**: Connect external application to a local-running LDAP server
+1. **Install NethVoice**: Proceed with [NethVoice installation](nethvoice_install) via the Software Center
+2. **Register NethServer**: Activate your [Enterprise subscription](#register-nethserver)
 
 ## Register NethServer {#register-nethserver}
 

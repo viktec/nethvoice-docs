@@ -26,11 +26,12 @@ const config: Config = {
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: false,
   },
 
   plugins: [
     './plugins/docusaurus-plugin-generate-trunks',
+    './plugins/docusaurus-plugin-generate-migration-status',
   ],
 
   scripts: [
@@ -39,6 +40,8 @@ const config: Config = {
       "data-website-id": "54bcf336-8574-4f4e-b02d-27916cc99e46",
       "data-project-name": "NethVoice Documentation",
       "data-project-color": "#059669",
+      "data-modal-header-bg-color": "#059669",
+      "data-modal-title-color": "#ffffff",
       "data-project-logo": "https://docs.nethvoice.com/img/favicon_white.ico",
       "data-source-group-ids-include": "e92a7b49-112e-479c-8813-0b8562b9e652",
       async: true,
@@ -53,9 +56,9 @@ const config: Config = {
     : 'https://nethserver.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.NODE_ENV === 'production' 
-    ? '/' 
-    : '/nethvoice-docs/',
+  baseUrl: process.env.BASE_URL ?? (process.env.NODE_ENV === 'production'
+    ? '/'
+    : '/nethvoice-docs/'),
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -199,6 +202,23 @@ const config: Config = {
             {
               label: 'Partner Community (Italian)',
               href: 'https://partner.nethesis.it',
+            },
+          ],
+        },
+        {
+          title: 'Developers',
+          items: [
+            {
+              label: 'Middleware API reference',
+              href: 'https://bump.sh/nethesis/doc/nethcti-middleware/',
+            },
+            {
+              label: 'CTI Server API reference',
+              href: 'https://documenter.getpostman.com/view/15699632/TzRRC88p',
+            },
+            {
+              label: 'API Migration Status',
+              to: '/migration-status',
             },
           ],
         },

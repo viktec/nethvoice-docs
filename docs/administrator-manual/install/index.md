@@ -9,23 +9,10 @@ This section covers the complete installation process for NethVoice, from settin
 
 ## Overview {#overview}
 
-NethVoice installation is a multi-step process:
+NethVoice installation is a two-step process:
 
 1. **[NethServer 8 Installation](nethserver.md)** - Install the NethServer 8 base platform
-2. **[Create User Domain](nethserver.md#user-domains)** - Set up LDAP for users and authentication (in NethServer)
-3. **[NethVoice Proxy Installation & Configuration](../advanced/nethvoice_proxy.md)** - Install and configure the external VoIP gateway (REQUIRED first)
-4. **[NethVoice Installation](nethvoice_install.md)** - Install NethVoice on top of configured proxy
-5. **[Module Configuration](nethvoice_install.md#module-configuration)** - Configure NethVoice with your requirements
-
-:::warning Installation Order
-1. NethServer 8 must be installed first
-2. User Domain must be created second (required by NethVoice)
-3. NethVoice Proxy must be installed and configured third
-4. NethVoice can only be installed after proxy is ready
-5. NethVoice configuration uses the user domain created in step 2
-
-See [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md) for details on proxy requirements.
-:::
+2. **[NethVoice Installation](nethvoice_install.md)** - Install and configure NethVoice application
 
 ## What is NethServer 8? {#what-is-nethserver-8}
 
@@ -62,47 +49,19 @@ Follow the [NethServer Installation guide](nethserver.md) to:
 - Access the web administration interface
 - Create your cluster
 
-### Step 3: Create User Domain {#step-3-create-user-domain}
-
-Create a user domain for NethVoice users and extensions:
-- Access NethServer 8 web interface → Domains and users
-- Create domain (OpenLDAP recommended for NethVoice)
-- Set admin credentials
-- Note LDAP bind settings (needed for NethVoice configuration)
-
-See [User Domains setup](nethserver.md#user-domains) in the NethServer Installation guide for details.
-
-### Step 4: Install NethVoice Proxy {#step-4-install-nethvoice-proxy}
-
-After NethServer 8 and user domain are ready, install and configure the VoIP proxy:
-- Access the Software Center
-- Install NethVoice Proxy
-- Configure proxy domain (FQDN)
-- Set network interface and public IP
-- Verify proxy is running
-
-See [NethVoice Proxy Installation Guide](../advanced/nethvoice_proxy.md) for detailed steps.
-
-### Step 5: Install NethVoice {#step-5-install-nethvoice}
-
-With NethVoice Proxy configured and running:
-- Access the Software Center
-- Install NethVoice
-- Complete the NethVoice configuration wizard
-- Select the user domain created in Step 3
-- Set up virtual hosts and certificates
-
-### Step 6: Configure NethVoice {#step-6-configure-nethvoice}
+### Step 3: Install and configure NethVoice {#step-3-install-nethvoice}
 
 Follow the [NethVoice Installation guide](nethvoice_install.md) to:
-- Configure NethVoice virtual hosts
-- Verify user domain is selected
-- Configure Let's Encrypt certificates
-- Access NethVoice administration and CTI
+- Install NethVoice
+- Complete the setup configuration wizard:
+  - Configure an account provider
+  - Install and configure a NethVoice Proxy
+  - Set up virtual hosts, certificates and administration password
+- Access NethVoice administration interface and CTI
 
 ## Quick Reference {#quick-reference}
 
-### System Requirements (Minimum) {#system-requirements-minimum}
+### Minimum System Requirements {#system-requirements-minimum}
 
 | Component | Requirement |
 |-----------|-------------|
@@ -149,6 +108,19 @@ Complete guide covering:
 - Cluster configuration
 - Troubleshooting
 
+### [NethVoice Installation](nethvoice_install.md) {#nethvoice-installation}
+
+Complete guide covering:
+- NethVoice software installation
+- Setup wizard:
+  - User domain
+  - NethVoice Proxy
+  - Virtual hosts (base hosts)
+  - Let's Encrypt certificates
+  - Administration password
+- Administrator access
+- Initial configuration
+
 ### [NethVoice Proxy Installation](../advanced/nethvoice_proxy.md) {#nethvoice-proxy-installation}
 
 Complete guide covering:
@@ -158,19 +130,7 @@ Complete guide covering:
 - Configuration (domain, interface, public IP)
 - SSL certificate setup
 - Verification and testing
-- Must be installed BEFORE NethVoice
-
-### [NethVoice Installation](nethvoice_install.md) {#nethvoice-installation}
-
-Complete guide covering:
-- Installation order (Proxy → NethVoice)
-- NethVoice software installation
-- Module configuration
-- Virtual host setup
-- User domain configuration
-- Let's Encrypt certificate configuration
-- Administrator access
-- Initial configuration
+- Must be installed before NethVoice
 
 ## Installation Checklist {#installation-checklist}
 
@@ -184,17 +144,6 @@ Before you begin, ensure:
 - [ ] Firewall allows required ports (80, 443, 55820 for clustering)
 - [ ] Internet connection is stable
 - [ ] You have administrative access to the server
-
-During installation, ensure you complete:
-
-- [ ] NethServer 8 installation
-- [ ] User Domain creation (OpenLDAP recommended)
-- [ ] Note down LDAP bind settings
-- [ ] NethVoice Proxy installation
-- [ ] NethVoice Proxy configuration
-- [ ] Verify proxy is running before NethVoice install
-- [ ] NethVoice installation
-- [ ] NethVoice configuration with user domain
 
 ## Important Notes {#important-notes}
 

@@ -12,7 +12,7 @@ Designed to run on [NethServer](https://www.nethserver.org/), NethVoice supports
 
 This guide will walk you through the basic steps to set up NethVoice on your system.
 
-## 1. Install NethServer 8 {#1-install-nethserver-8}
+## 1. Install NethServer 8 {#install-nethserver-8}
 
 Begin by installing NethServer 8 on your server.  
 - Download and follow the installation instructions from the [official guide](https://docs.nethserver.org/projects/ns8/en/latest/install.html).
@@ -21,25 +21,17 @@ Begin by installing NethServer 8 on your server.
   - **Password:** `Nethesis,1234`
 - Create a cluster and ensure your server has a static IP address and a valid FQDN.
 
-## 2. Install and Configure NethVoice Proxy {#2-install-and-configure-nethvoice-proxy}
-
-The NethVoice Proxy is required to enable secure remote access to NethVoice services.
-- Install the NethVoice Proxy module from the Software Center.
-- Assign a valid FQDN (e.g., `proxy.yourdomain.org`) and ensure the DNS record is configured.
-- Configure the network interface and public IP as needed.
-- Only one NethVoice Proxy can be installed per node.
-- For detailed steps, refer to the [NethVoice Proxy documentation](https://docs.nethvoice.com/docs/administrator-manual/install/nethvoice_install#step-1-install-nethvoice-proxy).
-
-## 3. Install NethVoice Module {#3-install-nethvoice-module}
+## 2. Install NethVoice Module {#install-nethvoice-module}
 
 Once the proxy is configured, you can install the NethVoice module:
 - Open the **Software Center** from the web interface.
 - Search for the NethVoice application and click **Install**.
 - For more information, see the [Software Center documentation](https://docs.nethserver.org/projects/ns8/en/latest/software_center.html).
 
-## 4. Configure NethVoice {#4-configure-nethvoice}
+## 3. Configure NethVoice {#configure-nethvoice}
 
 After installation, configure your NethVoice instance:
+- Follow the [first-time setup wizard](https://docs.nethvoice.com/docs/administrator-manual/install/nethvoice_install#setup-wizard)
 - Follow the [NethVoice configuration guide](https://docs.nethvoice.com/docs/administrator-manual/install/nethvoice_install#module-configuration) for detailed setup instructions.
 - Complete the initial configuration, add users, and set up your telephony environment as needed.
 
@@ -49,5 +41,8 @@ For each step, refer to the linked documentation for comprehensive, step-by-step
 
 ## Related tutorials {#related-tutorials}
 
-* [Cloud vs On-Premise deployments](https://docs.nethvoice.com/docs/tutorial/cloud_vs_onpremise)
-* [Export phonebook as CSV from NethVoice](https://docs.nethvoice.com/docs/tutorial/export-phonebook-csv)
+* [Common deployment scenarios](./cloud_vs_onpremise.md)
+* [Export phonebook as CSV from NethVoice](./export-phonebook-csv.md)
+* [Prune old Voicemail Messages](./voicemail-prune.md)
+* [Prune old Call Recordings](./recording-prune.md)
+* [Protect NethVoice from brute-force attacks (CrowdSec)](./crowdsec.md)
